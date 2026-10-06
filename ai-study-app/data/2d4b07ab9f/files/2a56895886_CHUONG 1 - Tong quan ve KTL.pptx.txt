@@ -1,0 +1,168 @@
+[Slide 1]
+GIẢNG VIÊN: ThS. HOÀNG ANH VIỆN
+Mail: hoanganhvien@iuh.edu.vn.
+ĐT: 0915.941.952
+Trường Đại học Công nghiệp Tp. Hồ Chí Minh
+Khoa QTKD
+MÔN HỌC: KINH TẾ LƯỢNG
+
+[Slide 2]
+GIỚI THIỆU MÔN HỌC
+
+[Slide 3]
+1. CHUẨN ĐẦU RA MÔN HỌC
+
+[Slide 4]
+2. MÔ TẢ CHUNG VỀ MÔN HỌC
+Chương 1: Khái quát về kinh tế lượng và hồi quy
+Chương 2: Mô hình hồi qui 2 biến
+Chương 3: Mô hình hồi qui 2 biến mở rộng
+Chương 4: Mô hình hồi qui tuyến tính nhiều biến
+Chương 5: Mô hình hồi qui với biến giả
+Chương 6: Đa cộng tuyến – phương sai thay đổi- tự tương quan
+
+[Slide 5]
+3. PHƯƠNG PHÁP ĐÁNH GIÁ VÀ LƯU Ý
+Dự lớp: 		Trên 80%
+ Kiểm tra thường xuyên
+Thực hành: cá nhân và nhóm
+ Giữa học phần: tự luận nhóm
+ Thi tự luận cá nhân kết thúc học phần.
+
+[Slide 6]
+6
+4. TÀI LIỆU HỌC TẬP
+Tài liệu học tập
+Slide bài giảng Kinh tế lượng và bài tập kèm theo
+Huỳnh Đạt Hùng, Trần Nha Ghi, Phạm Xuân Giang, Nguyễn Ngọc Hiền.  Kinh tế lượng. 2024. Nhà xuất bản  Đại học Công nghiệp Tp. HCM.
+
+[Slide 7]
+7
+4. TÀI LIỆU HỌC TẬP
+Tài liệu tham khảo
+[1]. Nguyễn Quang Dong, Nguyễn Thị Minh. Kinh tế lượng. 2013. NXB Đại Học Kinh tế Quốc Dân Hà Nội. [100289786-100289805]
+[2]. Damodar N, Gujarati. Basic Econometrics. 6th edition. 2015. New York. McGraw-Hill Education. [100290196]
+[3]. Trần Thị Tuấn Anh, Nhập Môn Kinh Tế Lượng:Cách Tiếp Cận Hiện Đại. 2019 Nhà xuất bản kinh tế TP. HCM. […]
+
+[Slide 8]
+5. YÊU CẦU ĐỐI VỚI HỌC VIÊN
+1. Chuẩn bị tài liệu liên quan khi đến lớp
+2. Nhóm cài phần mềm SPSS; Cá nhân: 01 máy tính cầm tay (500 ms, 570 ms, 500 es, 570 es
+3. Kiến thức: toán, xác suất – thống kê (hàm số, kiểm định); hiểu rõ về kinh tế học; sử dụng phần mềm, máy tính cầm tay để xử lý dữ liệu và có tư duy nghiên cứu khoa học.
+4. Tự học, tự nghiên cứu
+
+[Slide 9]
+KHÁI QUÁT VỀ KINH TẾ LƯỢNG VÀ HỒI QUY
+CHƯƠNG 1
+
+[Slide 10]
+NỘI DUNG
+1.1. Khái niệm
+1.2. Ứng dụng của kinh tế lượng
+1.3. Phương pháp luận của kinh tế lượng
+1.4. Dữ liệu sử dụng trong phân tích hồi quy
+1.5. Tổng quát về hồi quy
+1.6. Hàm hội quy tổng thể và hàm hồi quy mẫu
+
+[Slide 11]
+1.1. Khái niệm:
+Kinh tế lượng mô hình hóa toán học các mối quan hệ kinh tế từ đó dùng nó để dự báo và đưa ra chính sách kinh tế trong tương lai.
+
+[Slide 12]
+1.2. Ứng dụng của kinh tế lượng
+Ước lượng: Qd = 1,2P - 2
+
+Kiểm định: các hệ số beta (hệ số hồi quy) có ý nghĩa hay không? Mối quan hệ giữa Qd và P có tồn tại hay không?
+
+Dự báo chính sách: các chính sách tác động đến P để thay đổi Qd.
+
+[Slide 13]
+1.3. Phương pháp luận của kinh tế lượng
+Xác định vấn đề nghiên cứu
+Lý thuyết kinh tế/ giả thuyết
+Thiết lập mô hình kinh tế lượng
+Thu thập và xử lý dữ liệu
+Ước lượng các tham số hồi quy
+Kiểm định giả thuyết
+Thảo luận kết quả
+Dự báo, khuyến nghị chính sách
+
+[Slide 14]
+1.4. Dữ liệu sử dụng trong phân tích hồi quy
+Các loại dữ liệu:
+Số liệu chuỗi thời gian: Là số liệu của 1 hay nhiều chỉ tiêu của 1 đơn vị kinh tế tại nhiều thời điểm.
+Doanh thu của công ty A giai đoạn 2019 - 2023.
+Dữ liệu chéo: Là số liệu của 1 chỉ tiêu hay nhiều chỉ tiêu tại nhiều đơn vị kinh tế ở cùng một thời điểm cho trước.
+Doanh thu, lợi nhuận của các công ty du lịch Miền Trung năm 2023; giá trị SXCN và TM của các tỉnh năm 2023.
+Dữ liệu bảng: là sự kết hợp giữa dữ liệu chéo và dữ liệu chuỗi thời gian. 
+Doanh thu của các công ty du lịch Miền Trung giai đoạn 2020- 2023
+
+Các nguồn dữ liệu: thứ cấp – thông tin đã có sẵn và sơ cấp- thu thập lần đầu.
+
+[Slide 15]
+1.5. Tổng quát về hồi quy
+Phân tích hồi quy là tìm ra mối quan hệ của biến phụ thuộc (Y) với 1 hoặc nhiều biến độc lập (X).
+Biến phụ thuộc (Dependent variable - Y): chịu sự tác động của 1 hay nhiều biến độc lập X.
+Biến độc lập (Independent variable-X): là biến tác động đến biến phụ thuộc Y.
+
+[Slide 16]
+Biến định lượng, định tính và biến giả
+Biến định lượng: thể hiện bằng co số cụ thể, có đợn vị, thể hiện mức độ, độ lớn của biến. 
+Biến định tính: mô tả tính chất, đặc điểm… của một sự vật, hoạt động. 
+Biến giả: khi xử lý dữ liệu có chứa biến định tính cần phải lượng hóa bằng những con số để đưa vào phân tích hồi quy.
+
+[Slide 17]
+1.6. Hàm hồi quy tổng thể và hàm hồi quy mẫu:
+Tổng thể và mẫu
+Tổng thể: là tập hợp tất cả các phần tử thuộc hiện tượng nghiên cứu cần được quan sát, thu thập và phân tích. 
+    SV trường ĐH IUH 
+Mẫu là một phần của tổng thể được chọn ra theo những cách thức nhất định và với một dung lượng hợp lý.
+    Chọn 2000 SV đại diện để khảo sát.
+
+[Slide 18]
+Hàm hồi quy tổng thể (PRF – Population regression Function)
+Yi= β1 + β2 Xi + ui 
+Với ui : nhiễu  yếu tố độc lập khác không đưa vào mô hình
+Hàm hồi qui mẫu (SRF – Sample Regression Function)
+Dạng xác định:
+Dạng ngẫu nhiên:
+
+[Slide 19]
+Hàm hồi quy, mô hình nghiên cứu và giả thuyết nghiên cứu
+Hàm hồi quy:
+Mô hình nghiên cứu:
+Y
+X
+H1
+Giả thuyết nghiên cứu: 
+Biến X tác động thuận chiều (hoặc ngược chiều đến biến Y)
+
+[Slide 20]
+Hàm hồi quy, mô hình nghiên cứu và giả thuyết nghiên cứu
+Hàm hồi quy:
+Mô hình nghiên cứu:
+Doanh số
+CPQC
+H1 (+)
+Giả thuyết nghiên cứu: 
+H1: CPQC tác động thuận chiều đến biến doanh số bán hàng
+
+[Slide 21]
+Hàm hồi quy, mô hình nghiên cứu và giả thuyết nghiên cứu
+Hàm hồi quy???
+Giả thuyết nghiên cứu???
+
+[Slide 22]
+Tìm kiếm tài liệu
+https://www.google.com/
+https://scholar.google.com/
+https://www.mdpi.com/
+https://journalofscience.ou.edu.vn/index.php/soci-vi
+https://js.ktpt.edu.vn/index.php/jed/index
+……
+
+[Slide 23]
+Phần mềm thông dụng…
+
+[Slide 26]
+BÀI TẬP

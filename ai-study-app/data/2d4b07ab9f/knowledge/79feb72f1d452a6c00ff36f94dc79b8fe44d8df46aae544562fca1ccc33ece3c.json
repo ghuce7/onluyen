@@ -1,0 +1,155 @@
+[
+  {
+    "type": "formula",
+    "title": "Hàm hồi quy mẫu (SRF)",
+    "plain": "Đây là phương trình toán học dùng để dự đoán giá trị của biến Y dựa vào biến X dựa trên số liệu thực tế thu thập được (mẫu).",
+    "analogy": "Giống như công thức tính tiền đi taxi dựa vào số kilomet bạn chạy thực tế vậy đó.",
+    "prereq": [
+      "Khái niệm biến X và Y"
+    ],
+    "formula_latex": "\\hat{Y}_i = \\hat{\\beta}_1 + \\hat{\\beta}_2 X_i",
+    "formula_words": "Y mũ bằng beta 1 mũ cộng beta 2 mũ nhân X",
+    "symbols": [
+      {
+        "symbol": "\\hat{Y}_i",
+        "meaning": "Giá trị Y được tính toán (lý thuyết) theo mẫu"
+      },
+      {
+        "symbol": "\\hat{\\beta}_1",
+        "meaning": "Hệ số chặn (khi X bằng 0 thì Y bằng bao nhiêu)"
+      },
+      {
+        "symbol": "\\hat{\\beta}_2",
+        "meaning": "Hệ số góc (X thay đổi thì Y thay đổi thế nào)"
+      },
+      {
+        "symbol": "X_i",
+        "meaning": "Biến độc lập (nguyên nhân)"
+      }
+    ],
+    "steps": [
+      "Nhập dữ liệu X và Y vào máy tính",
+      "Dùng chế độ hồi quy tuyến tính (REG hoặc STAT)",
+      "Lấy giá trị A và B từ máy gán vào công thức"
+    ],
+    "example": "Cho số liệu chi tiêu (Y) và thu nhập (X), máy tính ra kết quả: Chi tiêu = 4 + 0.75 * Thu nhập. Nghĩa là hệ số chặn là 4 và hệ số góc là 0.75.",
+    "pitfall": "Nhầm lẫn giữa giá trị thực tế Y và giá trị dự báo Y mũ.",
+    "exam_tip": "Đề bài hay hỏi 'Ước lượng hàm hồi quy mẫu của Y theo X', chỉ cần tìm ra beta 1 mũ và beta 2 mũ rồi lắp vào công thức.",
+    "keywords": [
+      "SRF",
+      "hàm hồi quy mẫu",
+      "hệ số hồi quy"
+    ]
+  },
+  {
+    "type": "concept",
+    "title": "Ý nghĩa của hệ số hồi quy",
+    "plain": "Giải thích con số beta 1 và beta 2 nói lên điều gì về mặt thực tế giữa nguyên nhân (X) và kết quả (Y).",
+    "analogy": "Giống như bác sĩ nói: cứ tăng 1 viên thuốc (X) thì bệnh giảm đi mấy phần (Y).",
+    "prereq": [
+      "Hàm hồi quy mẫu (SRF)"
+    ],
+    "formula_latex": "",
+    "formula_words": "",
+    "symbols": [
+      {
+        "symbol": "\\hat{\\beta}_1",
+        "meaning": "Khi X = 0 thì giá trị trung bình của Y là chừng đó"
+      },
+      {
+        "symbol": "\\hat{\\beta}_2",
+        "meaning": "Khi X tăng 1 đơn vị thì Y tăng (nếu dương) hoặc giảm (nếu âm) đúng bằng beta 2 đơn vị"
+      }
+    ],
+    "steps": [
+      "Nhìn dấu của hệ số beta 2 để biết đồng biến hay nghịch biến",
+      "Phát biểu ý nghĩa của beta 1 khi X bằng 0",
+      "Phát biểu ý nghĩa của beta 2 khi X tăng 1 đơn vị"
+    ],
+    "example": "Chi tiêu = 4 + 0.75 * Thu nhập. Ý nghĩa: Khi thu nhập bằng 0 thì chi tiêu thấp nhất là 4 triệu đồng. Khi thu nhập tăng 1 triệu thì chi tiêu tăng 0.75 triệu đồng.",
+    "pitfall": "Quên câu cửa miệng 'với các điều kiện khác không đổi' hoặc nhầm chiều tăng giảm.",
+    "exam_tip": "Gặp câu hỏi 'Giải thích ý nghĩa kinh tế của các hệ số beta' thì làm theo mẫu: Beta 1 là khi X=0, Beta 2 là khi X tăng 1 đơn vị.",
+    "keywords": [
+      "ý nghĩa hệ số",
+      "beta 1",
+      "beta 2"
+    ]
+  },
+  {
+    "type": "formula",
+    "title": "Hệ số xác định R bình phương",
+    "plain": "Đo xem biến nguyên nhân (X) giải thích được bao nhiêu phần trăm sự thay đổi của kết quả (Y), phần còn lại là do yếu tố khác ngoài mô hình.",
+    "analogy": "Giống như điểm số của bạn 75% là do chăm chỉ học bài (X), còn 25% là do may mắn hoặc đề dễ.",
+    "prereq": [
+      "TSS, ESS, RSS"
+    ],
+    "formula_latex": "R^2 = \\frac{ESS}{TSS}",
+    "formula_words": "R bình phương bằng ESS chia TSS",
+    "symbols": [
+      {
+        "symbol": "R^2",
+        "meaning": "Hệ số xác định (từ 0 đến 1 hoặc 0% đến 100%)"
+      },
+      {
+        "symbol": "ESS",
+        "meaning": "Tổng bình phương phần giải thích được"
+      },
+      {
+        "symbol": "TSS",
+        "meaning": "Tổng bình phương tổng thể"
+      }
+    ],
+    "steps": [
+      "Tính giá trị ESS",
+      "Tính giá trị TSS",
+      "Lấy ESS chia cho TSS rồi đổi ra phần trăm"
+    ],
+    "example": "Nếu R bình phương bằng 0.75 nghĩa là X giải thích được 75% sự biến động của Y, còn 25% do yếu tố ngoài.",
+    "pitfall": "Nghĩ rằng R bình phương có thể âm hoặc lớn hơn 1 (thực tế luôn từ 0 đến 1).",
+    "exam_tip": "Đề bài hay bắt tính R bình phương và nhận xét mô hình giải thích tốt hay kém.",
+    "keywords": [
+      "R2",
+      "hệ số xác định",
+      "ESS",
+      "TSS"
+    ]
+  },
+  {
+    "type": "process",
+    "title": "Kiểm định sự phù hợp của mô hình (Kiểm định F)",
+    "plain": "Dùng để kiểm tra xem toàn bộ cái mô hình hồi quy này có xài được không hay chỉ là đoán mò.",
+    "analogy": "Giống như kiểm tra xem cái xe máy tự chế có chạy được thật không trước khi đem ra đường lớn.",
+    "prereq": [
+      "Hệ số xác định R bình phương"
+    ],
+    "formula_latex": "F = \\frac{R^2 (n-2)}{1-R^2}",
+    "formula_words": "F bằng R bình phương nhân mở ngoặc n trừ 2 đóng ngoặc chia cho 1 trừ R bình phương",
+    "symbols": [
+      {
+        "symbol": "F",
+        "meaning": "Giá trị kiểm định F"
+      },
+      {
+        "symbol": "n",
+        "meaning": "Cỡ mẫu (số lượng quan sát)"
+      },
+      {
+        "symbol": "R^2",
+        "meaning": "Hệ số xác định"
+      }
+    ],
+    "steps": [
+      "Tính giá trị F theo công thức từ R bình phương và n",
+      "Tra bảng hoặc lấy giá trị F tới hạn đề cho",
+      "So sánh F tính toán với F bảng để kết luận"
+    ],
+    "example": "Tính ra F bằng 12.5, so với F bảng là 5.318. Vì 12.5 lớn hơn 5.318 nên kết luận hàm hồi quy phù hợp.",
+    "pitfall": "Nhầm lẫn giữa quy tắc so sánh giá trị F tính toán và F bảng.",
+    "exam_tip": "Câu hỏi quen thuộc: 'Hàm hồi quy có phù hợp hay không với mức ý nghĩa 5%?'.",
+    "keywords": [
+      "kiểm định F",
+      "hành hồi quy phù hợp",
+      "F tính toán"
+    ]
+  }
+]

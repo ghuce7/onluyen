@@ -1,0 +1,1390 @@
+{
+  "exam_data": {
+    "exam_title": "Đề Thi Ôn Tập Cấp Tốc: Lập Trình Python Trong Công Nghệ Tài Chính (FinTech)",
+    "total_points": 10,
+    "duration_minutes": 120,
+    "questions": [
+      {
+        "id": 1,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Trong Jupyter Notebook, cell nào dùng để chạy mã lệnh Python?",
+        "choices": {
+          "A": "Code cell",
+          "B": "Markdown cell",
+          "C": "Text cell",
+          "D": "Formula cell"
+        },
+        "correct_answer": "A",
+        "explanation": "Trong Jupyter Notebook, Code cell dùng để viết và chạy code Python, còn Markdown cell dùng để viết văn bản, giải thích và công thức $...$.",
+        "key_concept": "Jupyter Notebook"
+      },
+      {
+        "id": 2,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Phím tắt thông dụng nào được dùng để chạy một ô lệnh (cell) trong Jupyter Notebook?",
+        "choices": {
+          "A": "Ctrl + S",
+          "B": "Shift + Enter",
+          "C": "Alt + Tab",
+          "D": "Ctrl + C"
+        },
+        "correct_answer": "B",
+        "explanation": "Tổ hợp phím Shift + Enter được sử dụng để chạy (execute) nội dung của một cell hiện tại và chuyển sang cell tiếp theo trong Jupyter Notebook.",
+        "key_concept": "Jupyter Notebook"
+      },
+      {
+        "id": 3,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Phần mở rộng (extension) chuẩn của một file Jupyter Notebook là gì?",
+        "choices": {
+          "A": ".py",
+          "B": ".txt",
+          "C": ".ipynb",
+          "D": ".fin"
+        },
+        "correct_answer": "C",
+        "explanation": "File Jupyter Notebook được lưu dưới định dạng .ipynb (Interactive Python Notebook), chứa cả mã nguồn, kết quả chạy và văn bản giải thích.",
+        "key_concept": "Jupyter Notebook"
+      },
+      {
+        "id": 4,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Trong Python, để khai báo một biến kiểu số nguyên (integer) biểu diễn số lượng cổ phiếu, cách viết nào sau đây là đúng?",
+        "choices": {
+          "A": "so_luong = 100",
+          "B": "so_luong = '100'",
+          "C": "so_luong = 100.0",
+          "D": "so_luong = True"
+        },
+        "correct_answer": "A",
+        "explanation": "Biến so_luong = 100 là kiểu số nguyên ($int$). '100' là kiểu chuỗi ($str$), 100.0 là kiểu số thực ($float$), và True là kiểu boolean ($bool$).",
+        "key_concept": "Kiểu dữ liệu"
+      },
+      {
+        "id": 5,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Kiểu dữ liệu nào trong Python phù hợp nhất để lưu trữ mã cổ phiếu (ví dụ: 'VNM', 'FPT')?",
+        "choices": {
+          "A": "int",
+          "B": "float",
+          "C": "str",
+          "D": "bool"
+        },
+        "correct_answer": "C",
+        "explanation": "Mã cổ phiếu là các ký tự văn bản, do đó phải sử dụng kiểu chuỗi ký tự ($str$).",
+        "key_concept": "Kiểu dữ liệu"
+      },
+      {
+        "id": 6,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Hàm nào trong Python dùng để kiểm tra kiểu dữ liệu của một biến?",
+        "choices": {
+          "A": "check()",
+          "B": "type()",
+          "C": "class()",
+          "D": "print()"
+        },
+        "correct_answer": "B",
+        "explanation": "Hàm type(bien) trả về kiểu dữ liệu của biến được truyền vào, rất hữu ích trong quá trình gỡ lỗi ($debug$).",
+        "key_concept": "Kiểu dữ liệu"
+      },
+      {
+        "id": 7,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Cấu trúc dữ liệu nào trong Python là danh sách CÓ THỂ thay đổi (mutable) các phần tử bên trong?",
+        "choices": {
+          "A": "Tuple",
+          "B": "List",
+          "C": "String",
+          "D": "Int"
+        },
+        "correct_answer": "B",
+        "explanation": "List là cấu trúc dữ liệu dạng chuỗi có thứ tự và có thể thay đổi được (thêm, sửa, xóa phần tử), ví dụ dùng lưu lịch sử giá theo ngày.",
+        "key_concept": "Cấu trúc dữ liệu"
+      },
+      {
+        "id": 8,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Đặc điểm cốt lõi của cấu trúc dữ liệu Tuple trong Python là gì?",
+        "choices": {
+          "A": "Có thể thay đổi phần tử sau khi tạo",
+          "B": "Không thể thay đổi (bất biến - immutable) sau khi tạo",
+          "C": "Không có thứ tự sắp xếp",
+          "D": "Chỉ chứa được các số nguyên"
+        },
+        "correct_answer": "B",
+        "explanation": "Tuple là cấu trúc dữ liệu bất biến (không thể thêm, bớt, sửa phần tử), rất phù hợp để lưu thông tin cố định như mã cổ phiếu và ngày niêm yết.",
+        "key_concept": "Cấu trúc dữ liệu"
+      },
+      {
+        "id": 9,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Trong Python, chỉ số (index) của phần tử đầu tiên trong một List là bao nhiêu?",
+        "choices": {
+          "A": "1",
+          "B": "-1",
+          "C": "0",
+          "D": "Tùy ý"
+        },
+        "correct_answer": "C",
+        "explanation": "Python đánh chỉ số (index) bắt đầu từ 0. Do đó, phần tử đầu tiên của list gia[0] ứng với vị trí số 0.",
+        "key_concept": "Cấu trúc dữ liệu"
+      },
+      {
+        "id": 10,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Cấu trúc dữ liệu nào lưu trữ dữ liệu theo cặp khóa - giá trị (key - value), rất lý tưởng để quản lý danh mục đầu tư?",
+        "choices": {
+          "A": "List",
+          "B": "Tuple",
+          "C": "Dict (Dictionary)",
+          "D": "Set"
+        },
+        "correct_answer": "C",
+        "explanation": "Dict lưu dữ liệu theo cặp khóa và giá trị, ví dụ danh_muc = {'VNM': 100}, cho phép tra cứu nhanh qua khóa thay vì vị trí.",
+        "key_concept": "Cấu trúc dữ liệu"
+      },
+      {
+        "id": 11,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Cấu trúc dữ liệu nào trong Python chỉ chứa các phần tử DUY NHẤT (không trùng lặp) và hỗ trợ các phép toán tập hợp?",
+        "choices": {
+          "A": "Set",
+          "B": "List",
+          "C": "Dict",
+          "D": "Tuple"
+        },
+        "correct_answer": "A",
+        "explanation": "Set là tập hợp không trùng lặp và không có thứ tự, hỗ trợ các phép toán tập hợp như giao (&), hợp (|), hiệu (-).",
+        "key_concept": "Cấu trúc dữ liệu"
+      },
+      {
+        "id": 12,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Thư viện cốt lõi nào trong Python cung cấp đối tượng ndarray để tính toán số học tối ưu tốc độ?",
+        "choices": {
+          "A": "Pandas",
+          "B": "NumPy",
+          "C": "Matplotlib",
+          "D": "Seaborn"
+        },
+        "correct_answer": "B",
+        "explanation": "NumPy (Numerical Python) cung cấp cấu trúc mảng ndarray giúp tính toán vector hóa nhanh hơn list thông thường từ 10-100 lần.",
+        "key_concept": "NumPy"
+      },
+      {
+        "id": 13,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Quy ước chuẩn quốc tế khi import thư viện NumPy vào Python là gì?",
+        "choices": {
+          "A": "import numpy as n",
+          "B": "import numpy as np",
+          "C": "import num as numpy",
+          "D": "import np as numpy"
+        },
+        "correct_answer": "B",
+        "explanation": "Quy ước tiêu chuẩn trong cộng đồng lập trình là import numpy as np.",
+        "key_concept": "NumPy"
+      },
+      {
+        "id": 14,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Trong Pandas, cấu trúc dữ liệu nào biểu diễn một BẢNG dữ liệu 2 chiều (gồm nhiều dòng và cột)?",
+        "choices": {
+          "A": "Series",
+          "B": "DataFrame",
+          "C": "Array",
+          "D": "Matrix"
+        },
+        "correct_answer": "B",
+        "explanation": "DataFrame là cấu trúc dữ liệu 2 chiều dạng bảng của Pandas (tương tự bảng tính Excel), trong khi Series là cấu trúc 1 chiều (một cột).",
+        "key_concept": "Pandas"
+      },
+      {
+        "id": 15,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Quy ước chuẩn khi import thư viện Pandas là gì?",
+        "choices": {
+          "A": "import pandas as p",
+          "B": "import pandas as pan",
+          "C": "import pandas as pd",
+          "D": "import pd as pandas"
+        },
+        "correct_answer": "C",
+        "explanation": "Quy ước tiêu chuẩn trong cộng đồng lập trình là import pandas as pd.",
+        "key_concept": "Pandas"
+      },
+      {
+        "id": 16,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Phương thức nào của DataFrame trong Pandas giúp xem nhanh 5 dòng đầu tiên của dữ liệu?",
+        "choices": {
+          "A": "df.tail()",
+          "B": "df.head()",
+          "C": "df.info()",
+          "D": "df.shape"
+        },
+        "correct_answer": "B",
+        "explanation": "df.head() trả về 5 dòng đầu tiên của DataFrame, còn df.tail() trả về 5 dòng cuối cùng.",
+        "key_concept": "Pandas"
+      },
+      {
+        "id": 17,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Phương thức nào của Pandas DataFrame trả về thông tin tổng quan gồm kiểu dữ liệu và số lượng ô không thiếu của mỗi cột?",
+        "choices": {
+          "A": "df.describe()",
+          "B": "df.info()",
+          "C": "df.shape",
+          "D": "df.columns"
+        },
+        "correct_answer": "B",
+        "explanation": "df.info() cung cấp thông tin chi tiết về số dòng, tên cột, kiểu dữ liệu ($dtype$) và số lượng giá trị không null.",
+        "key_concept": "Pandas"
+      },
+      {
+        "id": 18,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Thuộc tính nào của DataFrame trả về kích thước bảng dưới dạng một tuple (số dòng, số cột)?",
+        "choices": {
+          "A": "df.size",
+          "B": "df.shape",
+          "C": "df.length",
+          "D": "df.dim"
+        },
+        "correct_answer": "B",
+        "explanation": "Thuộc tính df.shape trả về (số dòng, số cột) của DataFrame.",
+        "key_concept": "Pandas"
+      },
+      {
+        "id": 19,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Trong Pandas, để chọn dữ liệu dựa vào TÊN NHÃN (label) của dòng hoặc cột, ta sử dụng thuộc tính nào?",
+        "choices": {
+          "A": "iloc",
+          "B": "loc",
+          "C": "ix",
+          "D": "select"
+        },
+        "correct_answer": "B",
+        "explanation": ".loc dùng để chọn dữ liệu theo nhãn (tên dòng/tên cột), trong khi .iloc dùng theo vị trí số nguyên.",
+        "key_concept": "Pandas"
+      },
+      {
+        "id": 20,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Trong Pandas, để chọn dữ liệu dựa vào VỊ TRÍ SỐ NGUYÊN (index position) của dòng hoặc cột, ta sử dụng thuộc tính nào?",
+        "choices": {
+          "A": "loc",
+          "B": "iloc",
+          "C": "pos",
+          "D": "index"
+        },
+        "correct_answer": "B",
+        "explanation": ".iloc cho phép truy xuất phần tử dựa trên vị trí số nguyên (bắt đầu từ 0).",
+        "key_concept": "Pandas"
+      },
+      {
+        "id": 21,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Thư viện Python nào chuyên dùng để vẽ biểu đồ thống kê đẹp và trực quan với cú pháp ngắn gọn?",
+        "choices": {
+          "A": "Matplotlib",
+          "B": "Seaborn",
+          "C": "NumPy",
+          "D": "Pandas"
+        },
+        "correct_answer": "B",
+        "explanation": "Seaborn được xây dựng trên nền Matplotlib, chuyên cung cấp các biểu đồ thống kê đẹp mắt và dễ sử dụng hơn.",
+        "key_concept": "Trực quan hóa dữ liệu"
+      },
+      {
+        "id": 22,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Thư viện Python nào chuyên cung cấp biểu đồ TƯƠNG TÁC (interactive charts) phù hợp làm dashboard tài chính?",
+        "choices": {
+          "A": "Plotly",
+          "B": "Matplotlib",
+          "C": "Seaborn",
+          "D": "NumPy"
+        },
+        "correct_answer": "A",
+        "explanation": "Plotly cho phép tạo các biểu đồ tương tác (phóng to, thu nhỏ, rê chuột xem giá trị), rất thích hợp cho dashboard tài chính.",
+        "key_concept": "Trực quan hóa dữ liệu"
+      },
+      {
+        "id": 23,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Thư viện Python nào được sử dụng phổ biến để tải dữ liệu giá cổ phiếu quốc tế miễn phí từ Yahoo Finance?",
+        "choices": {
+          "A": "vnstock",
+          "B": "yfinance",
+          "C": "pandas-datareader",
+          "D": "alpha-vantage"
+        },
+        "correct_answer": "B",
+        "explanation": "yfinance là thư viện phổ biến để tải dữ liệu lịch sử giá cổ phiếu quốc tế từ Yahoo Finance.",
+        "key_concept": "Thu thập dữ liệu"
+      },
+      {
+        "id": 24,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Thư viện Python nào chuyên dụng để khai thác dữ liệu chứng khoán Việt Nam (HOSE, HNX, UPCOM)?",
+        "choices": {
+          "A": "yfinance",
+          "B": "vnstock",
+          "C": "vietstock",
+          "D": "cafef-api"
+        },
+        "correct_answer": "B",
+        "explanation": "vnstock là thư viện mã nguồn mở chuyên thu thập dữ liệu chứng khoán Việt Nam.",
+        "key_concept": "Thu thập dữ liệu"
+      },
+      {
+        "id": 25,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Trong xử lý dữ liệu với Pandas, phương thức nào dùng để phát hiện các ô dữ liệu bị thiếu (null/NaN)?",
+        "choices": {
+          "A": "df.isnull() hoặc df.isna()",
+          "B": "df.empty()",
+          "C": "df.drop()",
+          "D": "df.fill()"
+        },
+        "correct_answer": "A",
+        "explanation": "df.isna() hoặc df.isnull() trả về bảng giá trị True/False biểu thị ô dữ liệu có bị thiếu hay không.",
+        "key_concept": "Làm sạch dữ liệu"
+      },
+      {
+        "id": 26,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Phương thức nào trong Pandas dùng để LOẠI BỎ các dòng chứa dữ liệu bị thiếu?",
+        "choices": {
+          "A": "df.dropna()",
+          "B": "df.fillna()",
+          "C": "df.removeNA()",
+          "D": "df.clean()"
+        },
+        "correct_answer": "A",
+        "explanation": "df.dropna() xóa toàn bộ các dòng (hoặc cột) có chứa giá trị NaN.",
+        "key_concept": "Làm sạch dữ liệu"
+      },
+      {
+        "id": 27,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Trong Pandas, phương thức df.fillna(method='ffill') thực hiện thao tác gì?",
+        "choices": {
+          "A": "Điền giá trị bằng 0",
+          "B": "Điền giá trị bằng trung bình cột",
+          "C": "Điền giá trị thiếu bằng giá trị liền trước (forward fill)",
+          "D": "Xóa dòng thiếu dữ liệu"
+        },
+        "correct_answer": "C",
+        "explanation": "method='ffill' thực hiện điền tiến (forward fill), lấy giá trị của dòng ngay trước đó điền vào ô bị thiếu.",
+        "key_concept": "Làm sạch dữ liệu"
+      },
+      {
+        "id": 28,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Phương pháp nào dùng để gom nhóm dữ liệu theo một cột (ví dụ theo mã cổ phiếu) để tính toán các chỉ số thống kê trong Pandas?",
+        "choices": {
+          "A": "df.sort_values()",
+          "B": "df.groupby()",
+          "C": "df.merge()",
+          "D": "df.pivot()"
+        },
+        "correct_answer": "B",
+        "explanation": "df.groupby() thực hiện mô hình 'chia nhóm - tính toán - tổng hợp' theo giá trị của cột chỉ định.",
+        "key_concept": "Pandas"
+      },
+      {
+        "id": 29,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Hành động nào sau đây thể hiện việc tuân thủ 'Best Practices' khi viết code Python tài chính?",
+        "choices": {
+          "A": "Đặt tên biến ngắn gọn một ký tự như x, y, z",
+          "B": "Đặt tên biến rõ nghĩa như gia_dong_cua thay vì x",
+          "C": "Không bao giờ ghi chú (comment) trong code",
+          "D": "Chạy lung tung các cell không theo thứ tự"
+        },
+        "correct_answer": "B",
+        "explanation": "Code tài chính cần độ chính xác cao và dễ kiểm tra lại, việc đặt tên biến rõ nghĩa giúp tăng tính dễ đọc và bảo trì.",
+        "key_concept": "Best Practices"
+      },
+      {
+        "id": 30,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Trong Python, từ khóa nào dùng để định nghĩa một hàm (function)?",
+        "choices": {
+          "A": "func",
+          "B": "define",
+          "C": "def",
+          "D": "lambda"
+        },
+        "correct_answer": "C",
+        "explanation": "Từ khóa def được sử dụng để bắt đầu khai báo một hàm trong Python.",
+        "key_concept": "Hàm trong Python"
+      },
+      {
+        "id": 31,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Cấu trúc điều kiện nào trong Python được sử dụng khi cần kiểm tra nhiều điều kiện tuần tự?",
+        "choices": {
+          "A": "if / else",
+          "B": "if / elif / else",
+          "C": "try / except",
+          "D": "for / in"
+        },
+        "correct_answer": "B",
+        "explanation": "if / elif / else cho phép kiểm tra nhiều điều kiện khác nhau theo thứ tự từ trên xuống.",
+        "key_concept": "Cấu trúc điều kiện"
+      },
+      {
+        "id": 32,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Khối lệnh nào trong Python dùng để bắt và xử lý ngoại lệ (lỗi chạy chương trình), giúp chương trình không bị dừng đột ngột?",
+        "choices": {
+          "A": "if / else",
+          "B": "try / except",
+          "C": "for / while",
+          "D": "def / return"
+        },
+        "correct_answer": "B",
+        "explanation": "try / except giúp bắt các ngoại lệ (như chia cho 0, thiếu dữ liệu) và xử lý an toàn mà không làm crash chương trình.",
+        "key_concept": "Xử lý ngoại lệ"
+      },
+      {
+        "id": 33,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Hàm ẩn danh (không cần đặt tên) dùng một lần trong Python được khởi tạo bằng từ khóa nào?",
+        "choices": {
+          "A": "def",
+          "B": "lambda",
+          "C": "anon",
+          "D": "func"
+        },
+        "correct_answer": "B",
+        "explanation": "Từ khóa lambda dùng để tạo các hàm ẩn danh ngắn gọn, thường dùng kết hợp với sorted() hoặc filter().",
+        "key_concept": "Hàm Lambda"
+      },
+      {
+        "id": 34,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Trong lập trình hướng đối tượng (OOP) của Python, phương thức khởi tạo tự động chạy khi tạo đối tượng mới có tên là gì?",
+        "choices": {
+          "A": "__start__",
+          "B": "__init__",
+          "C": "__main__",
+          "D": "__new__"
+        },
+        "correct_answer": "B",
+        "explanation": "__init__ là constructor (phương thức khởi tạo) được gọi tự động khi một đối tượng mới được tạo ra từ class.",
+        "key_concept": "OOP"
+      },
+      {
+        "id": 35,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Trong phương thức của một class Python, tham số đầu tiên bắt buộc đại diện cho chính đối tượng hiện tại là gì?",
+        "choices": {
+          "A": "this",
+          "B": "self",
+          "C": "object",
+          "D": "instance"
+        },
+        "correct_answer": "B",
+        "explanation": "self là tham số chuẩn bắt buộc đầu tiên trong các method của class Python để truy cập thuộc tính và phương thức của đối tượng.",
+        "key_concept": "OOP"
+      },
+      {
+        "id": 36,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Kỹ thuật nào trong lập trình hướng đối tượng cho phép lớp con tận dụng các thuộc tính và phương thức của lớp cha mà không cần viết lại?",
+        "choices": {
+          "A": "Đa hình (Polymorphism)",
+          "B": "Kế thừa (Inheritance)",
+          "C": "Đóng gói (Encapsulation)",
+          "D": "Trừu tượng (Abstraction)"
+        },
+        "correct_answer": "B",
+        "explanation": "Kế thừa (Inheritance) cho phép tạo class con mở rộng từ class cha mà không cần sửa đổi code của lớp cơ sở.",
+        "key_concept": "OOP"
+      },
+      {
+        "id": 37,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Phương thức nào trong Pandas dùng để kết hợp (gộp) hai DataFrame lại với nhau dựa trên một cột khóa chung (tương tự VLOOKUP trong Excel)?",
+        "choices": {
+          "A": "df.concat()",
+          "B": "df.merge()",
+          "C": "df.join()",
+          "D": "df.blend()"
+        },
+        "correct_answer": "B",
+        "explanation": "df.merge() dùng để kết hợp các bảng dữ liệu theo khóa chung (như mã cổ phiếu), giống phép nối join trong SQL.",
+        "key_concept": "Pandas nâng cao"
+      },
+      {
+        "id": 38,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Trong Python, dấu gạch dưới trong số nguyên (ví dụ: gia_von = 100_000_000) có tác dụng gì?",
+        "choices": {
+          "A": "Làm cho số có giá trị lớn hơn",
+          "B": "Giúp con người dễ đọc số lớn, Python tự động bỏ qua khi tính toán",
+          "C": "Gây lỗi cú pháp nếu chạy",
+          "D": "Chuyển số thành kiểu chuỗi"
+        },
+        "correct_answer": "B",
+        "explanation": "Dấu gạch dưới trong số học giúp phân tách hàng triệu/nghìn cho dễ nhìn, Python hoàn toàn bỏ qua các dấu này khi biên dịch.",
+        "key_concept": "Cơ bản Python"
+      },
+      {
+        "id": 39,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Mô phỏng nào sử dụng số ngẫu nhiên để tạo ra hàng nghìn kịch bản biến động thị trường nhằm ước lượng rủi ro?",
+        "choices": {
+          "A": "Mô phỏng Monte Carlo",
+          "B": "Hồi quy tuyến tính",
+          "C": "Cây quyết định",
+          "D": "K-Means Clustering"
+        },
+        "correct_answer": "A",
+        "explanation": "Mô phỏng Monte Carlo tạo ra hàng nghìn kịch bản ngẫu nhiên dựa trên phân phối xác suất để đo lường rủi ro tài chính.",
+        "key_concept": "NumPy ứng dụng"
+      },
+      {
+        "id": 40,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Phương pháp chuẩn hóa dữ liệu nào đưa các giá trị về khoảng giá trị từ 0 đến 1?",
+        "choices": {
+          "A": "Z-score normalization",
+          "B": "Min-Max Scaling",
+          "C": "Log transformation",
+          "D": "Decimal scaling"
+        },
+        "correct_answer": "B",
+        "explanation": "Min-Max Scaling thực hiện co giãn dữ liệu về đoạn $[0, 1]$ dựa trên giá trị nhỏ nhất và lớn nhất.",
+        "key_concept": "Chuẩn hóa dữ liệu"
+      },
+      {
+        "id": 41,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Tính kết quả đoạn code Python sau: `gia_von = 100_000_000; loi_nhuan = 10_000_000; ty_suat = loi_nhuan / gia_von; print(f'{ty_suat:.0%}')`",
+        "choices": {
+          "A": "10%",
+          "B": "10.0%",
+          "C": "1%",
+          "D": "0.1%"
+        },
+        "correct_answer": "A",
+        "explanation": "Tỷ suất lợi nhuận = $10.000.000 / 100.000.000 = 0.1$. Định dạng hiển thị phần trăm với 0 chữ số thập phân f'{ty_suat:.0%}' cho ra kết quả '10%'.",
+        "key_concept": "Thực hành Python"
+      },
+      {
+        "id": 42,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Kết quả của lệnh `print(type(68500.0))` trong Python là gì?",
+        "choices": {
+          "A": "<class 'int'>",
+          "B": "<class 'float'>",
+          "C": "<class 'str'>",
+          "D": "<class 'bool'>"
+        },
+        "correct_answer": "B",
+        "explanation": "Số 68500.0 có chứa phần thập phân (dấu chấm phẩy), do đó Python nhận diện đây là kiểu số thực ($float$).",
+        "key_concept": "Kiểu dữ liệu"
+      },
+      {
+        "id": 43,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Cho list giá: `gia = [68500, 69000, 68200]`. Lệnh nào sau đây trả về giá trị 69000?",
+        "choices": {
+          "A": "gia[0]",
+          "B": "gia[1]",
+          "C": "gia[2]",
+          "D": "gia[-1]"
+        },
+        "correct_answer": "B",
+        "explanation": "Index của list tính từ 0. gia[0] = 68500, gia[1] = 69000, gia[2] = 68200.",
+        "key_concept": "List slicing"
+      },
+      {
+        "id": 44,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Cho list giá: `gia = [68500, 69000, 68200, 70100, 71500]`. Kết quả của lệnh `gia[-1]` là gì?",
+        "choices": {
+          "A": "68500",
+          "B": "69000",
+          "C": "70100",
+          "D": "71500"
+        },
+        "correct_answer": "D",
+        "explanation": "Index âm trong Python tính ngược từ cuối lên. gia[-1] là phần tử cuối cùng của list, tức là 71500.",
+        "key_concept": "List slicing"
+      },
+      {
+        "id": 45,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Cho danh mục: `danh_muc = {'VNM': 100, 'FPT': 50}`. Kết quả khi gọi `danh_muc['FPT']` là gì?",
+        "choices": {
+          "A": "VNM",
+          "B": "100",
+          "C": "50",
+          "D": "KeyError"
+        },
+        "correct_answer": "C",
+        "explanation": "Truy xuất giá trị trong Dictionary thông qua khóa (key). Khóa 'FPT' trả về giá trị tương ứng là 50.",
+        "key_concept": "Dictionary"
+      },
+      {
+        "id": 46,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Cho hai tập hợp: `a = {'VNM', 'FPT'}` và `b = {'FPT', 'HPG'}`. Kết quả của phép toán giao `a & b` là gì?",
+        "choices": {
+          "A": "{'VNM'}",
+          "B": "{'FPT'}",
+          "C": "{'VNM', 'FPT', 'HPG'}",
+          "D": "{'HPG'}"
+        },
+        "correct_answer": "B",
+        "explanation": "Phép toán giao (&) giữa hai tập hợp Set trả về các phần tử xuất hiện ở CẢ HAI tập hợp. Phần tử chung duy nhất là 'FPT'.",
+        "key_concept": "Set operations"
+      },
+      {
+        "id": 47,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Cho đoạn code điều kiện rủi ro:\n```python\nty_suat_no = 1.5\nif ty_suat_no < 1.0:\n    muc = 'Thấp'\nelif ty_suat_no < 2.0:\n    muc = 'Trung bình'\nelse:\n    muc = 'Cao'\n```\nBiến `muc` nhận giá trị nào sau đây?",
+        "choices": {
+          "A": "Thấp",
+          "B": "Trung bình",
+          "C": "Cao",
+          "D": "Lỗi"
+        },
+        "correct_answer": "B",
+        "explanation": "Vì ty_suat_no = 1.5 không nhỏ hơn 1.0, nhưng nhỏ hơn 2.0, câu lệnh điều kiện thứ hai (elif) khớp và gán muc = 'Trung bình'.",
+        "key_concept": "Cấu trúc điều kiện"
+      },
+      {
+        "id": 48,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Cho hàm tính lãi kép:\n```python\ndef tinh_lai_kep(von, r, n):\n    return von * (1 + r) ** n\n```\nKết quả của `tinh_lai_kep(100, 0.1, 2)` là bao nhiêu?",
+        "choices": {
+          "A": "120",
+          "B": "121.0",
+          "C": "110.0",
+          "D": "100.0"
+        },
+        "correct_answer": "B",
+        "explanation": "Áp dụng công thức: $100 \\times (1 + 0.1)^2 = 100 \\times (1.1)^2 = 100 \\times 1.21 = 121.0$.",
+        "key_concept": "Hàm Python"
+      },
+      {
+        "id": 49,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Cho mảng NumPy: `import numpy as np; gia = np.array([10, 20, 30])`. Kết quả của `gia * 2` là gì?",
+        "choices": {
+          "A": "[10, 20, 30, 10, 20, 30]",
+          "B": "[20, 40, 60]",
+          "C": "[12, 22, 32]",
+          "D": "60"
+        },
+        "correct_answer": "B",
+        "explanation": "Nhờ tính năng vector hóa của mảng NumPy, phép toán gia * 2 được áp dụng đồng thời cho từng phần tử: $[10\\times2, 20\\times2, 30\\times2] = [20, 40, 60]$.",
+        "key_concept": "NumPy vector hóa"
+      },
+      {
+        "id": 50,
+        "type": "multiple_choice",
+        "points": 0.1,
+        "question": "Cho mảng NumPy: `gia = np.array([100, 200, 300])`. Kết quả của lệnh `gia.mean()` là bao nhiêu?",
+        "choices": {
+          "A": "100",
+          "B": "200",
+          "C": "300",
+          "D": "600"
+        },
+        "correct_answer": "B",
+        "explanation": "Hàm .mean() tính giá trị trung bình cộng của mảng: $(100 + 200 + 300) / 3 = 600 / 3 = 200$.",
+        "key_concept": "NumPy thống kê"
+      },
+      {
+        "id": 51,
+        "type": "essay",
+        "points": 0.5,
+        "question": "Hãy giải thích tại sao môi trường Jupyter Notebook lại được coi là công cụ tiêu chuẩn trong ngành khoa học dữ liệu và tài chính định lượng (quant finance)? Nêu ít nhất 3 ưu điểm chính.",
+        "choices": null,
+        "correct_answer": null,
+        "sample_answer": "Jupyter Notebook được coi là công cụ tiêu chuẩn trong tài chính định lượng vì các lý do sau:\n1. Lập trình tương tác theo từng ô lệnh (cell) độc lập, giúp kiểm tra kết quả ngay lập tức mà không cần chạy lại toàn bộ chương trình.\n2. Cho phép kết hợp linh hoạt giữa Code cell (chạy code Python) và Markdown cell (viết văn bản diễn giải, chèn công thức toán học $...$), rất hữu ích cho việc báo cáo phân tích.\n3. Kết quả trực quan (bảng số liệu, biểu đồ) hiển thị trực tiếp ngay bên dưới cell, giúp lưu giữ toàn bộ quá trình nghiên cứu khám phá dữ liệu trong cùng một file (.ipynb).",
+        "explanation": "Học sinh cần nắm vững bản chất tương tác và tính trực quan của Jupyter Notebook trong quy trình phân tích tài chính.",
+        "key_concept": "Jupyter Notebook"
+      },
+      {
+        "id": 52,
+        "type": "essay",
+        "points": 0.5,
+        "question": "Phân biệt sự khác nhau cơ bản giữa cấu trúc dữ liệu List và Tuple trong Python. Trong bài toán phân tích tài chính, khi nào nên dùng List và khi nào nên dùng Tuple?",
+        "choices": null,
+        "correct_answer": null,
+        "sample_answer": "- List: Có thứ tự, CÓ THỂ thay đổi (mutable), hỗ trợ các phương thức thêm/xóa phần tử như append(), remove().\n- Tuple: Có thứ tự, KHÔNG THỂ thay đổi (immutable) sau khi đã khởi tạo.\n- Ứng dụng tài chính:\n  + Dùng List khi lưu trữ dữ liệu thay đổi theo thời gian, ví dụ chuỗi giá đóng cửa hằng ngày (vì có thể cập nhật giá mới bằng append()).\n  + Dùng Tuple khi lưu trữ thông tin cố định không được phép thay đổi để bảo vệ toàn vẹn dữ liệu, ví dụ thông tin mã cổ phiếu, tên công ty, sàn niêm yết ('VNM', 'Vinamilk', 'HOSE').",
+        "explanation": "Học sinh phân biệt tính biến đổi (mutability) và ứng dụng thực tế tương ứng trong tài chính.",
+        "key_concept": "List vs Tuple"
+      },
+      {
+        "id": 53,
+        "type": "essay",
+        "points": 0.5,
+        "question": "Trình bày ưu điểm vượt trội của mảng NumPy (ndarray) so với danh sách (list) thông thường của Python khi xử lý dữ liệu tài chính lớn. Cho biết khái niệm vector hóa.",
+        "choices": null,
+        "correct_answer": null,
+        "sample_answer": "- Ưu điểm: Mảng NumPy được lưu trữ liền kề trong bộ nhớ và tối ưu bằng mã C bên dưới, giúp tốc độ xử lý nhanh hơn list thông thường từ 10 đến 100 lần, cực kỳ quan trọng khi xử lý hàng triệu dòng dữ liệu giao dịch chứng khoán.\n- Vector hóa (Vectorization): Là kỹ thuật cho phép thực hiện các phép toán số học trên toàn bộ mảng dữ liệu cùng một lúc mà KHÔNG CẦN sử dụng vòng lặp for thủ công (ví dụ: gia / 24500 sẽ tự động chia mọi phần tử trong mảng cho tỷ giá).",
+        "explanation": "Làm nổi bật sức mạnh tính toán hiệu năng cao của NumPy thông qua cơ chế vector hóa.",
+        "key_concept": "NumPy Vector hóa"
+      },
+      {
+        "id": 54,
+        "type": "essay",
+        "points": 0.5,
+        "question": "Giải thích sự khác biệt giữa hai cấu trúc cốt lõi Series và DataFrame trong thư viện Pandas. Cho ví dụ minh họa về ứng dụng thực tế trong chứng khoán.",
+        "choices": null,
+        "correct_answer": null,
+        "sample_answer": "- Series: Cấu trúc dữ liệu 1 chiều có nhãn (label), tương tự như một cột đơn lẻ trong bảng tính Excel hoặc một cột giá của một mã cổ phiếu.\n- DataFrame: Cấu trúc dữ liệu 2 chiều dạng bảng gồm nhiều hàng và cột (có nhãn cho cả hàng và cột), tương tự như toàn bộ bảng dữ liệu giao dịch gồm nhiều mã cổ phiếu và nhiều chỉ số.\n- Ví dụ thực tế: Một cột 'Gia_dong_cua' trong lịch sử giá cổ phiếu VNM là một Series; toàn bộ bảng gồm các cột Ngày, Mã CP, Giá mở cửa, Giá đóng cửa, Khối lượng giao dịch là một DataFrame.",
+        "explanation": "Phân biệt rõ ràng chiều dữ liệu (1D vs 2D) trong Pandas.",
+        "key_concept": "Pandas Series & DataFrame"
+      },
+      {
+        "id": 55,
+        "type": "essay",
+        "points": 0.5,
+        "question": "Tại sao dữ liệu tài chính thực tế thường hay bị thiếu (missing data)? Trình bày 3 cách xử lý dữ liệu thiếu phổ biến sử dụng thư viện Pandas.",
+        "choices": null,
+        "correct_answer": null,
+        "sample_answer": "- Nguyên nhân: Do ngày nghỉ lễ không giao dịch, lỗi hệ thống thu thập dữ liệu API, hoặc cổ phiếu mới niêm yết chưa có dữ liệu quá khứ.\n- 3 cách xử lý trong Pandas:\n  1. Loại bỏ dữ liệu thiếu (df.dropna()): Xóa bỏ toàn bộ các dòng hoặc cột có chứa giá trị NaN (đơn giản nhưng dễ làm mất mát thông tin).\n  2. Điền giá trị liền trước (df.fillna(method='ffill')): Giả định giá không đổi so với ngày hôm trước (Forward Fill - rất phổ biến với dữ liệu chuỗi thời gian giá).\n  3. Điền bằng giá trị thống kê (df.fillna(df.mean())): Thay thế các ô trống bằng giá trị trung bình của cột tương ứng.",
+        "explanation": "Trang bị kỹ năng làm sạch dữ liệu thực tế - một bước cốt lõi trong quy trình Data Science tài chính.",
+        "key_concept": "Làm sạch dữ liệu thiếu"
+      }
+    ]
+  },
+  "answers": {
+    "1": "A",
+    "2": "B",
+    "3": "C",
+    "4": "A",
+    "5": "C",
+    "6": "B",
+    "7": "B",
+    "8": "B",
+    "9": "C",
+    "10": "C",
+    "11": "C",
+    "12": "B",
+    "13": "B",
+    "14": "B",
+    "15": "C",
+    "16": "B",
+    "17": "D",
+    "18": "B",
+    "19": "B",
+    "20": "B",
+    "21": "A",
+    "22": "A",
+    "23": "B",
+    "24": "B",
+    "25": "A",
+    "26": "A",
+    "27": "C",
+    "28": "B",
+    "29": "B",
+    "30": "B",
+    "31": "C",
+    "32": "B",
+    "33": "B",
+    "34": "B",
+    "35": "B",
+    "36": "B",
+    "37": "B",
+    "38": "B",
+    "39": "A",
+    "40": "A",
+    "41": "A",
+    "42": "B",
+    "43": "B",
+    "44": "D",
+    "45": "C",
+    "46": "C",
+    "47": "B",
+    "48": "B",
+    "49": "B",
+    "50": "B",
+    "51": "- có thể tra ngay đáp án để biết có code lỗi ko fix bug cho lẹ\n- phù hợp với người mới\n- render đc nhiều thứ dễ dàng hơn",
+    "52": "list ko có tính bất biến còn tuple ngược lại\nlist xử dụng khi muốn cho phép dữ liệu đc thay đổi như khi cho khách hàng nhập dữ ;liệu vô\ncòn tuple thì ko muốn dữ liệu bị thay đổi dành cho các dev muốn làm code",
+    "53": "có thể thao tác tốt hơn với các dữ liệu trong danh sách ",
+    "54": "series chỉ có 1 cột kèm thuộc tính , df thì nhiều cột \ndf ví dụ như bảng báo cáo tài chính có nhiều cột, trong số các cột đó muốn gọi rieengh net income ra để xem thì sài series ",
+    "55": "do các số thập phân thường ko thể trình bày vô hạn "
+  },
+  "result": {
+    "total_score": 7.47,
+    "percentage": 74.7,
+    "grade_letter": "B",
+    "results": [
+      {
+        "question_id": "1",
+        "student_answer": "A",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "Trong Jupyter Notebook, Code cell dùng để viết và chạy code Python, còn Markdown cell dùng để viết văn bản, giải thích và công thức $...$."
+      },
+      {
+        "question_id": "2",
+        "student_answer": "B",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "Tổ hợp phím Shift + Enter được sử dụng để chạy (execute) nội dung của một cell hiện tại và chuyển sang cell tiếp theo trong Jupyter Notebook."
+      },
+      {
+        "question_id": "3",
+        "student_answer": "C",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "File Jupyter Notebook được lưu dưới định dạng .ipynb (Interactive Python Notebook), chứa cả mã nguồn, kết quả chạy và văn bản giải thích."
+      },
+      {
+        "question_id": "4",
+        "student_answer": "A",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "Biến so_luong = 100 là kiểu số nguyên ($int$). '100' là kiểu chuỗi ($str$), 100.0 là kiểu số thực ($float$), và True là kiểu boolean ($bool$)."
+      },
+      {
+        "question_id": "5",
+        "student_answer": "C",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "Mã cổ phiếu là các ký tự văn bản, do đó phải sử dụng kiểu chuỗi ký tự ($str$)."
+      },
+      {
+        "question_id": "6",
+        "student_answer": "B",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "Hàm type(bien) trả về kiểu dữ liệu của biến được truyền vào, rất hữu ích trong quá trình gỡ lỗi ($debug$)."
+      },
+      {
+        "question_id": "7",
+        "student_answer": "B",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "List là cấu trúc dữ liệu dạng chuỗi có thứ tự và có thể thay đổi được (thêm, sửa, xóa phần tử), ví dụ dùng lưu lịch sử giá theo ngày."
+      },
+      {
+        "question_id": "8",
+        "student_answer": "B",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "Tuple là cấu trúc dữ liệu bất biến (không thể thêm, bớt, sửa phần tử), rất phù hợp để lưu thông tin cố định như mã cổ phiếu và ngày niêm yết."
+      },
+      {
+        "question_id": "9",
+        "student_answer": "C",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "Python đánh chỉ số (index) bắt đầu từ 0. Do đó, phần tử đầu tiên của list gia[0] ứng với vị trí số 0."
+      },
+      {
+        "question_id": "10",
+        "student_answer": "C",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "Dict lưu dữ liệu theo cặp khóa và giá trị, ví dụ danh_muc = {'VNM': 100}, cho phép tra cứu nhanh qua khóa thay vì vị trí."
+      },
+      {
+        "question_id": "11",
+        "student_answer": "C",
+        "points": 0.1,
+        "is_correct": false,
+        "points_earned": 0,
+        "feedback": "Đáp án đúng là A: Set.",
+        "explanation": "Set là tập hợp không trùng lặp và không có thứ tự, hỗ trợ các phép toán tập hợp như giao (&), hợp (|), hiệu (-)."
+      },
+      {
+        "question_id": "12",
+        "student_answer": "B",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "NumPy (Numerical Python) cung cấp cấu trúc mảng ndarray giúp tính toán vector hóa nhanh hơn list thông thường từ 10-100 lần."
+      },
+      {
+        "question_id": "13",
+        "student_answer": "B",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "Quy ước tiêu chuẩn trong cộng đồng lập trình là import numpy as np."
+      },
+      {
+        "question_id": "14",
+        "student_answer": "B",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "DataFrame là cấu trúc dữ liệu 2 chiều dạng bảng của Pandas (tương tự bảng tính Excel), trong khi Series là cấu trúc 1 chiều (một cột)."
+      },
+      {
+        "question_id": "15",
+        "student_answer": "C",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "Quy ước tiêu chuẩn trong cộng đồng lập trình là import pandas as pd."
+      },
+      {
+        "question_id": "16",
+        "student_answer": "B",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "df.head() trả về 5 dòng đầu tiên của DataFrame, còn df.tail() trả về 5 dòng cuối cùng."
+      },
+      {
+        "question_id": "17",
+        "student_answer": "D",
+        "points": 0.1,
+        "is_correct": false,
+        "points_earned": 0,
+        "feedback": "Đáp án đúng là B: df.info().",
+        "explanation": "df.info() cung cấp thông tin chi tiết về số dòng, tên cột, kiểu dữ liệu ($dtype$) và số lượng giá trị không null."
+      },
+      {
+        "question_id": "18",
+        "student_answer": "B",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "Thuộc tính df.shape trả về (số dòng, số cột) của DataFrame."
+      },
+      {
+        "question_id": "19",
+        "student_answer": "B",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": ".loc dùng để chọn dữ liệu theo nhãn (tên dòng/tên cột), trong khi .iloc dùng theo vị trí số nguyên."
+      },
+      {
+        "question_id": "20",
+        "student_answer": "B",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": ".iloc cho phép truy xuất phần tử dựa trên vị trí số nguyên (bắt đầu từ 0)."
+      },
+      {
+        "question_id": "21",
+        "student_answer": "A",
+        "points": 0.1,
+        "is_correct": false,
+        "points_earned": 0,
+        "feedback": "Đáp án đúng là B: Seaborn.",
+        "explanation": "Seaborn được xây dựng trên nền Matplotlib, chuyên cung cấp các biểu đồ thống kê đẹp mắt và dễ sử dụng hơn."
+      },
+      {
+        "question_id": "22",
+        "student_answer": "A",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "Plotly cho phép tạo các biểu đồ tương tác (phóng to, thu nhỏ, rê chuột xem giá trị), rất thích hợp cho dashboard tài chính."
+      },
+      {
+        "question_id": "23",
+        "student_answer": "B",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "yfinance là thư viện phổ biến để tải dữ liệu lịch sử giá cổ phiếu quốc tế từ Yahoo Finance."
+      },
+      {
+        "question_id": "24",
+        "student_answer": "B",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "vnstock là thư viện mã nguồn mở chuyên thu thập dữ liệu chứng khoán Việt Nam."
+      },
+      {
+        "question_id": "25",
+        "student_answer": "A",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "df.isna() hoặc df.isnull() trả về bảng giá trị True/False biểu thị ô dữ liệu có bị thiếu hay không."
+      },
+      {
+        "question_id": "26",
+        "student_answer": "A",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "df.dropna() xóa toàn bộ các dòng (hoặc cột) có chứa giá trị NaN."
+      },
+      {
+        "question_id": "27",
+        "student_answer": "C",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "method='ffill' thực hiện điền tiến (forward fill), lấy giá trị của dòng ngay trước đó điền vào ô bị thiếu."
+      },
+      {
+        "question_id": "28",
+        "student_answer": "B",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "df.groupby() thực hiện mô hình 'chia nhóm - tính toán - tổng hợp' theo giá trị của cột chỉ định."
+      },
+      {
+        "question_id": "29",
+        "student_answer": "B",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "Code tài chính cần độ chính xác cao và dễ kiểm tra lại, việc đặt tên biến rõ nghĩa giúp tăng tính dễ đọc và bảo trì."
+      },
+      {
+        "question_id": "30",
+        "student_answer": "B",
+        "points": 0.1,
+        "is_correct": false,
+        "points_earned": 0,
+        "feedback": "Đáp án đúng là C: def.",
+        "explanation": "Từ khóa def được sử dụng để bắt đầu khai báo một hàm trong Python."
+      },
+      {
+        "question_id": "31",
+        "student_answer": "C",
+        "points": 0.1,
+        "is_correct": false,
+        "points_earned": 0,
+        "feedback": "Đáp án đúng là B: if / elif / else.",
+        "explanation": "if / elif / else cho phép kiểm tra nhiều điều kiện khác nhau theo thứ tự từ trên xuống."
+      },
+      {
+        "question_id": "32",
+        "student_answer": "B",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "try / except giúp bắt các ngoại lệ (như chia cho 0, thiếu dữ liệu) và xử lý an toàn mà không làm crash chương trình."
+      },
+      {
+        "question_id": "33",
+        "student_answer": "B",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "Từ khóa lambda dùng để tạo các hàm ẩn danh ngắn gọn, thường dùng kết hợp với sorted() hoặc filter()."
+      },
+      {
+        "question_id": "34",
+        "student_answer": "B",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "__init__ là constructor (phương thức khởi tạo) được gọi tự động khi một đối tượng mới được tạo ra từ class."
+      },
+      {
+        "question_id": "35",
+        "student_answer": "B",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "self là tham số chuẩn bắt buộc đầu tiên trong các method của class Python để truy cập thuộc tính và phương thức của đối tượng."
+      },
+      {
+        "question_id": "36",
+        "student_answer": "B",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "Kế thừa (Inheritance) cho phép tạo class con mở rộng từ class cha mà không cần sửa đổi code của lớp cơ sở."
+      },
+      {
+        "question_id": "37",
+        "student_answer": "B",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "df.merge() dùng để kết hợp các bảng dữ liệu theo khóa chung (như mã cổ phiếu), giống phép nối join trong SQL."
+      },
+      {
+        "question_id": "38",
+        "student_answer": "B",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "Dấu gạch dưới trong số học giúp phân tách hàng triệu/nghìn cho dễ nhìn, Python hoàn toàn bỏ qua các dấu này khi biên dịch."
+      },
+      {
+        "question_id": "39",
+        "student_answer": "A",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "Mô phỏng Monte Carlo tạo ra hàng nghìn kịch bản ngẫu nhiên dựa trên phân phối xác suất để đo lường rủi ro tài chính."
+      },
+      {
+        "question_id": "40",
+        "student_answer": "A",
+        "points": 0.1,
+        "is_correct": false,
+        "points_earned": 0,
+        "feedback": "Đáp án đúng là B: Min-Max Scaling.",
+        "explanation": "Min-Max Scaling thực hiện co giãn dữ liệu về đoạn $[0, 1]$ dựa trên giá trị nhỏ nhất và lớn nhất."
+      },
+      {
+        "question_id": "41",
+        "student_answer": "A",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "Tỷ suất lợi nhuận = $10.000.000 / 100.000.000 = 0.1$. Định dạng hiển thị phần trăm với 0 chữ số thập phân f'{ty_suat:.0%}' cho ra kết quả '10%'."
+      },
+      {
+        "question_id": "42",
+        "student_answer": "B",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "Số 68500.0 có chứa phần thập phân (dấu chấm phẩy), do đó Python nhận diện đây là kiểu số thực ($float$)."
+      },
+      {
+        "question_id": "43",
+        "student_answer": "B",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "Index của list tính từ 0. gia[0] = 68500, gia[1] = 69000, gia[2] = 68200."
+      },
+      {
+        "question_id": "44",
+        "student_answer": "D",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "Index âm trong Python tính ngược từ cuối lên. gia[-1] là phần tử cuối cùng của list, tức là 71500."
+      },
+      {
+        "question_id": "45",
+        "student_answer": "C",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "Truy xuất giá trị trong Dictionary thông qua khóa (key). Khóa 'FPT' trả về giá trị tương ứng là 50."
+      },
+      {
+        "question_id": "46",
+        "student_answer": "C",
+        "points": 0.1,
+        "is_correct": false,
+        "points_earned": 0,
+        "feedback": "Đáp án đúng là B: {'FPT'}.",
+        "explanation": "Phép toán giao (&) giữa hai tập hợp Set trả về các phần tử xuất hiện ở CẢ HAI tập hợp. Phần tử chung duy nhất là 'FPT'."
+      },
+      {
+        "question_id": "47",
+        "student_answer": "B",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "Vì ty_suat_no = 1.5 không nhỏ hơn 1.0, nhưng nhỏ hơn 2.0, câu lệnh điều kiện thứ hai (elif) khớp và gán muc = 'Trung bình'."
+      },
+      {
+        "question_id": "48",
+        "student_answer": "B",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "Áp dụng công thức: $100 \\times (1 + 0.1)^2 = 100 \\times (1.1)^2 = 100 \\times 1.21 = 121.0$."
+      },
+      {
+        "question_id": "49",
+        "student_answer": "B",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "Nhờ tính năng vector hóa của mảng NumPy, phép toán gia * 2 được áp dụng đồng thời cho từng phần tử: $[10\\times2, 20\\times2, 30\\times2] = [20, 40, 60]$."
+      },
+      {
+        "question_id": "50",
+        "student_answer": "B",
+        "points": 0.1,
+        "is_correct": true,
+        "points_earned": 0.1,
+        "feedback": "Chính xác!",
+        "explanation": "Hàm .mean() tính giá trị trung bình cộng của mảng: $(100 + 200 + 300) / 3 = 600 / 3 = 200$."
+      },
+      {
+        "question_id": "51",
+        "student_answer": "- có thể tra ngay đáp án để biết có code lỗi ko fix bug cho lẹ\n- phù hợp với người mới\n- render đc nhiều thứ dễ dàng hơn",
+        "points": 0.5,
+        "is_correct": false,
+        "points_earned": 0.2,
+        "feedback": "Bạn đã hiểu phần nào sự tiện lợi và tính tương tác của Jupyter Notebook (dễ kiểm tra code, dễ render). Tuy nhiên, bạn chưa nêu rõ 3 ưu điểm cốt lõi chuẩn theo bài học (tương tác từng cell, kết hợp Markdown/Code, và hiển thị kết quả trực quan ngay dưới cell).",
+        "explanation": "Jupyter Notebook được coi là công cụ tiêu chuẩn trong tài chính định lượng vì các lý do sau:\n1. Lập trình tương tác theo từng ô lệnh (cell) độc lập, giúp kiểm tra kết quả ngay lập tức mà không cần chạy lại toàn bộ chương trình.\n2. Cho phép kết hợp linh hoạt giữa Code cell (chạy code Python) và Markdown cell (viết văn bản diễn giải, chèn công thức toán học $...$), rất hữu ích cho việc báo cáo phân tích.\n3. Kết quả trực quan (bảng số liệu, biểu đồ) hiển thị trực tiếp ngay bên dưới cell, giúp lưu giữ toàn bộ quá trình nghiên cứu khám phá dữ liệu trong cùng một file (.ipynb)."
+      },
+      {
+        "question_id": "52",
+        "student_answer": "list ko có tính bất biến còn tuple ngược lại\nlist xử dụng khi muốn cho phép dữ liệu đc thay đổi như khi cho khách hàng nhập dữ ;liệu vô\ncòn tuple thì ko muốn dữ liệu bị thay đổi dành cho các dev muốn làm code",
+        "points": 0.5,
+        "is_correct": true,
+        "points_earned": 0.5,
+        "feedback": "Rất chính xác! Bạn đã nêu bật được tính bất biến (immutable) của Tuple so với List và đưa ra ví dụ ứng dụng thực tế rất hợp lý (List cho dữ liệu thay đổi, Tuple cho dữ liệu cố định không muốn bị sửa).",
+        "explanation": "- List: Có thứ tự, CÓ THỂ thay đổi (mutable), hỗ trợ các phương thức thêm/xóa phần tử như append(), remove().\n- Tuple: Có thứ tự, KHÔNG THỂ thay đổi (immutable) sau khi đã khởi tạo.\n- Ứng dụng tài chính:\n  + Dùng List khi lưu trữ dữ liệu thay đổi theo thời gian, ví dụ chuỗi giá đóng cửa hằng ngày (vì có thể cập nhật giá mới bằng append()).\n  + Dùng Tuple khi lưu trữ thông tin cố định không được phép thay đổi để bảo vệ toàn vẹn dữ liệu, ví dụ thông tin mã cổ phiếu, tên công ty, sàn niêm yết ('VNM', 'Vinamilk', 'HOSE')."
+      },
+      {
+        "question_id": "53",
+        "student_answer": "có thể thao tác tốt hơn với các dữ liệu trong danh sách ",
+        "points": 0.5,
+        "is_correct": false,
+        "points_earned": 0.1,
+        "feedback": "Câu trả lời của bạn quá chung chung (\"thao tác tốt hơn\"). Bạn chưa chỉ ra được ưu điểm về tốc độ vượt trội (nhờ lưu trữ liền kề và mã C) cũng như khái niệm cốt lõi là vector hóa (tính toán không cần vòng lặp for).",
+        "explanation": "- Ưu điểm: Mảng NumPy được lưu trữ liền kề trong bộ nhớ và tối ưu bằng mã C bên dưới, giúp tốc độ xử lý nhanh hơn list thông thường từ 10 đến 100 lần, cực kỳ quan trọng khi xử lý hàng triệu dòng dữ liệu giao dịch chứng khoán.\n- Vector hóa (Vectorization): Là kỹ thuật cho phép thực hiện các phép toán số học trên toàn bộ mảng dữ liệu cùng một lúc mà KHÔNG CẦN sử dụng vòng lặp for thủ công (ví dụ: gia / 24500 sẽ tự động chia mọi phần tử trong mảng cho tỷ giá)."
+      },
+      {
+        "question_id": "54",
+        "student_answer": "series chỉ có 1 cột kèm thuộc tính , df thì nhiều cột \ndf ví dụ như bảng báo cáo tài chính có nhiều cột, trong số các cột đó muốn gọi rieengh net income ra để xem thì sài series ",
+        "points": 0.5,
+        "is_correct": true,
+        "points_earned": 0.5,
+        "feedback": "Tuyệt vời! Bạn phân biệt rất rõ Series (1 chiều) và DataFrame (nhiều chiều), đồng thời đưa ra ví dụ về bảng báo cáo tài chính và cách lấy một cột ra thành Series rất sinh động và thực tế.",
+        "explanation": "- Series: Cấu trúc dữ liệu 1 chiều có nhãn (label), tương tự như một cột đơn lẻ trong bảng tính Excel hoặc một cột giá của một mã cổ phiếu.\n- DataFrame: Cấu trúc dữ liệu 2 chiều dạng bảng gồm nhiều hàng và cột (có nhãn cho cả hàng và cột), tương tự như toàn bộ bảng dữ liệu giao dịch gồm nhiều mã cổ phiếu và nhiều chỉ số.\n- Ví dụ thực tế: Một cột 'Gia_dong_cua' trong lịch sử giá cổ phiếu VNM là một Series; toàn bộ bảng gồm các cột Ngày, Mã CP, Giá mở cửa, Giá đóng cửa, Khối lượng giao dịch là một DataFrame."
+      },
+      {
+        "question_id": "55",
+        "student_answer": "do các số thập phân thường ko thể trình bày vô hạn ",
+        "points": 0.5,
+        "is_correct": false,
+        "points_earned": 0.0,
+        "feedback": "Ý kiến của bạn về \"số thập phân vô hạn\" chưa chính xác về nguyên nhân dữ liệu tài chính bị thiếu (thường do ngày nghỉ lễ, lỗi API, mã mới niêm yết). Bạn cũng chưa nêu được 3 cách xử lý phổ biến trong Pandas (dropna, ffill, fillna mean).",
+        "explanation": "- Nguyên nhân: Do ngày nghỉ lễ không giao dịch, lỗi hệ thống thu thập dữ liệu API, hoặc cổ phiếu mới niêm yết chưa có dữ liệu quá khứ.\n- 3 cách xử lý trong Pandas:\n  1. Loại bỏ dữ liệu thiếu (df.dropna()): Xóa bỏ toàn bộ các dòng hoặc cột có chứa giá trị NaN (đơn giản nhưng dễ làm mất mát thông tin).\n  2. Điền giá trị liền trước (df.fillna(method='ffill')): Giả định giá không đổi so với ngày hôm trước (Forward Fill - rất phổ biến với dữ liệu chuỗi thời gian giá).\n  3. Điền bằng giá trị thống kê (df.fillna(df.mean())): Thay thế các ô trống bằng giá trị trung bình của cột tương ứng."
+      }
+    ],
+    "weak_points": [
+      "Cần nhớ kỹ các khái niệm kỹ thuật cốt lõi (vector hóa, nguyên nhân thiếu dữ liệu).",
+      "Cần trình bày ý chính rõ ràng, rành mạch hơn thay vì viết tắt."
+    ],
+    "strong_points": [
+      "Khả năng tư duy logic và lấy ví dụ thực tế (như List/Tuple và Series/DataFrame) rất tốt.",
+      "Nắm bắt nhanh các cấu trúc dữ liệu cơ bản."
+    ],
+    "overall_feedback": "Bạn đã làm tốt ở các câu hỏi về cấu trúc dữ liệu (List/Tuple, Series/DataFrame) với ví dụ thực tế rất sinh động. Tuy nhiên, các câu hỏi về lý thuyết công cụ (Jupyter, NumPy vector hóa) và xử lý dữ liệu thiếu còn bị hổng kiến thức. Cần ôn tập lại kỹ phần vector hóa của NumPy và các hàm xử lý NaN trong Pandas nhé!"
+  },
+  "attempts": [
+    {
+      "at": 1791249706.7780046,
+      "score": 7.47
+    }
+  ],
+  "created_at": 1791247940,
+  "id": 1791247940
+}

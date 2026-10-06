@@ -1,0 +1,89 @@
+{
+  "formulas": [
+    {
+      "id": 1,
+      "name": "Hàm hồi quy tổng thể (PRF) và Hàm hồi quy mẫu (SRF) hai biến",
+      "formula": "PRF: $Y_i = \\beta_1 + \\beta_2 X_i + u_i$, SRF: $\\hat{Y}_i = \\hat{\\beta}_1 + \\hat{\\beta}_2 X_i$",
+      "meaning": "Mô hình hóa mối quan hệ tuyến tính giữa biến phụ thuộc Y và biến độc lập X ở cấp độ tổng thể và mẫu.",
+      "example": "Mô hình hồi quy chi tiêu theo thu nhập: $\\hat{Y}_i = 4 + 0.75 X_i$, khi thu nhập bằng 0 thì chi tiêu bình quân là 4 triệu đồng, thu nhập tăng 1 triệu thì chi tiêu bình quân tăng 0,75 triệu đồng."
+    },
+    {
+      "id": 2,
+      "name": "Ước lượng hệ số hồi quy OLS hai biến",
+      "formula": "$\\hat{\\beta}_2 = \\frac{\\sum X_i Y_i - n\\bar{X}\\bar{Y}}{\\sum X_i^2 - n(\\bar{X})^2} = \\frac{\\sum x_i y_i}{\\sum x_i^2}$, $\\hat{\\beta}_1 = \\bar{Y} - \\hat{\\beta}_2\\bar{X}$",
+      "meaning": "Công thức tính hệ số chặn và hệ số góc trong mô hình 2 biến theo phương pháp bình phương nhỏ nhất nhằm tối thiểu hóa tổng bình phương phần dư.",
+      "example": "Tính toán mối quan hệ giữa số tin nhắn từ crush ($X$) và thời gian hạnh phúc ($Y$), ta ước lượng được $\\hat{\\beta}_2 = 8.8935$ và $\\hat{\\beta}_1 = 28.9989$."
+    },
+    {
+      "id": 3,
+      "name": "Tổng bình phương biến thiên (TSS, ESS, RSS)",
+      "formula": "$TSS = \\sum (Y_i - \\bar{Y})^2 = \\sum Y_i^2 - n(\\bar{Y})^2$, $ESS = \\sum (\\hat{Y}_i - \\bar{Y})^2 = \\hat{\\beta}_2^2 \\sum x_i^2$, $RSS = TSS - ESS$",
+      "meaning": "Phân rã tổng độ biến thiên của Y (TSS) thành phần giải thích được bởi mô hình hồi quy (ESS) và phần không giải thích được do sai số (RSS).",
+      "example": "Khi $ESS > RSS$, hàm hồi quy được đánh giá là phù hợp với dữ liệu quan sát và ngược lại."
+    },
+    {
+      "id": 4,
+      "name": "Phương sai sai số ngẫu nhiên và sai số chuẩn của hệ số hồi quy (2 biến)",
+      "formula": "$\\sigma^2 = \\frac{RSS}{n - 2}$, $Var(\\hat{\\beta}_1) = \\frac{\\sum X_i^2}{n \\sum x_i^2} \\sigma^2$, $Var(\\hat{\\beta}_2) = \\frac{\\sigma^2}{\\sum x_i^2}$, $se(\\hat{\\beta}_i) = \\sqrt{Var(\\hat{\\beta}_i)}$",
+      "meaning": "Đo lường mức độ biến động và sai số mẫu của các ước lượng hệ số hồi quy.",
+      "example": "Dùng $se(\\hat{\\beta}_1)$ và $se(\\hat{\\beta}_2)$ để xác định độ chính xác, xây dựng khoảng tin cậy và thực hiện kiểm định t cho các hệ số."
+    },
+    {
+      "id": 5,
+      "name": "Hệ số xác định và hệ số tương quan",
+      "formula": "$R^2 = \\frac{ESS}{TSS}$, $r_{xy} = \\pm\\sqrt{R^2}$ (cùng dấu với $\\hat{\\beta}_2$)",
+      "meaning": "$R^2$ cho biết tỷ lệ phần trăm sự biến động của Y được giải thích bởi các biến độc lập; $r_{xy}$ đo lường mức độ tương quan tuyến tính giữa X và Y.",
+      "example": "$R^2 = 0.75$ nghĩa là biến X giải thích được 75% sự thay đổi của biến Y, còn lại 25% do các yếu tố ngoài mô hình tác động."
+    },
+    {
+      "id": 6,
+      "name": "Khoảng tin cậy cho hệ số hồi quy",
+      "formula": "$\\hat{\\beta}_i - t_{(\\alpha/2; n-k)} \\cdot se(\\hat{\\beta}_i) \\le \\beta_i \\le \\hat{\\beta}_i + t_{(\\alpha/2; n-k)} \\cdot se(\\hat{\\beta}_i)$",
+      "meaning": "Xác định khoảng giá trị chứa hệ số tổng thể $\\beta_i$ với độ tin cậy $1 - \\alpha$.",
+      "example": "Với độ tin cậy 95%, khoảng tin cậy của $\\beta_2$ là $0.308 \\le \\beta_2 \\le 0.367$, nghĩa là khi X thay đổi 1 đơn vị thì Y thay đổi trong khoảng từ 0,308 đến 0,367."
+    },
+    {
+      "id": 7,
+      "name": "Kiểm định giả thuyết về hệ số hồi quy (Kiểm định t)",
+      "formula": "$t = \\frac{\\hat{\\beta}_i - \\beta^*}{se(\\hat{\\beta}_i)}$",
+      "meaning": "Dùng để kiểm định giả thuyết hệ số hồi quy bằng một giá trị $\\beta^*$ (thường kiểm định ý nghĩa thống kê với $\\beta^* = 0$).",
+      "example": "Bác bỏ giả thuyết $H_0: \\beta_i = 0$ khi $|t| > t_{(\\alpha/2; n-k)}$ hoặc p-value $< \\alpha$, chứng tỏ biến độc lập có ảnh hưởng lên biến Y."
+    },
+    {
+      "id": 8,
+      "name": "Kiểm định sự phù hợp của hàm hồi quy (Kiểm định F)",
+      "formula": "$F = \\frac{R^2 / (k - 1)}{(1 - R^2) / (n - k)}$",
+      "meaning": "Kiểm định giả thuyết $H_0: R^2 = 0$ xem mô hình hồi quy có phù hợp với dữ liệu thực tế hay không.",
+      "example": "Nếu $F > F_{(\\alpha; k-1; n-k)}$ hoặc $Sig. F < 0.05$, ta bác bỏ $H_0$, kết luận hàm hồi quy có ý nghĩa thống kê ở mức 5%."
+    },
+    {
+      "id": 9,
+      "name": "Dự báo giá trị trung bình và cá biệt của Y (mô hình 2 biến)",
+      "formula": "$Var(\\hat{Y}_0) = \\sigma^2 [\\frac{1}{n} + \\frac{(X_0 - \\bar{X})^2}{\\sum x_i^2}]$, $Se(Y_0 - \\hat{Y}_0) = \\sigma \\sqrt{1 + \\frac{1}{n} + \\frac{(X_0 - \\bar{X})^2}{\\sum x_i^2}}$",
+      "meaning": "Xác định phương sai sai số khi dự báo giá trị kỳ vọng trung bình hoặc giá trị cá biệt của Y tại điểm $X_0$.",
+      "example": "Sử dụng công thức trên để thiết lập khoảng dự báo doanh số bán hàng trung bình khi chi phí quảng cáo là 9 trăm triệu đồng."
+    },
+    {
+      "id": 10,
+      "name": "Hệ số xác định hiệu chỉnh trong mô hình hồi quy bội",
+      "formula": "$\\bar{R}^2 = 1 - (1 - R^2)\\frac{n - 1}{n - k}$",
+      "meaning": "Đánh giá mức độ giải thích của mô hình sau khi đã hiệu chỉnh theo số lượng biến độc lập k và cỡ mẫu n.",
+      "example": "Khi xem xét đưa thêm biến $X_2$ vào mô hình cùng $X_3$, nếu $\\bar{R}^2$ tăng kèm kiểm định hệ số hồi quy có ý nghĩa thì việc thêm biến là cần thiết."
+    },
+    {
+      "id": 11,
+      "name": "Nguyên tắc thiết lập biến giả",
+      "formula": "\\text{Số biến giả} = m - 1 \\text{ (với } m \\text{ là số tính chất/thuộc tính của biến định tính)}$",
+      "meaning": "Quy tắc lượng hóa các thuộc tính định tính thành biến nhị phân (nhận giá trị 0 hoặc 1) để tránh bẫy biến giả.",
+      "example": "Biến thị trường có 3 khu vực (Miền Bắc, Trung, Nam) cần lập 2 biến giả $D_2$ (Miền Nam) và $D_3$ (Miền Trung), Miền Bắc là mức cơ sở ứng với $D_2 = D_3 = 0$."
+    }
+  ],
+  "summary": "Bộ tài liệu cung cấp kiến thức nền tảng về môn học Kinh tế lượng từ tổng quan đến các mô hình ứng dụng cụ thể. Nội dung bao gồm phương pháp luận, các dạng dữ liệu, phương pháp bình phương nhỏ nhất (OLS) trong hồi quy đơn biến và đa biến. Tài liệu đi sâu vào cách ước lượng tham số, tính toán sai số chuẩn, xây dựng khoảng tin cậy, thực hiện kiểm định giả thuyết thống kê (t, F) và dự báo. Cuối cùng, tài liệu hướng dẫn kỹ thuật đưa các yếu tố định tính vào mô hình thông qua việc thiết lập biến giả.",
+  "key_topics": [
+    "Tổng quan về kinh tế lượng, dữ liệu và hàm hồi quy (PRF, SRF)",
+    "Mô hình hồi quy tuyến tính hai biến và phương pháp OLS",
+    "Mô hình hồi quy tuyến tính nhiều biến (hồi quy bội)",
+    "Kiểm định giả thuyết (t, F), khoảng tin cậy và hệ số xác định R2",
+    "Mô hình hồi quy với biến giả cho các thuộc tính định tính"
+  ]
+}

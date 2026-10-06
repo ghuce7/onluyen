@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  ai-tutor:
+    build: .
+    container_name: matgoc_ai_tutor
+    ports:
+      - "8501:8501"
+    volumes:
+      # Map thư mục data ra ngoài VPS để không bị mất dữ liệu khi restart app
+      - ./data:/app/data
+    restart: unless-stopped

@@ -1,0 +1,303 @@
+[Slide 1]
+CHƯƠNG
+02
+3 TIẾT LÝ THUYẾT
+Cơ Bản Lập Trình Python Tài Chính
+Kiểu dữ liệu, cấu trúc dữ liệu, cấu trúc điều khiển, và hàm — áp dụng trực tiếp vào bài toán tài chính.
+
+[Slide 2]
+CHƯƠNG 2 · NỘI DUNG
+Cơ Bản Lập Trình Python Tài Chính
+2.1
+Kiểu dữ liệu trong tài chính
+2.2
+Cấu trúc dữ liệu: List, Tuple, Dict, Set
+2.3
+Cấu trúc điều kiện và vòng lặp
+2.4
+Hàm, module và xử lý ngoại lệ
+Chương 2 · Nội Dung
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 3]
+2.1 · KIỂU DỮ LIỆU
+Kiểu Dữ Liệu Trong Tài Chính
+int: số nguyên — số lượng cổ phiếu, số ngày giao dịch
+float: số thực — giá cổ phiếu, lãi suất, tỷ suất lợi nhuận
+str: chuỗi ký tự — mã cổ phiếu ('VNM'), tên khách hàng
+bool: đúng/sai — cờ đánh dấu (vd: da_thanh_toan = True)
+Lưu ý đặc biệt: số thực (float) có thể gây sai số nhỏ khi tính tiền — cần cẩn trọng khi so sánh
+Kiểu Dữ Liệu Trong Tài Chính
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 4]
+2.1 · THỰC HÀNH
+Ví Dụ Kiểu Dữ Liệu Tài Chính
+ma_co_phieu = "VNM"        # str
+gia_dong_cua = 68500.0       # float (VNĐ)
+so_luong = 100                # int
+da_khop_lenh = True           # bool
+
+gia_tri_giao_dich = gia_dong_cua * so_luong
+print(f"{ma_co_phieu}: {so_luong} CP x {gia_dong_cua:,.0f}đ "
+      f"= {gia_tri_giao_dich:,.0f}đ")
+type(bien) cho biết kiểu dữ liệu của một biến -- hữu ích khi debug lỗi tính toán.
+Ví Dụ Kiểu Dữ Liệu Tài Chính
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 5]
+2.2 · CẤU TRÚC DỮ LIỆU
+List và Tuple
+List: dãy có thứ tự, CÓ THỂ thay đổi — phù hợp lưu chuỗi giá đóng cửa theo ngày
+Tuple: dãy có thứ tự, KHÔNG THỂ thay đổi — phù hợp lưu thông tin cố định (mã CP, ngày niêm yết)
+Truy cập phần tử bằng chỉ số: gia[0] là phần tử đầu tiên, gia[-1] là phần tử cuối cùng
+List hỗ trợ thêm/xóa phần tử (append, remove); Tuple thì không, giúp bảo vệ dữ liệu không đổi
+Cả hai đều hỗ trợ lặp (for), cắt lát (slicing) như gia[0:5]
+List và Tuple
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 6]
+2.2 · THỰC HÀNH
+List và Tuple Trong Thực Tế
+gia_dong_cua = [68500, 69000, 68200, 70100, 71500]   # list
+thong_tin_cp = ("VNM", "Vinamilk", "HOSE")            # tuple (bất biến)
+
+gia_dong_cua.append(72000)     # thêm giá ngày mới -- OK với list
+print("5 ngày gần nhất:", gia_dong_cua[-5:])
+
+ma, ten, san = thong_tin_cp    # unpacking tuple
+print(f"{ma} ({ten}) niêm yết tại {san}")
+gia_dong_cua[-5:] lấy 5 phần tử cuối -- cú pháp slicing rất hữu ích với dữ liệu chuỗi thời gian.
+List và Tuple Trong Thực Tế
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 7]
+2.2 · CẤU TRÚC DỮ LIỆU
+Dict và Set
+Dict (dictionary): lưu dữ liệu dạng cặp khóa-giá trị — lý tưởng để lưu thông tin danh mục đầu tư
+Truy cập giá trị qua khóa: danh_muc['VNM'] thay vì phải nhớ vị trí trong list
+Set: tập hợp không trùng lặp, không có thứ tự — hữu ích để loại bỏ mã cổ phiếu trùng lặp
+Set hỗ trợ các phép toán tập hợp: giao (&), hợp (|), hiệu (-) — hữu ích so sánh 2 danh mục
+Cả dict và set đều tra cứu (lookup) rất nhanh, phù hợp dữ liệu lớn
+Dict và Set
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 8]
+2.2 · THỰC HÀNH
+Dict và Set Trong Thực Tế
+danh_muc = {"VNM": 100, "FPT": 50, "HPG": 200}   # mã CP: số lượng
+print(f"Số lượng VNM đang nắm giữ: {danh_muc['VNM']}")
+
+danh_muc["MWG"] = 30    # thêm mã cổ phiếu mới
+
+danh_muc_a = {"VNM", "FPT", "HPG"}
+danh_muc_b = {"FPT", "HPG", "MWG"}
+print("Mã chung 2 danh mục:", danh_muc_a & danh_muc_b)
+danh_muc_a & danh_muc_b cho ra các mã cổ phiếu xuất hiện ở CẢ HAI danh mục.
+Dict và Set Trong Thực Tế
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 9]
+2.3 · IF / ELIF / ELSE
+Cấu Trúc Điều Kiện
+ty_suat_no = 1.8   # tỷ lệ nợ trên vốn chủ sở hữu
+
+if ty_suat_no < 1.0:
+    muc_rui_ro = "Thấp"
+elif ty_suat_no < 2.0:
+    muc_rui_ro = "Trung bình"
+else:
+    muc_rui_ro = "Cao"
+
+print(f"Tỷ suất nợ {ty_suat_no} -> Mức rủi ro: {muc_rui_ro}")
+Cấu trúc if/elif/else là nền tảng để phân loại rủi ro tín dụng ở Chương 4.
+Cấu Trúc Điều Kiện
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 10]
+2.3 · FOR / WHILE
+Vòng Lặp
+gia_dong_cua = [68500, 69000, 68200, 70100, 71500]
+
+tong_gia = 0
+for gia in gia_dong_cua:
+    tong_gia += gia
+
+gia_trung_binh = tong_gia / len(gia_dong_cua)
+print(f"Giá trung bình 5 ngày: {gia_trung_binh:,.0f}đ")
+Ở Chương 3 ta sẽ thấy Pandas/NumPy làm việc này nhanh hơn nhiều mà không cần viết vòng lặp.
+Vòng Lặp
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 11]
+2.4 · ĐÓNG GÓI LOGIC TÁI SỬ DỤNG
+Hàm (Function)
+def tinh_lai_kep(von_goc, lai_suat, so_nam):
+    """Tính giá trị vốn sau khi hưởng lãi kép."""
+    return von_goc * (1 + lai_suat) ** so_nam
+
+ket_qua = tinh_lai_kep(100_000_000, 0.07, 10)
+print(f"Sau 10 năm: {ket_qua:,.0f}đ")
+Viết thành hàm giúp tái sử dụng công thức này ở bất kỳ đâu trong notebook, không cần chép lại code.
+Hàm (Function)
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 12]
+2.4 · TỔ CHỨC CODE
+Module
+Module là một file Python (.py) chứa các hàm, biến có thể import và tái sử dụng
+Có thể tự viết module riêng (vd: tai_chinh_utils.py) chứa các hàm tính toán tài chính dùng chung
+import ten_module rồi gọi ten_module.ten_ham() để sử dụng
+Giúp tổ chức dự án lớn thành nhiều file rõ ràng, dễ bảo trì, thay vì một notebook khổng lồ
+Các thư viện như NumPy, Pandas thực chất cũng là các module được cài đặt sẵn
+Module
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 13]
+2.4 · TRY / EXCEPT
+Xử Lý Ngoại Lệ (Exception Handling)
+def tinh_ty_suat_loi_nhuan(gia_mua, gia_ban):
+    try:
+        return (gia_ban - gia_mua) / gia_mua
+    except ZeroDivisionError:
+        print("Lỗi: giá mua bằng 0, không thể tính tỷ suất!")
+        return None
+
+print(tinh_ty_suat_loi_nhuan(50000, 55000))
+print(tinh_ty_suat_loi_nhuan(0, 55000))
+Dữ liệu tài chính thực tế luôn có khả năng lỗi (giá bằng 0, thiếu dữ liệu) -- try/except giúp chương trình không bị dừng đột ngột.
+Xử Lý Ngoại Lệ (Exception Handling)
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 14]
+2.2 · NÂNG CAO
+List/Dict Comprehension: Viết Code Ngắn Gọn Hơn
+Comprehension cho phép tạo list/dict mới chỉ trong MỘT dòng, thay vì vòng lặp for nhiều dòng
+Cú pháp: [biểu_thức for phần_tử in dãy] cho list, {key: value for ...} cho dict
+Có thể thêm điều kiện lọc ngay trong comprehension: [x for x in dãy if điều_kiện]
+Được dùng rất phổ biến trong code Python chuyên nghiệp vì ngắn gọn, dễ đọc khi quen
+Với logic phức tạp, vòng lặp for truyền thống vẫn dễ đọc hơn
+List/Dict Comprehension: Viết Code Ngắn Gọn Hơn
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 15]
+2.2 · NÂNG CAO
+Ví Dụ: List và Dict Comprehension
+gia_5_ngay = [68500, 69000, 68200, 70100, 71500]
+
+# List comprehension: quy đổi toàn bộ giá sang USD
+gia_usd = [gia / 24500 for gia in gia_5_ngay]
+
+# Có điều kiện lọc
+gia_tren_69000 = [gia for gia in gia_5_ngay if gia > 69000]
+
+# Dict comprehension: ghép 2 list thành dict
+ma_cp = ["VNM", "FPT", "HPG"]
+danh_muc = {ma: gia for ma, gia in zip(ma_cp, gia_5_ngay[:3])}
+Comprehension thay thế vòng lặp for + append() truyền thống bằng một dòng duy nhất, ngắn gọn hơn nhiều.
+Ví Dụ: List và Dict Comprehension
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 16]
+2.4 · NÂNG CAO
+Hàm Lambda: Hàm Ẩn Danh Dùng Một Lần
+danh_sach_cp = [
+    {"ma": "VNM", "loi_suat": 0.012},
+    {"ma": "FPT", "loi_suat": 0.028},
+    {"ma": "HPG", "loi_suat": -0.008},
+]
+
+# lambda làm khóa (key) sắp xếp -- không cần định nghĩa hàm riêng
+sap_xep = sorted(danh_sach_cp, key=lambda cp: cp["loi_suat"], reverse=True)
+
+for cp in sap_xep:
+    print(f"{cp['ma']}: {cp['loi_suat']:.1%}")
+lambda tạo một hàm nhỏ, không cần đặt tên -- rất tiện khi chỉ dùng một lần làm tiêu chí (vd: sắp xếp, lọc).
+Hàm Lambda: Hàm Ẩn Danh Dùng Một Lần
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 17]
+2.4 · NÂNG CAO
+Lập Trình Hướng Đối Tượng (OOP)
+class cho phép đóng gói DỮ LIỆU (thuộc tính) và HÀNH VI (method) liên quan vào một đối tượng
+__init__ là method khởi tạo, tự động chạy khi tạo một đối tượng mới từ class
+self là tham số bắt buộc đầu tiên của mọi method, đại diện cho chính đối tượng đó
+OOP rất phù hợp mô hình hóa các khái niệm tài chính: cổ phiếu, tài khoản, danh mục đầu tư
+Đây là nền tảng để hiểu các thư viện lớn như Pandas, Scikit-learn — vốn được xây dựng hoàn toàn bằng OOP
+Lập Trình Hướng Đối Tượng (OOP)
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 18]
+2.4 · NÂNG CAO
+Ví Dụ: Class CoPhieu
+class CoPhieu:
+    def __init__(self, ma_cp, gia_hien_tai):
+        self.ma_cp = ma_cp
+        self.gia_hien_tai = gia_hien_tai
+        self.lich_su_gia = [gia_hien_tai]
+
+    def cap_nhat_gia(self, gia_moi):
+        self.gia_hien_tai = gia_moi
+        self.lich_su_gia.append(gia_moi)
+
+    def tinh_loi_suat(self):
+        return (self.lich_su_gia[-1] - self.lich_su_gia[-2]) / self.lich_su_gia[-2]
+Mỗi đối tượng CoPhieu tự lưu lịch sử giá và tự tính lợi suất của chính nó -- dữ liệu và logic đi cùng nhau.
+Ví Dụ: Class CoPhieu
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 19]
+2.4 · KIẾN TRÚC OOP XUYÊN SUỐT MÔN HỌC
+Từ Một Class Đến Một Kiến Trúc: fintech_lib.py
+Một class đơn lẻ (CoPhieu) chỉ là khởi đầu. Hệ thống FinTech thực tế cần NHIỀU class phối hợp, mỗi class chịu trách nhiệm cho MỘT việc rõ ràng (nguyên tắc Single Responsibility)
+Từ Bài 5 trở đi, chúng ta dùng module dùng chung fintech_lib.py với 5 class cốt lõi, được TÁI SỬ DỤNG xuyên suốt các bài thực hành
+Portfolio KHÔNG tự tính VaR (đó là việc của RiskModel); Strategy KHÔNG tự chạy backtest (đó là việc của Backtester) — mỗi class độc lập, dễ kiểm thử, dễ thay thế riêng lẻ
+Đây là cách các hệ thống quản lý tài sản, giao dịch thuật toán thực tế được tổ chức
+Từ Một Class Đến Một Kiến Trúc: fintech_lib.py
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 20]
+2.4 · KIẾN TRÚC OOP XUYÊN SUỐT MÔN HỌC
+5 Class Cốt Lõi Của fintech_lib.py
+5 Class Cốt Lõi Của fintech_lib.py
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 21]
+2.4 · NÂNG CAO
+Kế Thừa (Inheritance): Mở Rộng Không Sửa Code Cũ
+class Strategy:                       # lớp cơ sở (abstract)
+    def tao_tin_hieu(self, df_gia):
+        raise NotImplementedError
+
+class ChienLuocMA(Strategy):          # lớp con: giao cắt MA
+    def __init__(self, ngan=20, dai=50):
+        self.ngan, self.dai = ngan, dai
+    def tao_tin_hieu(self, df_gia):
+        ...   # trả về tín hiệu 1/0/-1
+
+# Backtester dùng ĐƯỢC với BẤT KỲ lớp con nào của Strategy
+# mà không cần sửa một dòng code nào trong Backtester
+Đây là lợi ích cốt lõi của kế thừa: thêm chiến lược giao dịch MỚI chỉ cần viết class mới, không đụng vào code đã hoạt động.
+Kế Thừa (Inheritance): Mở Rộng Không Sửa Code Cũ
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 22]
+2 · LƯU Ý CHƯƠNG 2
+Lưu Ý & Best Practices
+Dùng list khi thứ tự và khả năng thay đổi quan trọng; dùng tuple cho dữ liệu không nên bị sửa
+Dùng dict khi cần tra cứu theo khóa (vd: theo mã cổ phiếu) thay vì theo vị trí trong danh sách
+Luôn thêm docstring ("""...""") cho hàm để người khác (và chính bạn sau này) hiểu hàm làm gì
+Bắt lỗi cụ thể (ZeroDivisionError, KeyError...) thay vì except: chung chung để dễ debug
+Với dữ liệu lớn, ưu tiên dùng NumPy/Pandas (Chương 3) thay vì vòng lặp for thuần Python
+Lưu Ý & Best Practices
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 23]
+TÓM TẮT CHƯƠNG
+Tóm Tắt Chương 2
+1
+Kiểu dữ liệu (int, float, str, bool) và cấu trúc dữ liệu (list, tuple, dict, set) là nền tảng biểu diễn dữ liệu tài chính
+2
+Cấu trúc điều kiện và vòng lặp cho phép tự động hóa các quyết định và tính toán lặp lại
+3
+Hàm giúp đóng gói logic tái sử dụng; try/except giúp chương trình xử lý dữ liệu lỗi một cách an toàn

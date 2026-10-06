@@ -1,0 +1,153 @@
+[
+  {
+    "type": "concept",
+    "title": "NumPy là gì?",
+    "plain": "NumPy là một thư viện trong Python giúp tính toán các con số cực kỳ nhanh chóng. Thay vì dùng danh sách (list) thông thường giống như đếm từng ngón tay một, NumPy dùng các mảng số học (ndarray) giúp xử lý hàng triệu con số cùng một lúc mà không cần vòng lặp.",
+    "analogy": "Giống như việc bạn dùng máy ủi đất để dọn rác thay vì dùng cái xẻng nhỏ.",
+    "prereq": [
+      "Kiến thức cơ bản về Python"
+    ],
+    "formula_latex": "",
+    "formula_words": "",
+    "symbols": [],
+    "steps": [
+      "Nhập thư viện NumPy vào chương trình",
+      "Tạo mảng dữ liệu bằng lệnh np.array()",
+      "Thực hiện phép tính trực tiếp trên mảng"
+    ],
+    "example": "Ví dụ có mảng giá cổ phiếu [68500, 69000, 68200]. Khi chia cho tỷ giá 24500, NumPy tự động chia mọi con số trong mảng cùng lúc.",
+    "pitfall": "Nhầm lẫn giữa mảng NumPy và danh sách (list) thông thường của Python nên không dùng được các hàm tối ưu tốc độ.",
+    "exam_tip": "Nhận biết qua câu lệnh import numpy as np.",
+    "keywords": [
+      "NumPy",
+      "ndarray",
+      "vector hóa"
+    ]
+  },
+  {
+    "type": "formula",
+    "title": "Tính Lợi Suất Hàng Ngày Bằng NumPy",
+    "plain": "Lợi suất ngày hôm nay cho biết giá cổ phiếu tăng hay giảm bao nhiêu phần trăm so với ngày hôm qua. Ta lấy giá ngày hôm nay trừ đi giá ngày hôm qua, sau đó chia cho giá ngày hôm qua.",
+    "analogy": "Giống như việc bạn tính xem hôm nay mình có nhiều tiền hơn hôm qua mấy phần trăm.",
+    "prereq": [
+      "Mảng NumPy cơ bản"
+    ],
+    "formula_latex": "loi\\_suat = \\frac{gia[1:] - gia[:-1]}{gia[:-1]}",
+    "formula_words": "Lợi suất bằng giá từ phần tử thứ hai đến hết trừ đi giá từ đầu đến sát phần tử cuối, tất cả chia cho giá từ đầu đến sát phần tử cuối.",
+    "symbols": [
+      {
+        "symbol": "gia",
+        "meaning": "Mảng chứa giá cổ phiếu theo thời gian"
+      },
+      {
+        "symbol": "gia[1:]",
+        "meaning": "Giá từ ngày thứ hai trở đi (giá hôm nay)"
+      },
+      {
+        "symbol": "gia[:-1]",
+        "meaning": "Giá từ đầu đến ngày sát cuối (giá hôm qua)"
+      }
+    ],
+    "steps": [
+      "Lấy mảng giá từ ngày thứ hai",
+      "Trừ đi mảng giá từ ngày đầu tiên",
+      "Chia kết quả cho mảng giá ngày đầu tiên"
+    ],
+    "example": "Với mảng giá [68500, 69000], lợi suất là (69000 - 68500) / 68500 bằng khoảng 0.0073 hay 0.73%.",
+    "pitfall": "Quên mất kỹ thuật cắt mảng (slicing) dẫn đến việc lấy nhầm chiều dài mảng không khớp nhau.",
+    "exam_tip": "Dạng bài tính tỷ lệ thay đổi theo thời gian không dùng vòng lặp.",
+    "keywords": [
+      "lợi suất",
+      "vector hóa",
+      "slicing"
+    ]
+  },
+  {
+    "type": "concept",
+    "title": "Pandas: Series và DataFrame",
+    "plain": "Pandas là thư viện chuyên dùng để quản lý dữ liệu dạng bảng. 'Series' giống như một cột đơn lẻ trong bảng Excel, còn 'DataFrame' giống như toàn bộ một trang tính Excel có cả dòng lẫn cột.",
+    "analogy": "Series giống như một danh sách ghi tên học sinh, còn DataFrame giống như cuốn sổ điểm của cả lớp.",
+    "prereq": [
+      "NumPy cơ bản"
+    ],
+    "formula_latex": "",
+    "formula_words": "",
+    "symbols": [],
+    "steps": [
+      "Nhập thư viện Pandas bằng import pandas as pd",
+      "Đưa dữ liệu dạng từ điển (dict) vào hàm pd.DataFrame()",
+      "Xem và thao tác với bảng dữ liệu"
+    ],
+    "example": "Tạo một bảng gồm cột Ngày, Mã cổ phiếu, Giá đóng cửa và Khối lượng giao dịch bằng lệnh pd.DataFrame().",
+    "pitfall": "Viết sai chính tả tên cột hoặc nhầm lẫn giữa kiểu dữ liệu chữ và số.",
+    "exam_tip": "Nhận biết qua từ khóa pd.DataFrame() hoặc pd.read_csv().",
+    "keywords": [
+      "Pandas",
+      "DataFrame",
+      "Series"
+    ]
+  },
+  {
+    "type": "process",
+    "title": "Truy Xuất Dữ Liệu Bằng .loc và .iloc",
+    "plain": "Đây là hai cách để lấy ra một phần dữ liệu trong bảng của Pandas. '.loc' dùng tên nhãn (chữ, ngày tháng) để tìm, còn '.iloc' dùng số thứ tự từ số 0 để tìm.",
+    "analogy": "Giống như tìm nhà: .loc dùng tên đường và số nhà, còn .iloc dùng 'ngôi nhà thứ 3 bên tay trái'.",
+    "prereq": [
+      "Hiểu về DataFrame trong Pandas"
+    ],
+    "formula_latex": "",
+    "formula_words": "",
+    "symbols": [],
+    "steps": [
+      "Xác định cần tìm theo tên nhãn hay theo số thứ tự",
+      "Dùng df.loc[tên_nhãn] hoặc df.iloc[số_thứ_tự]",
+      "Lấy ra dòng hoặc cột mong muốn"
+    ],
+    "example": "Để lấy dòng đầu tiên dùng df.iloc[0], để lấy theo ngày dùng df.loc['2026-01-03'].",
+    "pitfall": "Dùng nhầm số thứ tự vào .loc hoặc dùng tên nhãn vào .iloc gây lỗi chương trình.",
+    "exam_tip": "Đi thi hay hỏi phân biệt .loc (tên) và .iloc (vị trí số).",
+    "keywords": [
+      ".loc",
+      ".iloc",
+      "truy xuất dữ liệu"
+    ]
+  },
+  {
+    "type": "formula",
+    "title": "Chuẩn Hóa Dữ Liệu Bằng Min-Max Scaling",
+    "plain": "Đưa tất cả các con số trong bảng về một khoảng chung từ 0 đến 1 để các con số lớn không làm lấn át các con số nhỏ khi đưa vào máy học.",
+    "analogy": "Giống như việc quy đổi điểm số của các môn học về chung thang điểm 10 để so sánh công bằng.",
+    "prereq": [
+      "Hiểu về Series trong Pandas"
+    ],
+    "formula_latex": "gia\\_chuan\\_hoa = \\frac{gia - gia.min()}{gia.max() - gia.min()}",
+    "formula_words": "Giá chuẩn hóa bằng giá trị hiện tại trừ đi giá trị nhỏ nhất, rồi chia cho hiệu số giữa giá trị lớn nhất và giá trị nhỏ nhất.",
+    "symbols": [
+      {
+        "symbol": "gia",
+        "meaning": "Dữ liệu giá ban đầu"
+      },
+      {
+        "symbol": "gia.min()",
+        "meaning": "Giá trị nhỏ nhất trong dãy số"
+      },
+      {
+        "symbol": "gia.max()",
+        "meaning": "Giá trị lớn nhất trong dãy số"
+      }
+    ],
+    "steps": [
+      "Tìm giá trị nhỏ nhất và lớn nhất của cột",
+      "Lấy từng giá trị trừ đi giá trị nhỏ nhất",
+      "Chia kết quả cho khoảng cách giữa lớn nhất và nhỏ nhất"
+    ],
+    "example": "Nếu giá thấp nhất là 60000, cao nhất là 80000, giá 70000 sẽ được chuẩn hóa thành (70000 - 60000) / (80000 - 60000) = 0.5.",
+    "pitfall": "Quên trừ đi giá trị nhỏ nhất ở tử số khiến kết quả bị sai.",
+    "exam_tip": "Dạng bài đưa dữ liệu về khoảng [0, 1].",
+    "keywords": [
+      "Min-Max",
+      "chuẩn hóa dữ liệu",
+      "Normalization"
+    ]
+  }
+]

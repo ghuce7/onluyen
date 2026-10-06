@@ -1,0 +1,301 @@
+[Trang 1]
+CHƯƠNG 4
+Mô hình hồi qui tuyến tính nhiều biến
+
+[Trang 2]
+4.1 Mô hình hồi quy tuyến tính 3 biến
+4.1.1. Dạng hàm hồi quy tuyến tính 3 biến
++ u
+PRF: Yi= β + β X + β X
+1 2 2i 3 3i i
+෠ መ መ መ
+𝑌 = 𝛽 + 𝛽 𝑋 + 𝛽 𝑋
+SRF:
+𝑖 1 2 2 3 3
+➢ Y – Biến phụ thuộc
+i
+➢ X , X – Các biến độc lập
+2i 3i
+መ
+➢ 𝛽 – Hệ số tự do
+1
+መ መ
+➢ 𝛽 ; 𝛽 – Hệ số hồi quy
+2 3
+2
+
+[Trang 3]
+4.1.2 Ước lượng các tham số
+መ ሜ መ ሜ መ ሜ
+𝛽 = 𝑌 − 𝛽 𝑋 − 𝛽 𝑋
+1 2 2 3 3
+2
+(σ 𝑦 𝑥 )(σ 𝑥 ) − (σ 𝑦 𝑥 )(σ 𝑥 𝑥 )
+መ 𝑖 2𝑖 3𝑖 𝑖 3𝑖 2𝑖 3𝑖
+𝛽 =
+2
+(σ 𝑥 2 )(σ 𝑥 2 ) − (σ 𝑥 𝑥 )2
+2𝑖 3𝑖 2𝑖 3𝑖
+2
+(σ 𝑦 𝑥 )(σ 𝑥 ) − (σ 𝑦 𝑥 )(σ 𝑥 𝑥 )
+መ 𝑖 3𝑖 2𝑖 𝑖 2𝑖 2𝑖 3𝑖
+𝛽 =
+3
+(σ 𝑥 2 )(σ 𝑥 2 ) − (σ 𝑥 𝑥 )2
+2𝑖 3𝑖 2𝑖 3𝑖
+෡ ෡ ෡
+Các cách tính: 𝜷 , 𝜷 , 𝜷 .
+𝟏 𝟏 𝟑
+1.Máy tính casio:
+✓ Nhập tính các tổng, thế vào công thức.
+✓ Nhập tính các tổng, nhập hệ phương trình.
+2. Excel
+3. SPSS
+3
+
+[Trang 4]
+4.1.2. Ước lượng các tham số
+ሜ ሜ
+C1 _ Máy tính casio: ෍ y x = ෍ Y X − nYX
+i 2i i 2i 2
+2 2 ሜ 2
+෍ y = ෍ Y − n(Y)
+Nhập như hàm 2 biến
+i i
+lần lượt các cặp:
+2 2 ሜ 2
+෍ x = ෍ X − n(X )
++ (Y, X₂) 2i 2i 2
++ (Y, X₃)
+ሜ ሜ
+෍ y x = ෍ Y X − nYX
+i 3i i 3i 3
++ (X , X )
+2 3
+2 2 ሜ 2
+෍ x = ෍ X − n(X )
+3i 3i 3
+ሜ ሜ
+෍ x x = ෍ X X − nX X
+2i 3i 2i 3i 2 3
+መ መ መ
+=> Thế kết quả vào công thức tính: 𝛽 , 𝛽 , 𝛽 .
+1 2 3
+
+[Trang 5]
+X2 X3 Y
+1 5 45
+2 6 50
+3 7 55
+4 8 60
+2 10 58
+5 6 62
+6 9 70
+7 11 78
+8 12 82
+9 13 88
+
+[Trang 6]
+4.1.2. Ước lượng các tham số
+C2 _ Máy tính casio:
+1. Nhập (Y, X₂): σ 𝑋 , σ 𝑌, σ 𝑋 2, σ 𝑋 𝑌
+2 2 2
+2. Nhập (Y, X₃): σ 𝑋 , σ 𝑋 2, σ 𝑋 𝑌
+3 3 3
+3. Nhập (X , X ):෍ 𝑋 𝑋
+2 3 2 3
+𝑛 ෍ 𝑋 ෍ 𝑋 ෍ 𝑌
+4. Nhập ma trận vào máy 2 3
+෍ 𝑋
+෍ 𝑋 2 ෍ 𝑋 𝑋 ෍ 𝑋 𝑌
+2
+2 2 3 2
+෍ 𝑋
+෍ 𝑋 𝑋 ෍ 𝑋 2 ෍ 𝑋 𝑌
+3
+2 3 3 3
+✓ Casio fx-570, 580VN X: MODE → EQN =>Simultaneous=> 3 unknowns.
+✓ Nhập hệ số của ma trận theo dòng ---> =
+መ መ መ
+✓ Ghi lại kết quả: 𝛽 , 𝛽 , 𝛽
+1 2 3
+
+[Trang 7]
+Ý nghĩa của các hệ số hồi quy:
+෠ መ መ መ
+𝑌 = 𝛽 + 𝛽 𝑋 + 𝛽 𝑋
+𝑖 1 2 2 3 3
+෡ : መ
+➢ 𝜷 khi X = X = 0 giá trung bình của Y = 𝛽
+𝟏 1
+2 0
+෡ :
+➢ 𝜷
+𝟐
+መ መ
+✓ 𝛽 >0 => X và Y đồng biến (𝛽 <0 => X và Y nghịch biến)
+2 2 2 2
+መ
+✓ Khi X =0, khi X thay đổi 1 đơn vị thì Y thay đổi 𝛽 đơn vị.
+3 2 2
+෡ :
+➢ 𝜷
+𝟑
+መ መ
+✓ 𝛽 >0 => X và Y đồng biến (𝛽 <0 => X và Y nghịch biến)
+3 3 3 3
+መ
+✓ Khi X =0, khi X thay đổi 1 đơn vị thì Y thay đổi 𝛽 đơn vị.
+2 3 3
+
+[Trang 8]
+Giả sử có kết quả hồi quy:
+𝑪𝑵𝑺𝑽 = 𝟒𝟓 + 𝟎. 𝟓 ∗ 𝑺𝑳𝑨𝑴𝑻 - 𝟎. 𝟑 ∗ 𝑺𝑳𝑪𝑭
+Với: CNSV (kg), SLAMT (lần/tuần), SCCF (ly/ngày)
+Ý nghĩa HSHQ:
+෡
+➢ 𝜷 = 𝟒𝟓: SV không ăn mì tôm và không uống café cân
+𝟏
+nặng trung bình SV là 45kg.
+෡ =
+➢ 𝜷 0.5> 0 => SLAMT và CNSV đồng biến. Nếu SV
+𝟐
+không uống cafe, khi SLAMT tăng 1 lần/tuần thì CNSV
+tăng 𝟎, 𝟓𝐤𝐠 và ngược lại.
+෡
+➢ 𝜷 = − 𝟎. 𝟑 < 0 => SLAMT và SLCF nghịch biến. Nếu
+𝟑
+SV không ăn mì tôm, khi SLCF tăng 1 ly/ngày thì CNSV
+giảm 𝟎, 𝟑𝐤𝐠 và ngược lại.
+
+[Trang 9]
+4.1.3. Phương sai và sai số chuẩn
+4.1.3.1. Hệ số xác định
+ሜ
+✓ TSS =σ𝑌 2- nY2
+𝑖
+መ መ
+✓ ESS = 𝛽 σ𝑦 𝑥 + 𝛽 σ𝑦 𝑥
+2 𝑖 2𝑖 3 𝑖 3𝑖
+ሜ ሜ
+Với: σ 𝑦 𝑥 = σ 𝑌 𝑋 − 𝑛𝑌𝑋
+𝑖 2𝑖 𝑖 2𝑖 2
+ሜ ሜ
+và σ 𝑦 𝑥 = σ 𝑌 𝑋 − 𝑛𝑌𝑋
+𝑖 3𝑖 𝑖 3𝑖 3
+✓ RSS = TSS – ESS
+
+[Trang 11]
+4.1.3.2. Phương sai, sai số chuẩn các HSHQ
+ሜ 2 2 ሜ 2 2 ሜ ሜ
+1 𝑋 σ 𝑥 + 𝑋 σ 𝑥 − 2𝑋 𝑋 σ 𝑥 𝑥
+መ 2 3𝑖 3 2𝑖 2 3 2𝑖 3𝑖 2
+𝑉𝑎𝑟(𝛽 ) = + . 𝜎
+1
+𝑛 σ 𝑥 2 σ 𝑥 2 − (σ 𝑥 𝑥 )2
+2𝑖 3𝑖 2𝑖 3𝑖
+𝑅𝑆𝑆
+Với: Ϭ2 =
+𝑛−3
+- Sai số chuẩn (se) lấy căn bậc hai của Var
+11
+
+[Trang 12]
+4.1.3.3. Hệ số tương quan
+𝐸𝑆𝑆
+- Hệ số xác định: R2=
+𝑇𝑆𝑆
+𝑛−1
+- Hệ số điều chỉnh: R2=1-(1-R2)
+𝑛−𝑘
+➢ R2 hiệu chỉnh là cơ sở để xem xét việc đưa thêm
+biến X vào mô hình.
+i
+✓ Thêm biến nếu R2 hiệu chỉnh tăng => (kèm kiểm
+định beta liên quan biến thêm vào ≠0) thì việc
+thêm là cần thiết và ngược lại.
+
+[Trang 13]
+Hồi quy Y theo X3
+Hồi quy Y theo X2, X3
+Với mức ý nghĩa 5%, cho biết nên đưa thêm biến X2 vào mô hình hay không?
+
+[Trang 14]
+4.1.3.4. Khoảng tin cậy của các HSHQ
+መ መ መ መ
+𝛽 − 𝑡 . 𝑠𝑒 𝛽 ≤ β ≤ 𝛽 + 𝑡 . 𝑠𝑒 𝛽
+𝛼 𝛼
+𝑖 ; 𝑛−3 𝑖 𝑖 𝑖 ; 𝑛−3 𝑖
+2 2
+Lưu ý: cách nhận xét khoảng tin cậy các hệ số beta;
+cách tra bảng t(α/2; n-3)
+14
+
+[Trang 15]
+4.1.3.5. Kiểm định hệ số hồi quy
+❖ Giả thuyết: H : β = β*
+0 i
+H : β ≠ β*
+1 i
+෢ ∗
+𝛽 −𝛽
+෡
+✓ Tính t𝛽 = 𝑖
+𝑖
+෢
+𝑠𝑒(𝛽 )
+𝑖
+෢
+✓ Nếu: t𝛽𝑖 > t : chấp nhận H1 và ngược lại
+(α/2, n-3)
+Lưu ý:
+▪ Các dạng kiểm định beta điều kiện như hàm 2 biến
+▪ Kiểm định từ bảng dữ liệu hay kết quả cho sẵn
+15
+
+[Trang 16]
+Dạng 1
+
+[Trang 17]
+Dạng 2
+Cho kết quả phân tích hồi quy như bảng như sau:
+Với mức ý nghĩa 5%, cho biết biến X2, X3 có ảnh hưởng đến biến Y hay không?
+- tStat so sánh với t(α/2;n-3)
+- Pvalue so sánh với 0,05.
+
+[Trang 18]
+4.1.3.6. Kiểm định hàm HQ
+❖ Giả thuyết: H : R2 = 0
+0
+H : R2 ≠ 0
+1
+R2
+(𝑛−3)
+Tính: F =
+R2
+2(1− )
+✓ Quy tắc:
+▪ F < F α,2,n-3 : chấp nhận H
+( ) 0
+▪ F > F α,2,n-3 : chấp nhận H
+( ) 1
+Lưu ý: tra F(α;2; n-3); tính F khác 2 biến
+18
+
+[Trang 19]
+Dạng 2
+Cho kết quả phân tích hồi quy như bảng như sau:
+Với mức ý nghĩa 5%, hàm hồi quy có ý nghĩa hay không? (Ghi đầy đủ các bước kiểm định)
+- Giá trị F ở bảng anova so sánh với F(α;k-1;n-k)= F(0.05;2;7)=4,737.
+- SigF ở bảng anova so sánh với 0,05. (SigF <0,05: hàm hồi quy có ý nghĩa và ngược lại)
+- Tính F từ R Square ở bảng summary so sánh với F(α;k-1;n-k)= F(0.05;2;7)=4,737.
+
+[Trang 20]
+LÀM BÀI TẬP
+
+[Trang 21]
+4.3.7. Ứng dụng Excel giải bài toán hồi quy k biến
+1. Khai báo biến và nhập liệu vào phần mềm
+2. Chạy mô hình hồi quy theo yêu cầu
+3. Trình bày và diễn giải kết quả.
+21

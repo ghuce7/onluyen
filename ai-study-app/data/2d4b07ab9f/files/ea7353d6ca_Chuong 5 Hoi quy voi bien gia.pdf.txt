@@ -1,0 +1,162 @@
+[Trang 1]
+CHƯƠNG 5: MÔ HÌNH HỒI
+QUY VỚI BIẾN GIẢ
+
+[Trang 2]
+NỘI DUNG
+1. Khái niệm biến giả
+2. Đặt biến giả trong mô hình hồi quy
+3. Ứng dụng biến giả trong phân tích hồi quy
+
+[Trang 3]
+1. Khái niệm biến giả
+• Biến định lượng: Các giá trị quan sát được thể hệ
+bằng con số và có đơn vị cụ thể.
+• Biến định tính: Các giá trị quan sát là các thuộc
+tính thể hiện đặc điểm, tính chất của 1 hiện tượng.
+Các thuộc tính này được mã hóa bằng các con số.
+→Để đưa những thuộc tính của biến định tính vào
+mô hình hồi quy, cần lượng hóa chúng => sử dụng
+biến giả.
+→ Giới tính: Nam: 1 ; Nữ: 0
+
+[Trang 4]
+2. Đặt biến giả trong mô hình hồi quy
+2.1. Biến định tính có hai tính chất
+- Biến định tính thường là biến độc lập X
+- Doanh số bán của nhân viên theo giới tính (Nam, Nữ)
+- Đặt:
+✓D = 1: Nam
+✓D = 0: NỮ
+- Khi đó mô hình sẽ là: Y =  +  D + u
+1 2
+Lưu ý: Số biến giả cần đặt là số tính chất trừ 1
+
+[Trang 5]
+Số liệu về năng suất theo giới tính nhân viên
+Năng Giới tính Năng suất-Y Giới tính-D
+suất(SP/Ngày) (SP/Ngày)
+✓D = 1: NV Nam
+100 Nam 100 1
+✓D = 0: NV Nữ
+88 Nữ 88 0
+120 Nam ✓ Y =  +  D + u 120 1
+1 2
+130 Nam 130 1
+86 Nữ 86 0
+105 Nam 105 1
+79 Nữ 79 0
+73 Nữ 73 0
+81 Nữ 81 0
+103 Nam 103 1
+Y = 81,4 + 30,2D
+• Nhân viên là Nam (D=1) ➔ Y = 81,4 + 30,2*1=111,6 (sp/ngày)
+• Nhân viên là Nữ (D=0) ➔ Y = 81,4 + 30,2*0=81,4 (sp/ngày)
+
+[Trang 6]
+2. Đặt biến giả trong mô hình hồi quy
+2.2. Biến định tính có ba tính chất
+- Doanh số bán hang (Y) theo thị trường Bắc, Trung, Nam (Biến
+giả)
+- Đặt:
+✓D2 = 1: tính chất 1; D2=0: các tính chất còn lại
+✓D3 = 1: tính chất 2; D3=0: các tính chất còn lại
+✓D2 = D3=0: tính chất 3.
+• Khi đó mô hình sẽ là: Y =  +  D +  D + u
+1 2 2i 3 3i
+• Số biến giả cần đặt là số tính chất trừ 1
+
+[Trang 7]
+Số liệu về doanh số bán theo thị trường
+Năm Doanh số bán Thị trường Năm Doanh số bán D2 D3
+2022 400 Miền Nam 2022 400 1 0
+120 Miền Trung 120 0 1
+300 Miền Bắc 300 0 0
+2023 500 Miền Nam 2023 500 1 0
+150 Miền Trung 150 0 1
+370 Miền Bắc 370 0 0
+2024 600 Miền Nam 2024 600 1 0
+150 Miền Trung 150 0 1
+390 Miền Bắc 390 0 0
+✓D2 = 1: Miền Nam; D2=0: các miền còn lại
+✓D3 = 1: Miền Trung; D3=0: các miền còn lại
+✓D2 = D3=0: Miền Bắc.
+Khi đó mô hình sẽ là: Y =  +  D +  D + u
+1 2 2i 2 3i
+
+[Trang 8]
+Kết quả
+Y = 353.3333 + 146.6667D – 213.333D
+2i 3i
+✓Miền Nam (D2 = 1, D3=0) => Y = 500
+✓Miền Trung (D2 =0, D3 = 1) => Y = 140
+✓Miền Bắc (D2 = D3=0) => Y = 353.3333
+
+[Trang 9]
+2. Đặt biến giả trong mô hình hồi quy
+2.3. Biến giả có bốn tính chất
+- Doanh số bán hàng (Y) theo các mùa Xuân, Hạ, Thu, Đông (Biến
+giả).
+- Đặt:
+✓D2 = 1: Mùa Xuân; D2=0: các mùa còn lại
+✓D3 = 1: Mùa Hạ; D3=0: các mùa còn lại
+✓D4 =1: Mùa thu; D4 =0: các mùa còn lại
+✓D2 = D3=D4=0: Mùa đông.
+• Khi đó mô hình sẽ là: Y =  +  D +  D +  D + u
+1 2 2i 3 3i 4 4i
+• Số biến giả cần đặt là số tính chất trừ 1
+
+[Trang 10]
+• Có kết quả ước lượng mối quan hệ giữa kết quả học tập của
+sinh viên (Y) với thời gian tự học (X2), điểm tuyển sinh đầu
+vào (X3) và phương pháp học tập (X4) như sau:
+Y= 0,23 + 0,58X2 + 0,25X3 + 0,75X4.
+• Giả sử có biến định tính là khu vực sinh sống của sinh viên
+với ba thuộc tính (Đồng bằng, Trung du, Miền núi) ảnh
+hưởng đến kết quả học tập (Y).
+Yêu cầu: Hãy đặt và mã hóa biến giả, đưa biến giả vào mô
+hình hồi quy trên và cho biết dạng hàm hồi quy tại mỗi khu
+vực sinh sống của sinh viên.
+
+[Trang 12]
+Câu 1: Ước lượng mối quan hệ giữa doanh số bán hàng
+(Y) theo biến định tính là ngành hàng với 3 tính chất (A,
+B và C).
+Câu 2: Ước lượng mối quan hệ giữa Sự hài lòng của nhân
+viên (Y) theo biến định tính là phòng làm việc (KT, HC
+và SX).
+• Hãy đặt và mã hóa biến giả, đưa biến giả vào mô hình hồi quy và
+cho biết dạng hàm hồi quy tại mỗi tính chất ở các bài tập trên.
+
+[Trang 15]
+3. Ứng dụng biến giả trong phân tích hồi quy
+3.1. Hàm hồi quy 2 biến (1 biến định lượng và 1 biến định tính
+với 2 tính chất)
+- Mã hóa và tính toán thủ công được như mô hình hồi quy với 2
+biến định lượng.
+- Ví dụ: Ước lượng mối quan hệ giữa thu nhập theo giới tính
+Y: thu nhập; D: giới tính
+3.2. Hàm hồi quy 3 biến (1 biến định lượng và 2 biến định tính
+với 2 tính chất)
+- Mã hóa và tính toán trên phần mềm như mô hình hồi quy với 3
+biến định lượng.
+- Ví dụ: Ước lượng mối quan hệ giữa doanh số theo giới tính và
+thị trường (Nông thôn, Thành thị)
+Y: thu nhập; D: giới tính; Z: Thị trường
+
+[Trang 16]
+3. Ứng dụng biến giả trong phân tích hồi quy
+3.3. Hàm hồi quy 3 biến (2 biến định lượng và 1 biến định tính
+với 2 tính chất)
+- Ví dụ: Ước lượng mối quan hệ giữa lương của công nhân theo
+số năm kinh nghiệm và giới tính.
+Y: lương; X: Số năm kinh nghiệm; D: giới tính.
+3.4. Hàm hồi quy 4 biến (2 biến định lượng và 1 biến định tính
+với 3 tính chất)
+- Ví dụ: Ước lượng mối quan hệ giữa lương của công nhân theo
+số năm kinh nghiệm và khu vực thị trường bắc, trung, nam.
+Y: lương; X: Số năm kinh nghiệm; D1 và D2.
+3.5. Hàm hồi quy nhiều biến
+
+[Trang 19]
+GIẢI BÀI TẬP

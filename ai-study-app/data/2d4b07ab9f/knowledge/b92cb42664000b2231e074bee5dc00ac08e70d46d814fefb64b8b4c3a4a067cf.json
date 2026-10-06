@@ -1,0 +1,231 @@
+[
+  {
+    "type": "formula",
+    "title": "Dạng hàm hồi quy tuyến tính 3 biến",
+    "plain": "Mô hình hồi quy tuyến tính 3 biến dùng để dự đoán một biến kết quả (Y) dựa trên sự tác động của hai biến nguyên nhân (X2 và X3).",
+    "analogy": "Giống như việc bạn tính điểm thi đại học (Y), nó phụ thuộc vào điểm môn Toán (X2) và điểm môn Văn (X3) cộng thêm một chút may mắn rủi ro ngoài tầm kiểm soát (u).",
+    "prereq": [
+      "Khái niệm hàm số cơ bản",
+      "Mô hình hồi quy 2 biến"
+    ],
+    "formula_latex": "Y_i = \\beta_1 + \\beta_2 X_{2i} + \\beta_3 X_{3i} + u_i",
+    "formula_words": "Y i bằng beta 1 cộng beta 2 nhân X 2i cộng beta 3 nhân X 3i cộng u i",
+    "symbols": [
+      {
+        "symbol": "Y_i",
+        "meaning": "Biến phụ thuộc (cái cần dự đoán)"
+      },
+      {
+        "symbol": "X_{2i}",
+        "meaning": "Biến độc lập thứ nhất (nguyên nhân 1)"
+      },
+      {
+        "symbol": "X_{3i}",
+        "meaning": "Biến độc lập thứ hai (nguyên nhân 2)"
+      },
+      {
+        "symbol": "\\beta_1",
+        "meaning": "Hệ số tự do (điểm xuất phát khi các nguyên nhân bằng 0)"
+      },
+      {
+        "symbol": "\\beta_2",
+        "meaning": "Hệ số hồi quy của X2"
+      },
+      {
+        "symbol": "\\beta_3",
+        "meaning": "Hệ số hồi quy của X3"
+      },
+      {
+        "symbol": "u_i",
+        "meaning": "Sai số ngẫu nhiên"
+      }
+    ],
+    "steps": [
+      "Xác định biến Y và các biến X2, X3",
+      "Lắp các biến vào cấu trúc hàm hồi quy tổng mẫu"
+    ],
+    "example": "Cho phương trình cân nặng sinh viên (CNSV) = 45 + 0.5*SLAMT - 0.3*SLCF. Trong đó Y là CNSV, X2 là số lần ăn mì tôm (SLAMT), X3 là số ly café (SLCF).",
+    "pitfall": "Nhầm lẫn giữa biến phụ thuộc Y và các biến độc lập X, hoặc quên mất hệ số tự do beta 1.",
+    "exam_tip": "Đề bài thường cho sẵn bảng số liệu hoặc hàm số, yêu cầu nhận diện các hệ số hoặc viết phương trình.",
+    "keywords": [
+      "hồi quy 3 biến",
+      "biến phụ thuộc",
+      "biến độc lập",
+      "hệ số hồi quy"
+    ]
+  },
+  {
+    "type": "concept",
+    "title": "Ý nghĩa các hệ số hồi quy",
+    "plain": "Giải thích con số beta nói lên điều gì về mối quan hệ thực tế giữa các nguyên nhân và kết quả.",
+    "analogy": "Giống như việc tăng giá món ăn thì khách mua ít đi (nghịch biến) hoặc giảm giá thì mua nhiều lên (đồng biến).",
+    "prereq": [
+      "Dạng hàm hồi quy tuyến tính 3 biến"
+    ],
+    "formula_latex": "",
+    "formula_words": "",
+    "symbols": [
+      {
+        "symbol": "\\beta_1",
+        "meaning": "Giá trị trung bình của Y khi tất cả các biến X đều bằng 0"
+      },
+      {
+        "symbol": "\\beta_2",
+        "meaning": "Mức thay đổi của Y khi X2 tăng 1 đơn vị và X3 cố định"
+      },
+      {
+        "symbol": "\\beta_3",
+        "meaning": "Mức thay đổi của Y khi X3 tăng 1 đơn vị và X2 cố định"
+      }
+    ],
+    "steps": [
+      "Đọc hệ số beta 1: Gán X bằng 0 hết rồi kết luận Y",
+      "Đọc hệ số beta 2: Gắn điều kiện X3 không đổi, nếu X2 tăng 1 thì Y đổi bao nhiêu",
+      "Đọc hệ số beta 3: Gắn điều kiện X2 không đổi, nếu X3 tăng 1 thì Y đổi bao nhiêu"
+    ],
+    "example": "Với hàm CNSV = 45 + 0.5*SLAMT - 0.3*SLCF: Beta 1 = 45 nghĩa là sinh viên không ăn mì, không uống cafe thì nặng 45kg. Beta 2 = 0.5 nghĩa là khi không uống cafe, ăn thêm 1 gói mì tôm/tuần thì cân nặng tăng 0.5kg.",
+    "pitfall": "Quên đính kèm cụm từ 'giả định các yếu tố khác không đổi' khi giải thích ý nghĩa hệ số hồi quy.",
+    "exam_tip": "Câu hỏi 'Nêu ý nghĩa các hệ số hồi quy' xuất hiện gần như 100% trong các bài kiểm tra.",
+    "keywords": [
+      "ý nghĩa hệ số hồi quy",
+      "đồng biến",
+      "nghịch biến"
+    ]
+  },
+  {
+    "type": "formula",
+    "title": "Hệ số xác định R bình phương và hệ số hiệu chỉnh",
+    "plain": "Đo xem các biến X có giải thích được phần lớn sự thay đổi của Y hay không, và có nên nhét thêm biến mới vào mô hình hay không.",
+    "analogy": "Giống như việc xem xét việc mặc áo khoác và đội mũ có giúp bạn đỡ lạnh hơn bao nhiêu phần trăm.",
+    "prereq": [
+      "Ý nghĩa các hệ số hồi quy"
+    ],
+    "formula_latex": "R^2 = \\frac{ESS}{TSS}, \\bar{R}^2 = 1 - (1 - R^2)\\frac{n-1}{n-k}",
+    "formula_words": "R bình phương bằng ESS chia TSS. R bình phương hiệu chỉnh bằng 1 trừ mở ngoặc 1 trừ R bình phương đóng ngoặc nhân phân số n trừ 1 chia n trừ k",
+    "symbols": [
+      {
+        "symbol": "R^2",
+        "meaning": "Hệ số xác định thông thường"
+      },
+      {
+        "symbol": "\\bar{R}^2",
+        "meaning": "Hệ số xác định hiệu chỉnh"
+      },
+      {
+        "symbol": "ESS",
+        "meaning": "Tổng bình phương do mô hình giải thích"
+      },
+      {
+        "symbol": "TSS",
+        "meaning": "Tổng bình phương toàn phần"
+      },
+      {
+        "symbol": "n",
+        "meaning": "Cỡ mẫu (số lượng quan sát)"
+      },
+      {
+        "symbol": "k",
+        "meaning": "Số lượng tham số trong mô hình"
+      }
+    ],
+    "steps": [
+      "Tính ESS và TSS",
+      "Chia ESS cho TSS để ra R bình phương",
+      "Dùng công thức điều chỉnh để tính R hiệu chỉnh"
+    ],
+    "example": "Nếu R bình phương bằng 0.85, nghĩa là mô hình giải thích được 85% sự biến thiên của Y, còn 15% là do các yếu tố ngoài mô hình.",
+    "pitfall": "Cứ tưởng thêm biến X vào thì R bình phương thông thường chắc chắn tăng nên lạm dụng, thực tế phải nhìn vào R bình phương hiệu chỉnh.",
+    "exam_tip": "Câu hỏi thường hỏi: 'Có nên đưa thêm biến X vào mô hình hay không?' -> Dựa vào việc R bình phương hiệu chỉnh có tăng lên hay không.",
+    "keywords": [
+      "hệ số xác định",
+      "R bình phương",
+      "R hiệu chỉnh"
+    ]
+  },
+  {
+    "type": "process",
+    "title": "Kiểm định sự phù hợp của hàm hồi quy (Kiểm định F)",
+    "plain": "Kiểm tra xem toàn bộ các biến X trong mô hình có thực sự tác động đến Y hay chỉ là do ngẫu nhiên.",
+    "analogy": "Giống như việc bạn kết luận nhóm bạn thân hayụ hùa với nhau học giỏi, cần kiểm chứng xem có đúng thật vậy không hay chỉ ngẫu nhiên vài lần điểm cao.",
+    "prereq": [
+      "Hệ số xác định R bình phương và hệ số hiệu chỉnh"
+    ],
+    "formula_latex": "F = \\frac{R^2 / (k-1)}{(1-R^2) / (n-k)}",
+    "formula_words": "F bằng phân số R bình phương chia k trừ 1 ở tử, mẫu là phân số một trừ R bình phương chia n trừ k",
+    "symbols": [
+      {
+        "symbol": "F",
+        "meaning": "Giá trị kiểm định F tính toán"
+      },
+      {
+        "symbol": "n",
+        "meaning": "Cỡ mẫu"
+      },
+      {
+        "symbol": "k",
+        "meaning": "Số lượng tham số"
+      },
+      {
+        "symbol": "R^2",
+        "meaning": "Hệ số xác định"
+      }
+    ],
+    "steps": [
+      "Đặt giả thiết H0 (R bình phương bằng 0) và H1 (R bình phương khác 0)",
+      "Tính giá trị F theo công thức hoặc tra từ bảng kết quả phần mềm",
+      "So sánh F tính toán với F tới hạn tra bảng hoặc so sánh SigF với mức ý nghĩa alpha 0.05"
+    ],
+    "example": "Nếu SigF = 0.003 nhỏ hơn 0.05, ta bác bỏ H0 và kết luận hàm hồi quy có ý nghĩa thống kê.",
+    "pitfall": "Nhầm lẫn giữa bậc tự do ở tử số và mẫu số khi đi tra bảng phân phối F.",
+    "exam_tip": "Đề thi cho bảng ANOVA xuất ra từ Excel/SPSS và yêu cầu kết luận hàm hồi quy có ý nghĩa hay không.",
+    "keywords": [
+      "kiểm định F",
+      "kiểm định hàm hồi quy",
+      "ANOVA",
+      "SigF"
+    ]
+  },
+  {
+    "type": "process",
+    "title": "Kiểm định các hệ số hồi quy (Kiểm định t)",
+    "plain": "Kiểm tra xem riêng lẻ từng biến X có thực sự ảnh hưởng đến Y hay không.",
+    "analogy": "Giống như trong một đội bóng, xem xét cầu thủ A có thực sự đóng góp vào chiến thắng hay chỉ đứng sân cho đủ đội hình.",
+    "prereq": [
+      "Ý nghĩa các hệ số hồi quy"
+    ],
+    "formula_latex": "t_{\\beta_i} = \\frac{\\hat{\\beta}_i - \\beta_i^*}{se(\\hat{\\beta}_i)}",
+    "formula_words": "t beta i bằng beta mũ i trừ beta sao chia cho sai số chuẩn của beta mũ i",
+    "symbols": [
+      {
+        "symbol": "t_{\\beta_i}",
+        "meaning": "Giá trị t tính toán cho hệ số beta i"
+      },
+      {
+        "symbol": "\\hat{\\beta}_i",
+        "meaning": "Hệ số hồi quy ước lượng từ mẫu"
+      },
+      {
+        "symbol": "\\beta_i^*",
+        "meaning": "Giá trị giả thuyết (thường bằng 0)"
+      },
+      {
+        "symbol": "se(\\hat{\\beta}_i)",
+        "meaning": "Sai số chuẩn của hệ số hồi quy"
+      }
+    ],
+    "steps": [
+      "Đặt giả thiết H0 (hệ số bằng 0) và H1 (hệ số khác 0)",
+      "Tính giá trị t hoặc lấy giá trị tStat từ bảng kết quả",
+      "So sánh trị tuyệt đối của t tính toán với t tra bảng t(alpha/2, n-3) hoặc so sánh P-value với 0.05"
+    ],
+    "example": "Nếu P-value của biến X2 là 0.012 nhỏ hơn 0.05, ta bác bỏ H0, kết luận biến X2 thực sự có ảnh hưởng đến Y.",
+    "pitfall": "Quên lấy trị tuyệt đối khi so sánh giá trị t tính toán với t tới hạn trong bảng.",
+    "exam_tip": "Bài toán kinh điển: 'Với mức ý nghĩa 5%, các biến X có ảnh hưởng đến Y hay không?'",
+    "keywords": [
+      "kiểm định t",
+      "kiểm định hệ số hồi quy",
+      "tStat",
+      "P-value"
+    ]
+  }
+]

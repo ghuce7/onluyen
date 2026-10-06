@@ -1,0 +1,116 @@
+[
+  {
+    "type": "concept",
+    "title": "Kinh tế lượng là gì?",
+    "plain": "Kinh tế lượng giống như việc dùng toán học và thống kê để đo lường các mối quan hệ kinh tế ngoài đời thật, từ đó giúp dự đoán tương lai và ra quyết định.",
+    "analogy": "Giống như bác sĩ đo huyết áp, nhịp tim để biết sức khỏe cơ thể và đoán xem có bệnh gì không.",
+    "prereq": [
+      "Toán cơ bản",
+      "Xác suất thống kê"
+    ],
+    "formula_latex": "",
+    "formula_words": "",
+    "symbols": [],
+    "steps": [
+      "Xác định vấn đề cần nghiên cứu",
+      "Thu thập số liệu",
+      "Chạy mô hình và đưa ra dự báo"
+    ],
+    "example": "Dự báo lượng cầu sản phẩm dựa trên giá bán.",
+    "pitfall": "Nghĩ kinh tế lượng chỉ là lý thuyết suông mà không gắn với số liệu thực tế.",
+    "exam_tip": "Câu hỏi lý thuyết hay hỏi về khái niệm và ứng dụng.",
+    "keywords": [
+      "kinh tế lượng",
+      "mô hình hóa"
+    ]
+  },
+  {
+    "type": "concept",
+    "title": "Biến phụ thuộc và Biến độc lập",
+    "plain": "Biến phụ thuộc (Y) là cái chúng ta muốn giải thích hoặc dự đoán. Biến độc lập (X) là nguyên nhân tác động làm thay đổi Y.",
+    "analogy": "Y giống như điểm số thi (kết quả), còn X giống như số giờ bạn ngồi học bài (nguyên nhân).",
+    "prereq": [
+      "Hàm số cơ bản"
+    ],
+    "formula_latex": "",
+    "formula_words": "",
+    "symbols": [],
+    "steps": [
+      "Xác định cái gì chịu ảnh hưởng (Y)",
+      "Tìm các yếu tố tác động đến nó (X)"
+    ],
+    "example": "Doanh số bán hàng (Y) chịu tác động của chi phí quảng cáo (X).",
+    "pitfall": "Nhầm lẫn giữa nguyên nhân (X) và kết quả (Y).",
+    "exam_tip": "Bài tập thường yêu cầu chỉ rõ đâu là biến X, đâu là biến Y trong một đề bài cụ thể.",
+    "keywords": [
+      "biến phụ thuộc",
+      "biến độc lập"
+    ]
+  },
+  {
+    "type": "fact",
+    "title": "Các loại dữ liệu trong kinh tế lượng",
+    "plain": "Có 3 loại dữ liệu chính: Dữ liệu chuỗi thời gian (1 đối tượng qua nhiều năm), Dữ liệu chéo (nhiều đối tượng tại 1 thời điểm), và Dữ liệu bảng (kết hợp cả hai).",
+    "analogy": "Chuỗi thời gian giống như nhật ký phát triển của một người từ bé đến lớn. Dữ liệu chéo giống như bức ảnh chụp tập thể cả lớp trong một ngày.",
+    "prereq": [],
+    "formula_latex": "",
+    "formula_words": "",
+    "symbols": [],
+    "steps": [
+      "Xác định đối tượng nghiên cứu",
+      "Xác định khoảng thời gian hoặc không gian thu thập"
+    ],
+    "example": "Doanh thu công ty A từ năm 2019 đến 2023 là dữ liệu chuỗi thời gian.",
+    "pitfall": "Không phân biệt được thời gian và không gian khi nhìn vào tập dữ liệu.",
+    "exam_tip": "Nhận diện loại dữ liệu qua mô tả đề bài để chọn phương pháp phân tích đúng.",
+    "keywords": [
+      "dữ liệu chuỗi thời gian",
+      "dữ liệu chéo",
+      "dữ liệu bảng"
+    ]
+  },
+  {
+    "type": "formula",
+    "title": "Hàm hồi quy tổng thể (PRF)",
+    "plain": "Là phương trình thể hiện mối quan hệ lý thuyết giữa biến Y và biến X trên toàn bộ tổng thể lớn, có kèm theo sai số ngẫu nhiên u.",
+    "analogy": "Giống như công thức tính chiều cao trung bình của tất cả học sinh cả nước dựa vào độ tuổi.",
+    "prereq": [
+      "Phương trình đường thẳng y = ax + b"
+    ],
+    "formula_latex": "Y_i = \\beta_1 + \\beta_2 X_i + u_i",
+    "formula_words": "Y i bằng beta 1 cộng beta 2 nhân X i cộng u i",
+    "symbols": [
+      {
+        "symbol": "Y_i",
+        "meaning": "Biến phụ thuộc của quan sát thứ i"
+      },
+      {
+        "symbol": "X_i",
+        "meaning": "Biến độc lập của quan sát thứ i"
+      },
+      {
+        "symbol": "\\beta_1",
+        "meaning": "Hằng số (tung độ gốc)"
+      },
+      {
+        "symbol": "\\beta_2",
+        "meaning": "Hệ số góc (độ tác động của X lên Y)"
+      },
+      {
+        "symbol": "u_i",
+        "meaning": "Sai số ngẫu nhiên (các yếu tố ngoài mô hình)"
+      }
+    ],
+    "steps": [
+      "Xác định biến Y và X",
+      "Viết dạng tổng quát có kèm hệ số beta và sai số u"
+    ],
+    "example": "Y_i = 1.2 + 0.5 X_i + u_i với beta 1 bằng 1.2 và beta 2 bằng 0.5.",
+    "pitfall": "Quên viết biến sai số u_i khi viết hàm tổng thể.",
+    "exam_tip": "Phân biệt rõ ký hiệu của tổng thể (beta) và mẫu (b hoặc hat).",
+    "keywords": [
+      "PRF",
+      "hàm hồi quy tổng thể"
+    ]
+  }
+]

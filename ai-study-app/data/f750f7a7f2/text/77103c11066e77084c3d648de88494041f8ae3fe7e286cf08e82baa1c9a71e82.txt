@@ -1,0 +1,117 @@
+[Slide 1]
+CHƯƠNG
+01
+3 TIẾT LÝ THUYẾT
+Tổng Quan Về Python Và Ứng Dụng Trong Tài Chính
+Làm quen với Python, môi trường Jupyter Notebook, và bức tranh toàn cảnh về Python trong FinTech.
+
+[Slide 2]
+CHƯƠNG 1 · NỘI DUNG
+Tổng Quan Về Python Và Ứng Dụng Trong Tài Chính
+1.1
+Giới thiệu ngôn ngữ lập trình Python và môi trường Jupyter Notebook
+1.2
+Ứng dụng của Python trong công nghệ tài chính (FinTech)
+1.3
+Các thư viện Python phổ biến trong tài chính
+Chương 1 · Nội Dung
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 3]
+1.1 · GIỚI THIỆU PYTHON
+Vì Sao Python Trong Tài Chính?
+Python là ngôn ngữ lập trình cấp cao, cú pháp rõ ràng, dễ đọc — rút ngắn thời gian phát triển
+Hệ sinh thái thư viện cực kỳ phong phú cho xử lý dữ liệu, thống kê, và Học máy
+Được các định chế tài chính lớn (ngân hàng, quỹ đầu tư, công ty chứng khoán) sử dụng rộng rãi
+Cộng đồng lớn, tài liệu phong phú, dễ tìm giải pháp cho vấn đề gặp phải
+Miễn phí, mã nguồn mở, chạy đa nền tảng (Windows, macOS, Linux)
+Vì Sao Python Trong Tài Chính?
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 4]
+1.1 · CÔNG CỤ LẬP TRÌNH
+Môi Trường Jupyter Notebook
+Jupyter Notebook là môi trường lập trình tương tác, chạy từng ô lệnh (cell) độc lập
+Hai loại cell chính: Code cell (chạy code Python) và Markdown cell (văn bản, giải thích, công thức)
+Kết quả (số liệu, bảng, biểu đồ) hiển thị ngay bên dưới cell — rất phù hợp cho phân tích dữ liệu khám phá
+Có thể lưu lại toàn bộ quá trình phân tích: code, kết quả, và diễn giải trong cùng một file (.ipynb)
+Là công cụ tiêu chuẩn trong ngành khoa học dữ liệu và tài chính định lượng (quant finance)
+Môi Trường Jupyter Notebook
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 5]
+1.1 · THỰC HÀNH NHANH
+Ô Lệnh Đầu Tiên Trong Jupyter Notebook
+# Đây là một code cell -- nhấn Shift + Enter để chạy
+print("Xin chào FinTech!")
+
+# Python có thể tính toán tài chính đơn giản ngay lập tức
+gia_von = 100_000_000      # 100 triệu đồng
+loi_nhuan = 8_500_000       # 8.5 triệu đồng lợi nhuận
+ty_suat_loi_nhuan = loi_nhuan / gia_von
+print(f"Tỷ suất lợi nhuận: {ty_suat_loi_nhuan:.2%}")
+Dấu gạch dưới trong số (100_000_000) chỉ giúp dễ đọc -- Python bỏ qua nó khi tính toán.
+Ô Lệnh Đầu Tiên Trong Jupyter Notebook
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 6]
+1.2 · PYTHON TRONG THỰC TẾ
+Ứng Dụng Của Python Trong FinTech
+Giao dịch thuật toán (Algorithmic Trading): tự động phân tích và đặt lệnh mua/bán theo chiến lược
+Phân tích rủi ro (Risk Analysis): định lượng rủi ro thị trường, rủi ro tín dụng, rủi ro thanh khoản
+Phát hiện gian lận (Fraud Detection): dùng Học máy phát hiện giao dịch bất thường theo thời gian thực
+Chatbot và trợ lý ảo tài chính: tự động hóa tư vấn, chăm sóc khách hàng ngân hàng số
+Blockchain và tiền mã hóa: xây dựng và phân tích hợp đồng thông minh, sổ cái phân tán
+Robo-advisor: tự động đề xuất và quản lý danh mục đầu tư cá nhân hóa
+Ứng Dụng Của Python Trong FinTech
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 7]
+1.2 · CASE STUDY NGẮN
+Python Trong Các Lĩnh Vực FinTech
+Python Trong Các Lĩnh Vực FinTech
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 8]
+1.3 · HỆ SINH THÁI THƯ VIỆN
+Các Thư Viện Python Phổ Biến Trong Tài Chính
+Các Thư Viện Python Phổ Biến Trong Tài Chính
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 9]
+1.3 · BẮT ĐẦU MỘT NOTEBOOK PHÂN TÍCH
+Import Các Thư Viện Thường Dùng
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Các thư viện dưới đây sẽ được giới thiệu ở Chương 3, 4
+# import yfinance as yf
+# from sklearn.linear_model import LogisticRegression
+
+print("Đã sẵn sàng cho phân tích tài chính!")
+Hầu như mọi notebook phân tích tài chính trong môn học đều bắt đầu bằng các dòng import này.
+Import Các Thư Viện Thường Dùng
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 10]
+1 · LƯU Ý CHƯƠNG 1
+Best Practices
+Luôn đặt tên biến rõ nghĩa (vd: gia_dong_cua thay vì x) — code tài chính cần dễ kiểm tra lại
+Chạy Jupyter Notebook theo đúng thứ tự từ trên xuống để tránh lỗi biến chưa được định nghĩa
+Lưu notebook thường xuyên (Ctrl+S) — mất công sức phân tích do quên lưu là điều đáng tiếc
+Cài đặt các thư viện qua pip install trước khi import (vd: pip install yfinance)
+Luôn ghi chú (markdown cell) giải thích ý nghĩa từng bước phân tích, không chỉ viết code
+Lưu Ý & Best Practices
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 11]
+TÓM TẮT CHƯƠNG
+Tóm Tắt Chương 1
+1
+Python là công cụ tiêu chuẩn trong công nghệ tài chính hiện đại nhờ hệ sinh thái thư viện phong phú
+2
+Jupyter Notebook là môi trường lý tưởng để phân tích dữ liệu tài chính theo từng bước, có diễn giải
+3
+NumPy, Pandas, Matplotlib/Seaborn/Plotly, yFinance/vnstock, Scikit-learn là bộ công cụ cốt lõi của môn học

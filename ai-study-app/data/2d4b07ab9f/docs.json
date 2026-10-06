@@ -1,0 +1,38 @@
+[
+  {
+    "hash": "2a5689588602883056a2848b84b517c357f7f4a2d6092a1b148c068c7dffcbc5",
+    "filename": "CHUONG 1 - Tong quan ve KTL.pptx.txt",
+    "stored_name": "2a56895886_CHUONG 1 - Tong quan ve KTL.pptx.txt",
+    "char_count": 5358,
+    "added_at": 1791247256.6004193,
+    "extracted": true,
+    "model_used": "Gemini:gemini-flash-lite-latest"
+  },
+  {
+    "hash": "79feb72f1d452a6c00ff36f94dc79b8fe44d8df46aae544562fca1ccc33ece3c",
+    "filename": "Chuong 2- Mo hinh hoi qui 2 bien (1).pdf.txt",
+    "stored_name": "79feb72f1d_Chuong 2- Mo hinh hoi qui 2 bien (1).pdf.txt",
+    "char_count": 12786,
+    "added_at": 1791247256.60424,
+    "extracted": true,
+    "model_used": "Gemini:gemini-flash-lite-latest"
+  },
+  {
+    "hash": "b92cb42664000b2231e074bee5dc00ac08e70d46d814fefb64b8b4c3a4a067cf",
+    "filename": "Chuong 4 Mo hinh hoi quy boiSV.pdf.txt",
+    "stored_name": "b92cb42664_Chuong 4 Mo hinh hoi quy boiSV.pdf.txt",
+    "char_count": 5125,
+    "added_at": 1791247256.6084986,
+    "extracted": true,
+    "model_used": "Gemini:gemini-flash-lite-latest"
+  },
+  {
+    "hash": "ea7353d6ca22dffcd83a089bb6591ff8dd8b6e47db362608a4abf241fa49c5c9",
+    "filename": "Chuong 5 Hoi quy voi bien gia.pdf.txt",
+    "stored_name": "ea7353d6ca_Chuong 5 Hoi quy voi bien gia.pdf.txt",
+    "char_count": 4838,
+    "added_at": 1791247256.6108997,
+    "extracted": true,
+    "model_used": "Gemini:gemini-flash-lite-latest"
+  }
+]

@@ -1,0 +1,439 @@
+[Slide 1]
+CHƯƠNG
+03
+9 TIẾT LÝ THUYẾT
+Xử Lý Và Phân Tích Dữ Liệu Tài Chính
+NumPy, Pandas, làm sạch dữ liệu, thu thập dữ liệu thực tế, và trực quan hóa — bộ kỹ năng cốt lõi của môn học.
+
+[Slide 2]
+CHƯƠNG 3 · NỘI DUNG
+Xử Lý Và Phân Tích Dữ Liệu Tài Chính
+3.1
+Làm việc với NumPy trong tính toán tài chính
+3.2
+Xử lý dữ liệu với Pandas (DataFrame, Series)
+3.3
+Làm sạch và chuẩn hóa dữ liệu tài chính
+3.4
+Thu thập dữ liệu tài chính từ API (yFinance, vnstock...)
+3.5
+Trực quan hóa dữ liệu với Matplotlib, Seaborn, Plotly
+Chương 3 · Nội Dung
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 3]
+3.1 · NUMPY TRONG TÍNH TOÁN TÀI CHÍNH
+Vì Sao Cần NumPy?
+NumPy (Numerical Python) cung cấp ndarray — mảng số học tối ưu tốc độ, thay thế list thông thường
+Phép toán trên mảng NumPy được vector hóa: áp dụng cho toàn bộ mảng cùng lúc, không cần vòng lặp
+Nhanh hơn list Python thuần từ 10–100 lần với dữ liệu lớn — quan trọng khi xử lý dữ liệu giao dịch
+Là nền tảng mà Pandas, Scikit-learn, và hầu hết thư viện khoa học dữ liệu Python được xây dựng trên đó
+import numpy as np là quy ước chuẩn trong toàn ngành
+Vì Sao Cần NumPy?
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 4]
+3.1 · NDARRAY CƠ BẢN
+Tạo và Tính Toán Với Mảng NumPy
+import numpy as np
+
+gia = np.array([68500, 69000, 68200, 70100, 71500])
+
+print("Trung bình:", gia.mean())
+print("Độ lệch chuẩn:", gia.std())
+print("Giá trị lớn nhất:", gia.max())
+
+gia_usd = gia / 24500     # chuyển đổi cùng lúc toàn bộ mảng sang USD
+Không cần vòng lặp: gia / 24500 tự động chia MỌI phần tử của mảng cho tỷ giá.
+Tạo và Tính Toán Với Mảng NumPy
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 5]
+3.1 · VECTOR HÓA TRONG TÀI CHÍNH
+Tính Lợi Suất Bằng NumPy
+gia = np.array([68500, 69000, 68200, 70100, 71500])
+
+# Lợi suất hàng ngày: (gia hôm nay - gia hôm qua) / gia hôm qua
+loi_suat = (gia[1:] - gia[:-1]) / gia[:-1]
+print("Lợi suất từng ngày:", np.round(loi_suat, 4))
+
+loi_suat_binh_quan = loi_suat.mean()
+do_bien_dong = loi_suat.std()
+print(f"Lợi suất TB: {loi_suat_binh_quan:.2%}, Độ biến động: {do_bien_dong:.2%}")
+gia[1:] và gia[:-1] là kỹ thuật slicing để so sánh mỗi giá trị với giá trị ngay trước nó, không cần vòng lặp.
+Tính Lợi Suất Bằng NumPy
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 6]
+3.1 · ỨNG DỤNG NÂNG CAO CỦA NUMPY
+Mô Phỏng Monte Carlo Đơn Giản
+Mô phỏng Monte Carlo tạo ra hàng nghìn kịch bản ngẫu nhiên để ước lượng rủi ro/lợi nhuận tương lai
+np.random.normal() tạo ra các số ngẫu nhiên theo phân phối chuẩn — mô phỏng biến động lợi suất
+Với NumPy, ta có thể mô phỏng hàng nghìn kịch bản CÙNG LÚC nhờ vector hóa
+Kỹ thuật này là nền tảng cho tính Value at Risk (VaR) và đánh giá rủi ro danh mục nâng cao
+Ta sẽ thực hành kỹ thuật này chi tiết hơn ở Chương 4 khi phân tích rủi ro danh mục
+Mô Phỏng Monte Carlo Đơn Giản
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 7]
+3.2 · CẤU TRÚC DỮ LIỆU CỐT LÕI
+Pandas: Series và DataFrame
+Pandas là thư viện xử lý dữ liệu dạng bảng, xây dựng trên nền NumPy
+Series: một cột dữ liệu có nhãn (label) — giống một cột duy nhất trong Excel
+DataFrame: bảng dữ liệu 2 chiều gồm nhiều Series — giống toàn bộ một trang tính Excel
+Mỗi dòng và cột trong DataFrame đều có nhãn, giúp truy xuất dữ liệu trực quan, rõ ràng
+import pandas as pd là quy ước chuẩn; df là tên biến thường dùng cho DataFrame
+Pandas: Series và DataFrame
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 8]
+3.2 · PANDAS DATAFRAME
+Tạo DataFrame Từ Dữ Liệu Giao Dịch
+import pandas as pd
+
+du_lieu = {
+    "Ngay": ["2026-01-02", "2026-01-03", "2026-01-06"],
+    "Ma_CP": ["VNM", "VNM", "VNM"],
+    "Gia_dong_cua": [68500, 69000, 68200],
+    "Khoi_luong": [1_200_000, 980_000, 1_450_000],
+}
+
+df = pd.DataFrame(du_lieu)
+print(df)
+Một dict Python với các list cùng độ dài chuyển trực tiếp thành DataFrame -- cách tạo bảng dữ liệu nhanh nhất.
+Tạo DataFrame Từ Dữ Liệu Giao Dịch
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 9]
+3.2 · NẠP DỮ LIỆU THỰC TẾ
+Đọc Dữ Liệu Từ File
+df = pd.read_csv("gia_co_phieu.csv", parse_dates=["Ngay"])
+df = df.set_index("Ngay")   # đặt cột Ngày làm chỉ mục (index)
+
+print(df.head())        # 5 dòng đầu tiên
+print(df.info())        # thông tin kiểu dữ liệu từng cột
+print(df.shape)         # (số dòng, số cột)
+parse_dates tự động chuyển cột ngày tháng dạng text thành kiểu datetime, giúp thao tác theo thời gian dễ dàng.
+Đọc Dữ Liệu Từ File
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 10]
+3.2 · TRUY XUẤT DỮ LIỆU
+Chọn Lọc Dữ Liệu: .loc và .iloc
+# .loc: chọn theo NHÃN (label)
+print(df.loc["2026-01-03"])
+print(df.loc[:, "Gia_dong_cua"])    # chọn cột theo tên
+
+# .iloc: chọn theo VỊ TRÍ (position)
+print(df.iloc[0])          # dòng đầu tiên
+print(df.iloc[0:3, 1:3])   # 3 dòng đầu, cột thứ 2-3
+Ghi nhớ: .loc dùng TÊN (nhãn), .iloc dùng SỐ (vị trí) -- nhầm lẫn giữa hai cái là lỗi phổ biến.
+Chọn Lọc Dữ Liệu: .loc và .iloc
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 11]
+3.2 · FILTER & SORT
+Lọc và Sắp Xếp Dữ Liệu
+# Lọc: chỉ giữ các ngày khối lượng giao dịch trên 1 triệu
+df_loc_khoi_luong_cao = df[df["Khoi_luong"] > 1_000_000]
+
+# Sắp xếp theo giá đóng cửa giảm dần
+df_sap_xep = df.sort_values("Gia_dong_cua", ascending=False)
+print(df_sap_xep.head())
+df[điều kiện] là cú pháp lọc chuẩn của Pandas -- rất giống cách viết điều kiện if ở Chương 2.
+Lọc và Sắp Xếp Dữ Liệu
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 12]
+3.2 · PHÂN TÍCH THEO NHÓM
+Tổng Hợp Dữ Liệu: groupby
+# Ví dụ: dữ liệu nhiều mã cổ phiếu, tính giá TB theo từng mã
+gia_tb_theo_ma = df.groupby("Ma_CP")["Gia_dong_cua"].mean()
+print(gia_tb_theo_ma)
+
+# Nhiều phép tổng hợp cùng lúc
+thong_ke = df.groupby("Ma_CP")["Gia_dong_cua"].agg(["mean", "std", "max"])
+print(thong_ke)
+groupby thực hiện theo mô hình 'chia nhóm - tính toán - gộp kết quả' -- cực kỳ mạnh khi phân tích nhiều mã cổ phiếu.
+Tổng Hợp Dữ Liệu: groupby
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 13]
+3.3 · LÀM SẠCH DỮ LIỆU
+Dữ Liệu Thiếu (Missing Data)
+Dữ liệu tài chính thực tế thường có giá trị thiếu: ngày nghỉ giao dịch, lỗi thu thập, cổ phiếu mới niêm yết
+df.isna() phát hiện ô nào bị thiếu (trả về True/False); df.isna().sum() đếm số lượng thiếu mỗi cột
+df.dropna() loại bỏ dòng/cột có dữ liệu thiếu — đơn giản nhưng có thể mất nhiều dữ liệu
+df.fillna() điền giá trị thay thế — vd dùng giá của ngày liền trước (forward fill)
+Lựa chọn cách xử lý phụ thuộc bài toán: loại bỏ, điền giá trị, hay giữ nguyên và đánh dấu
+Dữ Liệu Thiếu (Missing Data)
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 14]
+3.3 · ISNA / DROPNA / FILLNA
+Xử Lý Dữ Liệu Thiếu
+print(df.isna().sum())          # đếm giá trị thiếu mỗi cột
+
+df_sach = df.dropna()            # cách 1: loại bỏ dòng thiếu dữ liệu
+
+df_dien = df.fillna(method="ffill")   # cách 2: điền bằng giá trị liền trước
+
+df_dien_gt = df.fillna(df.mean(numeric_only=True))  # cách 3: điền bằng giá trị TB
+'ffill' (forward fill) là lựa chọn phổ biến với dữ liệu giá -- giả định giá không đổi khi thiếu dữ liệu ngày đó.
+Xử Lý Dữ Liệu Thiếu
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 15]
+3.3 · KIỂM SOÁT CHẤT LƯỢNG DỮ LIỆU
+Phát Hiện Giá Trị Ngoại Lai (Outlier)
+loi_suat = df["Gia_dong_cua"].pct_change().dropna()
+
+# Phương pháp Z-score: giá trị cách xa trung bình > 3 độ lệch chuẩn
+z_score = (loi_suat - loi_suat.mean()) / loi_suat.std()
+ngoai_lai = loi_suat[z_score.abs() > 3]
+
+print(f"Phát hiện {len(ngoai_lai)} giá trị ngoại lai cần kiểm tra lại")
+Ngoại lai không phải lúc nào cũng là lỗi -- có thể là biến động thật (tin tức, sự kiện) nên cần kiểm tra thủ công trước khi loại bỏ.
+Phát Hiện Giá Trị Ngoại Lai (Outlier)
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 16]
+3.3 · ĐƯA DỮ LIỆU VỀ CÙNG THANG ĐO
+Chuẩn Hóa Dữ Liệu (Normalization)
+gia = df["Gia_dong_cua"]
+
+# Min-Max Scaling: đưa dữ liệu về khoảng [0, 1]
+gia_chuan_hoa = (gia - gia.min()) / (gia.max() - gia.min())
+
+# Chuẩn hóa Z-score: đưa về trung bình 0, độ lệch chuẩn 1
+gia_z_score = (gia - gia.mean()) / gia.std()
+Chuẩn hóa rất quan trọng trước khi đưa dữ liệu vào mô hình Học máy (Chương 4) -- các đặc trưng có thang đo khác nhau có thể làm sai lệch mô hình.
+Chuẩn Hóa Dữ Liệu (Normalization)
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 17]
+3.4 · DỮ LIỆU THỰC TẾ
+Thu Thập Dữ Liệu Từ API Tài Chính
+yFinance: thư viện Python phổ biến để lấy dữ liệu giá cổ phiếu quốc tế miễn phí từ Yahoo Finance
+vnstock: thư viện chuyên biệt lấy dữ liệu chứng khoán Việt Nam (HOSE, HNX, UPCOM)
+Cả hai đều cần kết nối Internet để gọi API và trả về dữ liệu dạng DataFrame
+Thu Thập Dữ Liệu Từ API Tài Chính
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 18]
+3.4 · CÚ PHÁP THỰC TẾ (CẦN INTERNET)
+Lấy Dữ Liệu Với yFinance
+import yfinance as yf
+
+# Lấy dữ liệu giá AAPL trong 6 tháng gần nhất
+df_aapl = yf.download("AAPL", period="6mo", interval="1d")
+print(df_aapl.head())
+
+df_aapl.to_csv("aapl_6thang.csv")   # lưu lại để dùng offline sau này
+yf.download() trả về DataFrame với các cột Open/High/Low/Close/Volume, chỉ mục là ngày giao dịch.
+Lấy Dữ Liệu Với yFinance
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 19]
+3.4 · CÚ PHÁP THỰC TẾ (CẦN INTERNET)
+Lấy Dữ Liệu Chứng Khoán Việt Nam Với vnstock
+from vnstock.api.quote import Quote
+
+q = Quote(symbol="VNM", source="VCI")
+df_vnm = q.history(start="2025-01-01", end="2026-01-01")
+print(df_vnm.head())
+vnstock là thư viện mã nguồn mở phổ biến nhất hiện nay cho dữ liệu chứng khoán Việt Nam (cú pháp vnstock.api hiện hành, thay cho lớp Vnstock() đã ngừng hỗ trợ).
+Lấy Dữ Liệu Chứng Khoán Việt Nam Với vnstock
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 20]
+3.4 · LỰA CHỌN NGUỒN DỮ LIỆU
+So Sánh yFinance và vnstock
+So Sánh yFinance và vnstock
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 21]
+3.5 · TRỰC QUAN HÓA
+Trực Quan Hóa Dữ Liệu: Vì Sao Quan Trọng?
+Một biểu đồ giá tốt giúp phát hiện xu hướng, biến động bất thường nhanh hơn nhiều so với đọc bảng số liệu
+Ba thư viện phổ biến: Matplotlib (nền tảng, tùy biến cao), Seaborn (biểu đồ thống kê đẹp, ít code), Plotly (tương tác, phù hợp dashboard)
+Lựa chọn thư viện phụ thuộc mục đích: báo cáo tĩnh (Matplotlib/Seaborn) hay dashboard tương tác (Plotly)
+Nguyên tắc chung: luôn có tiêu đề, nhãn trục, và chú thích rõ ràng cho mọi biểu đồ tài chính
+Thực hành các thư viện này chi tiết hơn ở Bài thực hành 4
+Trực Quan Hóa Dữ Liệu: Vì Sao Quan Trọng?
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 22]
+3.5 · TRỰC QUAN HÓA CƠ BẢN
+Biểu Đồ Với Matplotlib
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(10, 5))
+plt.plot(df.index, df["Gia_dong_cua"], color="navy")
+plt.title("Diễn Biến Giá Đóng Cửa")
+plt.xlabel("Ngày")
+plt.ylabel("Giá (VNĐ)")
+plt.show()
+figsize=(10, 5) đặt kích thước biểu đồ (rộng x cao, tính bằng inch).
+Biểu Đồ Với Matplotlib
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 23]
+3.5 · TRỰC QUAN HÓA NÂNG CAO
+Biểu Đồ Thống Kê Với Seaborn
+import seaborn as sns
+
+loi_suat = df["Gia_dong_cua"].pct_change().dropna()
+
+sns.histplot(loi_suat, kde=True, color="teal")
+plt.title("Phân Phối Lợi Suất Hàng Ngày")
+plt.show()
+kde=True vẽ thêm đường ước lượng mật độ (density curve), giúp thấy rõ hình dạng phân phối.
+Biểu Đồ Thống Kê Với Seaborn
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 24]
+3.5 · TRỰC QUAN HÓA TƯƠNG TÁC
+Biểu Đồ Tương Tác Với Plotly
+import plotly.graph_objects as go
+
+fig = go.Figure(data=[go.Candlestick(
+    x=df.index, open=df["Gia_mo_cua"], high=df["Gia_cao_nhat"],
+    low=df["Gia_thap_nhat"], close=df["Gia_dong_cua"]
+)])
+fig.update_layout(title="Biểu Đồ Nến Tương Tác")
+fig.show()
+Biểu đồ Plotly có thể phóng to/thu nhỏ, xem giá trị khi rê chuột -- rất phù hợp cho dashboard.
+Biểu Đồ Tương Tác Với Plotly
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 25]
+3.5 · LỰA CHỌN CÔNG CỤ
+So Sánh Ba Thư Viện Trực Quan Hóa
+So Sánh Ba Thư Viện Trực Quan Hóa
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 26]
+3.2 · NÂNG CAO
+Pivot Table Nâng Cao
+bang_tong_hop = df.pivot_table(
+    index="Ma_CP",
+    values=["Gia_dong_cua", "Khoi_luong"],
+    aggfunc={"Gia_dong_cua": ["mean", "std"], "Khoi_luong": "sum"}
+)
+print(bang_tong_hop.round(0))
+pivot_table cho phép tổng hợp NHIỀU giá trị bằng NHIỀU hàm khác nhau cùng lúc, linh hoạt hơn pivot() thông thường.
+Pivot Table Nâng Cao
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 27]
+3.2 · NÂNG CAO
+Merge Dữ Liệu Từ Nhiều Nguồn
+thong_tin_cty = pd.DataFrame({
+    "Ma_CP": ["VNM", "FPT", "HPG"],
+    "Nganh": ["Tiêu dùng", "Công nghệ", "Thép"],
+})
+
+df_day_du = df.merge(thong_tin_cty, on="Ma_CP", how="left")
+
+# Giờ có thể phân tích theo ngành nhờ đã merge
+print(df_day_du.groupby("Nganh")["Gia_dong_cua"].mean().round(0))
+merge() ghép hai DataFrame theo một cột chung (khóa) -- giống VLOOKUP/phép nối bảng trong Excel/SQL.
+Merge Dữ Liệu Từ Nhiều Nguồn
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 28]
+3.3 · NÂNG CAO
+apply() Với Hàm Tùy Chỉnh
+def phan_loai_bien_dong(loi_suat_ngay):
+    if pd.isna(loi_suat_ngay):
+        return "Không xác định"
+    elif abs(loi_suat_ngay) > 0.03:
+        return "Biến động mạnh"
+    else:
+        return "Ổn định"
+
+df["muc_bien_dong"] = df["loi_suat"].apply(phan_loai_bien_dong)
+apply() chạy một hàm TỰ VIẾT lên từng phần tử -- dùng khi logic phức tạp hơn các hàm Pandas có sẵn.
+apply() Với Hàm Tùy Chỉnh
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 29]
+3.3 · NÂNG CAO
+Phát Hiện Ngoại Lệ Bằng Phương Pháp IQR
+def tim_ngoai_le_iqr(nhom):
+    q1, q3 = nhom.quantile([0.25, 0.75])
+    iqr = q3 - q1
+    can_duoi, can_tren = q1 - 1.5*iqr, q3 + 1.5*iqr
+    return (nhom < can_duoi) | (nhom > can_tren)
+
+df["ngoai_le_iqr"] = df.groupby("Ma_CP")["loi_suat"].transform(tim_ngoai_le_iqr)
+IQR (khoảng tứ phân vị) là phương pháp thay thế cho Z-score, ít bị chính các giá trị ngoại lệ 'kéo lệch' kết quả hơn.
+Phát Hiện Ngoại Lệ Bằng Phương Pháp IQR
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 30]
+3.1 · NÂNG CAO
+Sharpe Ratio và Maximum Drawdown Vector Hóa
+def tinh_sharpe_ratio(loi_suat_ngay, rf=0.03, so_ngay_nam=252):
+    ls_nam = loi_suat_ngay.mean() * so_ngay_nam
+    bd_nam = loi_suat_ngay.std() * np.sqrt(so_ngay_nam)
+    return (ls_nam - rf) / bd_nam
+
+def tinh_max_drawdown(gia_series):
+    gt_tich_luy = (1 + gia_series.pct_change().fillna(0)).cumprod()
+    dinh_cao_nhat = gt_tich_luy.cummax()
+    return ((gt_tich_luy - dinh_cao_nhat) / dinh_cao_nhat).min()
+Hai chỉ số đánh giá hiệu suất đầu tư quan trọng bậc nhất, tính hoàn toàn không cần vòng lặp nhờ vector hóa NumPy/Pandas.
+Sharpe Ratio và Maximum Drawdown Vector Hóa
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 31]
+3.4 · NÂNG CAO
+Độ Tin Cậy Khi Thu Thập Dữ Liệu
+Gọi API thực tế có thể thất bại tạm thời (mạng chậm, server quá tải) — cần cơ chế thử lại (retry)
+Exponential backoff: tăng dần thời gian chờ giữa các lần thử lại (1s, 2s, 4s...) thay vì thử liên tục
+Luôn kiểm định (validate) dữ liệu vừa lấy về: giá có dương không, có thiếu dữ liệu không, có biến động bất thường không
+Cơ chế cache (lưu lại dữ liệu đã lấy) giúp tránh gọi API lặp lại không cần thiết, tiết kiệm thời gian và hạn mức
+Khi thu thập nhiều mã cùng lúc, nên bỏ qua mã lỗi và tiếp tục thay vì dừng toàn bộ chương trình
+Độ Tin Cậy Khi Thu Thập Dữ Liệu
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 32]
+3.4 · NÂNG CAO
+Retry Với Exponential Backoff
+import time
+
+def goi_api_voi_retry(ham_goi_api, so_lan_thu=3, cho_ban_dau=1):
+    for lan_thu in range(so_lan_thu):
+        try:
+            return ham_goi_api()
+        except Exception as e:
+            thoi_gian_cho = cho_ban_dau * (2 ** lan_thu)
+            print(f"Lần {lan_thu+1} thất bại, chờ {thoi_gian_cho}s...")
+            time.sleep(thoi_gian_cho)
+    return None    # hết lượt thử -- chuyển sang dữ liệu dự phòng
+Thời gian chờ tăng GẤP ĐÔI sau mỗi lần thất bại -- tránh làm quá tải server đang gặp sự cố.
+Retry Với Exponential Backoff
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 33]
+3 · LƯU Ý CHƯƠNG 3
+Lưu Ý & Best Practices
+Luôn kiểm tra df.info() và df.isna().sum() ngay sau khi nạp dữ liệu mới, trước khi phân tích tiếp
+Không tự động xóa mọi dữ liệu thiếu (dropna) mà không hiểu vì sao dữ liệu bị thiếu
+Khi gọi API (yFinance, vnstock), luôn lưu dữ liệu ra file để tránh gọi lại API nhiều lần không cần thiết
+Kiểm tra đơn vị và định dạng dữ liệu (VNĐ hay nghìn VNĐ? ngày dạng dd/mm hay mm/dd?) trước khi tính toán
+Chọn loại biểu đồ phù hợp với thông điệp muốn truyền tải, không chỉ vì biểu đồ đó trông đẹp
+Lưu Ý & Best Practices
+Lập Trình Python Trong Công Nghệ Tài Chính
+
+[Slide 34]
+TÓM TẮT CHƯƠNG
+Tóm Tắt Chương 3
+1
+NumPy và Pandas là bộ đôi công cụ cốt lõi để xử lý dữ liệu tài chính hiệu quả, nhanh chóng
+2
+Làm sạch dữ liệu (thiếu, ngoại lai, chuẩn hóa) là bước bắt buộc trước khi phân tích hay xây dựng mô hình
+3
+yFinance/vnstock thu thập dữ liệu thực tế; Matplotlib/Seaborn/Plotly biến dữ liệu thành biểu đồ có ý nghĩa

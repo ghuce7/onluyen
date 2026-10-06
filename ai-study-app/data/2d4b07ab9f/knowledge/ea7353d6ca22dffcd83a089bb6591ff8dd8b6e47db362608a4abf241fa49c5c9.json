@@ -1,0 +1,117 @@
+[
+  {
+    "type": "concept",
+    "title": "Khái niệm biến định lượng và biến định tính",
+    "plain": "Biến định lượng là những thứ đo lường được bằng con số rõ ràng như tiền bạc, chiều cao, sản lượng. Biến định tính là các đặc điểm, tính chất không phải số như giới tính (Nam/Nữ), khu vực (Bắc/Trung/Nam), để máy tính và mô hình toán học hiểu được thì ta phải biến các chữ này thành các con số gọi là mã hóa.",
+    "analogy": "Giống như việc bạn phân loại áo quần vào các giỏ khác nhau và gắn nhãn số cho mỗi giỏ để dễ quản lý.",
+    "prereq": [],
+    "formula_latex": "",
+    "formula_words": "",
+    "symbols": [],
+    "steps": [
+      "Xác định tính chất của hiện tượng",
+      "Gán cho mỗi tính chất một con số tượng trưng"
+    ],
+    "example": "Biến giới tính có 2 tính chất được mã hóa thành: Nam là 1, Nữ là 0.",
+    "pitfall": "Nhầm lẫn giữa con số đại diện cho tên gọi (biến giả) với con số mang giá trị đo lường thực tế.",
+    "exam_tip": "Nhìn vào đề bài thấy dữ liệu là chữ (Nam/Nữ, Miền Bắc/Trung/Nam) thì ngay lập tức biết đó là biến định tính cần mã hóa.",
+    "keywords": [
+      "biến định lượng",
+      "biến định tính",
+      "mã hóa"
+    ]
+  },
+  {
+    "type": "formula",
+    "title": "Cách đặt và đưa biến giả vào mô hình có 2 tính chất",
+    "plain": "Khi biến định tính chỉ có 2 tính chất (ví dụ Nam và Nữ), ta chỉ cần dùng ĐÚNG MỘT biến giả (ký hiệu là D). Quy tắc vàng là: Số biến giả luôn bằng số tính chất trừ đi 1 (2 trừ 1 còn 1). Tính chất nào được chọn làm mốc thì gán bằng 0, tính chất còn lại gán bằng 1.",
+    "analogy": "Giống như công tắc điện chỉ có 2 trạng thái: Bật là 1, Tắt là 0.",
+    "prereq": [
+      "Khái niệm biến định lượng và biến định tính"
+    ],
+    "formula_latex": "Y = \\beta_1 + \\beta_2 D + u",
+    "formula_words": "Y bằng beta 1 cộng beta 2 nhân D cộng u",
+    "symbols": [
+      {
+        "symbol": "Y",
+        "meaning": "Biến phụ thuộc cần dự báo (ví dụ: năng suất, doanh số)"
+      },
+      {
+        "symbol": "\\beta_1",
+        "meaning": "Hằng số của mô hình, thể hiện giá trị của nhóm mốc (khi D = 0)"
+      },
+      {
+        "symbol": "\\beta_2",
+        "meaning": "Hệ số của biến giả, thể hiện mức chênh lệch giữa nhóm có D = 1 so với nhóm mốc"
+      },
+      {
+        "symbol": "D",
+        "meaning": "Biến giả nhận giá trị 0 hoặc 1"
+      },
+      {
+        "symbol": "u",
+        "meaning": "Sai số ngẫu nhiên"
+      }
+    ],
+    "steps": [
+      "Xác định số tính chất và đặt số biến giả bằng số tính chất trừ 1",
+      "Gán giá trị 1 cho một tính chất và 0 cho tính chất làm mốc",
+      "Thay vào phương trình hồi quy và tính toán"
+    ],
+    "example": "Cho mô hình năng suất Y = 81,4 + 30,2D với D = 1 nếu là Nam và D = 0 nếu là Nữ. Nếu nhân viên là Nam (D=1): Y = 81,4 + 30,2 * 1 = 111,6 sản phẩm/ngày. Nếu nhân viên là Nữ (D=0): Y = 81,4 + 30,2 * 0 = 81,4 sản phẩm/ngày.",
+    "pitfall": "Đặt số lượng biến giả bằng đúng số tính chất thay vì lấy số tính chất trừ đi 1.",
+    "exam_tip": "Đề bài cho biến định tính 2 trạng thái (Nam/Nữ, Có/Không) thì viết ngay mô hình có 1 biến giả D.",
+    "keywords": [
+      "biến giả",
+      "mô hình hồi quy",
+      "2 tính chất"
+    ]
+  },
+  {
+    "type": "formula",
+    "title": "Cách đặt và đưa biến giả vào mô hình có 3 tính chất trở lên",
+    "plain": "Khi biến định tính có từ 3 tính chất trở lên (ví dụ 3 miền Bắc, Trung, Nam), ta vẫn tuân theo quy tắc: Số biến giả bằng số tính chất trừ 1 (3 tính chất thì dùng 2 biến giả D2 và D3). Tính chất còn lại không đặt biến giả riêng mà sẽ đóng vai trò làm 'nhóm gốc' (khi tất cả các biến giả đồng thời bằng 0).",
+    "analogy": "Giống như có 3 hướng đi, ta chỉ cần đặt biển chỉ dẫn cho 2 hướng, hướng còn lại mặc định là đường đi thẳng khi không thấy biển báo.",
+    "prereq": [
+      "Cách đặt và đưa biến giả vào mô hình có 2 tính chất"
+    ],
+    "formula_latex": "Y = \\beta_1 + \\beta_2 D_{2i} + \\beta_3 D_{3i} + u",
+    "formula_words": "Y bằng beta 1 cộng beta 2 nhân D 2 i cộng beta 3 nhân D 3 i cộng u",
+    "symbols": [
+      {
+        "symbol": "Y",
+        "meaning": "Biến phụ thuộc"
+      },
+      {
+        "symbol": "\\beta_1",
+        "meaning": "Giá trị của nhóm gốc (khi tất cả các biến giả bằng 0)"
+      },
+      {
+        "symbol": "D_{2i}",
+        "meaning": "Biến giả thứ nhất ứng với tính chất thứ hai"
+      },
+      {
+        "symbol": "D_{3i}",
+        "meaning": "Biến giả thứ hai ứng với tính chất thứ ba"
+      },
+      {
+        "symbol": "\\beta_2, \\beta_3",
+        "meaning": "Các hệ số hồi quy tương ứng với biến giả"
+      }
+    ],
+    "steps": [
+      "Đếm tổng số tính chất, suy ra số biến giả cần dùng bằng cách lấy số tính chất trừ 1",
+      "Chọn 1 tính chất làm nhóm gốc (cho các biến giả bằng 0 hết)",
+      "Gán giá trị cho từng biến giả ứng với các tính chất còn lại",
+      "Viết phương trình và thay giá trị để tìm hàm hồi quy từng khu vực"
+    ],
+    "example": "Cho kết quả Y = 353,3333 + 146,6667 D2 - 213,333 D3. Miền Nam (D2=1, D3=0) cho Y = 353,3333 + 146,6667 * 1 - 213,333 * 0 = 500.",
+    "pitfall": "Quên mất trường hợp nhóm gốc là lúc tất cả các biến giả đồng thời nhận giá trị bằng 0.",
+    "exam_tip": "Gặp bài toán phân loại 3 miền Bắc Trung Nam hoặc 3 mùa Xuân Hạ Thu, hãy nhớ lập bảng mã hóa 0 và 1 cho từng dòng để không bị lẫn lộn.",
+    "keywords": [
+      "nhiều tính chất",
+      "biến giả",
+      "nhóm gốc"
+    ]
+  }
+]

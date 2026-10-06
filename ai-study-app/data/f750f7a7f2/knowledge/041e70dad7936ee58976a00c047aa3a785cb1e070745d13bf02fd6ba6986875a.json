@@ -1,0 +1,283 @@
+[
+  {
+    "type": "concept",
+    "title": "Kiểu Dữ Liệu Cơ Bản Trong Python",
+    "plain": "Giống như ngoài đời chúng ta có chữ viết, số đếm, số tiền có lẻ và câu trả lời đúng/sai, máy tính cũng chia dữ liệu ra thành các hộp có kiểu khác nhau để dễ quản lý.",
+    "analogy": "Giống như việc bạn phân loại tài sản: tiền mặt nguyên cục (int), số dư tài khoản có xu lẻ (float), tên ngân hàng (str), và trạng thái đã đóng tiền hay chưa (bool).",
+    "prereq": [],
+    "formula_latex": "",
+    "formula_words": "",
+    "symbols": [],
+    "steps": [
+      "Xác định loại thông tin cần lưu",
+      "Chọn kiểu int, float, str hoặc bool tương ứng",
+      "Kiểm tra kiểu dữ liệu bằng hàm type()"
+    ],
+    "example": "ma_co_phieu = \"VNM\" (kiểu str), gia_dong_cua = 68500.0 (kiểu float), so_luong = 100 (kiểu int), da_khop_lenh = True (kiểu bool).",
+    "pitfall": "Dùng kiểu số thực (float) để tính toán tiền tệ có thể gây ra sai số nhỏ do cách máy tính lưu trữ số.",
+    "exam_tip": "Nhớ rõ int là số nguyên, float là số thập phân, str là chữ nằm trong dấu ngoặc kép, bool chỉ có True hoặc False.",
+    "keywords": [
+      "int",
+      "float",
+      "str",
+      "bool",
+      "type"
+    ]
+  },
+  {
+    "type": "concept",
+    "title": "Cấu Trúc Dữ Liệu: List và Tuple",
+    "plain": "Đây là cách gom nhiều dữ liệu lại thành một chuỗi. List cho phép thay đổi, thêm bớt món đồ bên trong thoải mái; còn Tuple thì cố định từ đầu đến cuối không được sửa.",
+    "analogy": "List giống như giỏ đựng đồ đi siêu thị, thích thì bỏ thêm hoặc bớt ra; Tuple giống như tờ giấy khai sinh, thông tin trên đó đã đóng khung không được sửa đổi.",
+    "prereq": [
+      "Kiểu Dữ Liệu Cơ Bản Trong Python"
+    ],
+    "formula_latex": "",
+    "formula_words": "",
+    "symbols": [],
+    "steps": [
+      "Dùng dấu ngoặc vuông [] cho List hoặc ngoặc tròn () cho Tuple",
+      "Truy cập phần tử bằng chỉ số bắt đầu từ 0",
+      "Dùng hàm append() để thêm phần tử vào List"
+    ],
+    "example": "gia_dong_cua = [68500, 69000, 68200], thêm giá mới: gia_dong_cua.append(72000) kết quả danh sách có thêm 72000 ở cuối.",
+    "pitfall": "Cố tình dùng hàm thay đổi dữ liệu (như append) lên Tuple sẽ bị báo lỗi ngay lập tức.",
+    "exam_tip": "Đề bài yêu cầu lưu danh sách thay đổi theo thời gian thì chọn List, dữ liệu cố định không đổi thì chọn Tuple.",
+    "keywords": [
+      "List",
+      "Tuple",
+      "append",
+      "slicing"
+    ]
+  },
+  {
+    "type": "concept",
+    "title": "Cấu Trúc Dữ Liệu: Dict và Set",
+    "plain": "Dict lưu dữ liệu theo cặp 'tên khóa - giá trị' giống như danh bạ điện thoại tra theo tên. Set là túi chứa các phần tử không bị trùng lặp.",
+    "analogy": "Dict giống như danh bạ điện thoại, gõ tên 'VNM' là ra số lượng cổ phiếu ngay. Set giống như buổi điểm danh, mỗi người chỉ được tính một lần, không có chuyện tên bị lặp lại.",
+    "prereq": [
+      "Kiểu Dữ Liệu Cơ Bản Trong Python"
+    ],
+    "formula_latex": "",
+    "formula_words": "",
+    "symbols": [],
+    "steps": [
+      "Tạo Dict bằng dấu ngoặc nhọn {} với cặp khóa:giá_trị",
+      "Truy cập giá trị bằng cách gọi tên khóa: danh_muc['VNM']",
+      "Tạo Set bằng dấu ngoặc nhọn {} chứa các phần tử đơn lẻ"
+    ],
+    "example": "danh_muc = {\"VNM\": 100, \"FPT\": 50}, gọi danh_muc['VNM'] sẽ trả về số lượng là 100.",
+    "pitfall": "Gọi một khóa không có trong Dict sẽ gây lỗi KeyError khiến chương trình dừng đột ngột.",
+    "exam_tip": "Khi cần tìm kiếm nhanh theo mã định danh hoặc lọc mã trùng lặp thì nghĩ ngay đến Dict và Set.",
+    "keywords": [
+      "Dict",
+      "Set",
+      "key-value",
+      "lookup"
+    ]
+  },
+  {
+    "type": "process",
+    "title": "Cấu Trúc Điều Kiện (If / Elif / Else)",
+    "plain": "Giúp máy tính biết cách ra quyết định rẽ nhánh dựa vào tình huống thực tế, giống như con người tự suy luận.",
+    "analogy": "Giống như khi bạn đi đường: Nếu đèn đỏ thì dừng lại, còn không thì nếu đèn vàng thì đi chậm, còn lại (đèn xanh) thì phóng thẳng.",
+    "prereq": [
+      "Kiểu Dữ Liệu Cơ Bản Trong Python"
+    ],
+    "formula_latex": "",
+    "formula_words": "",
+    "symbols": [],
+    "steps": [
+      "Đặt điều kiện chính với từ khóa if",
+      "Đặt các điều kiện phụ tiếp theo với elif",
+      "Chừa lại trường hợp cuối cùng bằng else"
+    ],
+    "example": "ty_suat_no = 1.8; nếu ty_suat_no < 1.0 in 'Thấp', nếu nhỏ hơn 2.0 in 'Trung bình', còn lại in 'Cao'. Kết quả in ra 'Trung bình'.",
+    "pitfall": "Quên dấu hai chấm (:) ở cuối dòng điều kiện hoặc quên lề thụt dòng (indentation) bên dưới.",
+    "exam_tip": "Bài toán phân loại, xét hạn mức rủi ro, kiểm tra điều kiện tài chính chắc chắn phải dùng cấu trúc này.",
+    "keywords": [
+      "if",
+      "elif",
+      "else",
+      "điều kiện"
+    ]
+  },
+  {
+    "type": "process",
+    "title": "Vòng Lặp (For / While)",
+    "plain": "Giúp máy tính tự động lặp đi lặp lại một công việc nhàm chán hàng trăm lần mà không cần con người viết tay từng dòng code.",
+    "analogy": "Giống như việc kiểm đếm từng tờ tiền trong một cọc tiền dày, bạn cứ lật từng tờ cho đến khi hết sạch thì thôi.",
+    "prereq": [
+      "Cấu Trúc Dữ Liệu: List và Tuple"
+    ],
+    "formula_latex": "",
+    "formula_words": "",
+    "symbols": [],
+    "steps": [
+      "Xác định danh sách cần duyệt qua",
+      "Viết câu lệnh vòng lặp for lấy từng phần tử",
+      "Thực hiện khối lệnh tính toán bên trong vòng lặp"
+    ],
+    "example": "gia_dong_cua = [68500, 69000]; tổng giá tính bằng cách lấy từng giá cộng dồn lại qua vòng lặp for rồi chia cho 2 ra giá trung bình là 68750đ.",
+    "pitfall": "Tạo vòng lặp vô hạn (đặc biệt với while) khiến máy tính bị đơ nếu điều kiện dừng không bao giờ xảy ra.",
+    "exam_tip": "Bài toán duyệt qua danh sách giá cổ phiếu để tính tổng hoặc trung bình thì dùng vòng lặp for.",
+    "keywords": [
+      "for",
+      "while",
+      "vòng lặp"
+    ]
+  },
+  {
+    "type": "formula",
+    "title": "Hàm Tính Lãi Kép (Function)",
+    "plain": "Đóng gói một đoạn công thức toán học thành một chiếc hộp có tên riêng, sau đó bạn chỉ việc gọi tên chiếc hộp ra dùng lại bất cứ lúc nào mà không cần viết lại từ đầu.",
+    "analogy": "Giống như một chiếc máy pha cà phê tự động: bạn chỉ cần bỏ hạt cà phê và nước vào, ấn nút là máy tự làm ra ly cà phê mà không phải thủ công pha từng bước mỗi lần uống.",
+    "prereq": [
+      "Kiểu Dữ Liệu Cơ Bản Trong Python"
+    ],
+    "formula_latex": "ket\\_qua = von\\_goc \\times (1 + lai\\_suat)^{so\\_nam}",
+    "formula_words": "kết quả bằng vốn gốc nhân với mở ngoặc một cộng lãi suất đóng ngoặc mũ số năm",
+    "symbols": [
+      {
+        "symbol": "von\\_goc",
+        "meaning": "Số tiền ban đầu đem đi đầu tư"
+      },
+      {
+        "symbol": "lai\\_suat",
+        "meaning": "Tỷ suất sinh lợi tính theo năm (dạng số thập phân)"
+      },
+      {
+        "symbol": "so\\_nam",
+        "meaning": "Thời gian đầu tư tính bằng năm"
+      }
+    ],
+    "steps": [
+      "Khai báo hàm với từ khóa def",
+      "Nhận các đầu vào cần thiết (vốn gốc, lãi suất, số năm)",
+      "Tính toán và trả về kết quả bằng từ khóa return"
+    ],
+    "example": "von_goc = 100_000_000, lai_suat = 0.07, so_nam = 10. Tính: 100000000 * (1 + 0.07) ** 10 = 196,715,136đ.",
+    "pitfall": "Quên lệnh return trong hàm khiến hàm chạy xong không trả ra kết quả gì (trả về None).",
+    "exam_tip": "Khi đề yêu cầu viết đoạn code tính toán có thể tái sử dụng nhiều lần với các số liệu khác nhau, hãy nghĩ đến việc viết hàm.",
+    "keywords": [
+      "def",
+      "return",
+      "hàm",
+      "lãi kép"
+    ]
+  },
+  {
+    "type": "concept",
+    "title": "Xử Lý Ngoại Lệ (Try / Except)",
+    "plain": "Phòng ngừa trường hợp chương trình gặp sự cố bất ngờ (như chia cho số 0) thì sẽ tự chữa cháy thay vì bị sập ngang xương.",
+    "analogy": "Giống như việc lắp túi khí trên xe ô tô: bình thường xe chạy bình thường, nhưng nếu lỡ xảy ra va chạm thì túi khí sẽ bung ra cứu mạng thay vì để xe hỏng nặng.",
+    "prereq": [
+      "Cấu Trúc Điều Kiện (If / Elif / Else)"
+    ],
+    "formula_latex": "",
+    "formula_words": "",
+    "symbols": [],
+    "steps": [
+      "Đặt đoạn code có nguy cơ gây lỗi vào khối try",
+      "Đặt hướng giải quyết khi có lỗi vào khối except",
+      "Chỉ định rõ loại lỗi cần bắt để dễ kiểm soát"
+    ],
+    "example": "Tính tỷ suất lợi nhuận khi giá mua bằng 0. Khối try tính toán sẽ báo lỗi chia cho 0, khối except lập tức bắt lấy và in câu thông báo lỗi thay vì sập code.",
+    "pitfall": "Dùng lệnh except chung chung không rõ lỗi gì khiến việc tìm nguyên nhân bị sai sót trở nên khó khăn.",
+    "exam_tip": "Khi xử lý dữ liệu tài chính thực tế hay bị thiếu hoặc bằng 0, luôn nhớ bao bọc bằng try/except.",
+    "keywords": [
+      "try",
+      "except",
+      "ZeroDivisionError",
+      "ngoại lệ"
+    ]
+  },
+  {
+    "type": "concept",
+    "title": "List và Dict Comprehension",
+    "plain": "Cách viết code siêu ngắn gọn để tạo ra một danh sách mới hoặc từ điển mới chỉ trong một dòng lệnh duy nhất thay vì viết vòng lặp dài dòng.",
+    "analogy": "Giống như việc bạn nhờ người khác lọc nhanh các quả táo ngon bỏ vào giỏ thay vì nhặt từng quả kiểm tra thủ công qua nhiều công đoạn.",
+    "prereq": [
+      "Cấu Trúc Dữ Liệu: List và Tuple",
+      "Vòng Lặp (For / While)"
+    ],
+    "formula_latex": "",
+    "formula_words": "",
+    "symbols": [],
+    "steps": [
+      "Mở ngoặc vuông hoặc nhọn",
+      "Viết biểu thức kết quả kèm theo vòng lặp for ở bên trong",
+      "Thêm điều kiện lọc nếu cần thiết"
+    ],
+    "example": "gia_5_ngay = [68500, 69000, 68200], chuyển sang USD bằng comprehension: [gia / 24500 for gia in gia_5_ngay] ra kết quả danh sách giá trị USD mới.",
+    "pitfall": "Viết quá nhiều điều kiện phức tạp gộp vào một dòng khiến đoạn code trở nên khó đọc, khó sửa lỗi.",
+    "exam_tip": "Nhận biết qua cú pháp có vòng lặp for nằm ngay bên trong dấu ngoặc vuông hoặc ngoặc nhọn.",
+    "keywords": [
+      "comprehension",
+      "list",
+      "dict",
+      "tối ưu code"
+    ]
+  },
+  {
+    "type": "concept",
+    "title": "Hàm Lambda (Hàm Ẩn Danh)",
+    "plain": "Một chiếc hàm mini không cần đặt tên, chuyên dùng để làm các việc lặt vặt diễn ra trong chớp mắt rồi thôi.",
+    "analogy": "Giống như tờ giấy nhớ ghi chú nhanh một việc trong ngày rồi xé bỏ, không cần lưu vào sổ tay danh bạ dài dòng.",
+    "prereq": [
+      "Hàm Tính Lãi Kép (Function)"
+    ],
+    "formula_latex": "",
+    "formula_words": "",
+    "symbols": [],
+    "steps": [
+      "Dùng từ khóa lambda",
+      "Khai báo tham số đầu vào theo sau là dấu hai chấm",
+      "Viết biểu thức tính toán ngắn gọn ngay bên cạnh"
+    ],
+    "example": "Sắp xếp danh sách cổ phiếu theo tỷ suất lợi nhuận: sorted(danh_sach_cp, key=lambda cp: cp[\"loi_suat\"], reverse=True). Kết quả sắp xếp giảm dần theo lợi suất.",
+    "pitfall": "Cố viết một logic quá dài dòng, phức tạp bên trong hàm lambda làm người khác không đọc nổi.",
+    "exam_tip": "Thường gặp trong các hàm như sorted() khi cần truyền một tiêu chí sắp xếp nhanh.",
+    "keywords": [
+      "lambda",
+      "hàm ẩn danh",
+      "sorted"
+    ]
+  },
+  {
+    "type": "concept",
+    "title": "Lập Trình Hướng Đối Tượng (OOP với Class)",
+    "plain": "Cách gom chung dữ liệu (đặc điểm) và hành vi (thao tác xử lý) của một đối tượng vào chung một chỗ để dễ mô phỏng thực tế.",
+    "analogy": "Giống như bản vẽ chế tạo một chiếc xe hơi: bản vẽ quy định xe có màu gì, bánh xe ra sao (thuộc tính) và xe có thể chạy hay phanh thế nào (hành vi).",
+    "prereq": [
+      "Hàm Tính Lãi Kép (Function)"
+    ],
+    "formula_latex": "",
+    "formula_words": "",
+    "symbols": [
+      {
+        "symbol": "self",
+        "meaning": "Tham số đại diện cho chính đối tượng đang được tạo ra hoặc thao tác"
+      },
+      {
+        "symbol": "\\_\\_init\\_\\_",
+        "meaning": "Hàm khởi tạo chạy tự động đầu tiên khi tạo đối tượng từ class"
+      }
+    ],
+    "steps": [
+      "Định nghĩa khuôn mẫu bằng từ khóa class",
+      "Viết hàm khởi tạo __init__ để nhận các thông tin ban đầu",
+      "Viết các hàm hành vi (method) gắn liền với đối tượng"
+    ],
+    "example": "Tạo class CoPhieu với mã và giá hiện tại, hàm cap_nhat_gia() giúp cập nhật giá mới và tự động lưu vào lịch sử giá.",
+    "pitfall": "Quên truyền tham số self ở đầu mỗi hàm (method) bên trong class khiến Python báo lỗi.",
+    "exam_tip": "Gặp các từ khóa class, __init__, self thì chắc chắn đây là kiến thức về Lập trình hướng đối tượng.",
+    "keywords": [
+      "class",
+      "OOP",
+      "self",
+      "__init__",
+      "đối tượng"
+    ]
+  }
+]

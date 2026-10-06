@@ -1,0 +1,29 @@
+[
+  {
+    "hash": "77103c11066e77084c3d648de88494041f8ae3fe7e286cf08e82baa1c9a71e82",
+    "filename": "01_Chuong_1_Tong_Quan_Python_Va_Ung_Dung_Tai_Chinh.pptx",
+    "stored_name": "77103c1106_01_Chuong_1_Tong_Quan_Python_Va_Ung_Dung_Tai_Chinh.pptx",
+    "char_count": 4680,
+    "added_at": 1791247841.1819212,
+    "extracted": true,
+    "model_used": "Gemini:gemini-flash-lite-latest"
+  },
+  {
+    "hash": "041e70dad7936ee58976a00c047aa3a785cb1e070745d13bf02fd6ba6986875a",
+    "filename": "02_Chuong_2_Co_Ban_Lap_Trinh_Python_Tai_Chinh.pptx",
+    "stored_name": "041e70dad7_02_Chuong_2_Co_Ban_Lap_Trinh_Python_Tai_Chinh.pptx",
+    "char_count": 11419,
+    "added_at": 1791247841.252908,
+    "extracted": true,
+    "model_used": "Gemini:gemini-flash-lite-latest"
+  },
+  {
+    "hash": "dcf16527e6f6c5c2e05ff6957049648a373e5bc6e850bbed21948fca80ef9f1a",
+    "filename": "03_Chuong_3_Xu_Ly_Va_Phan_Tich_Du_Lieu_Tai_Chinh.pptx",
+    "stored_name": "dcf16527e6_03_Chuong_3_Xu_Ly_Va_Phan_Tich_Du_Lieu_Tai_Chinh.pptx",
+    "char_count": 16632,
+    "added_at": 1791247841.349383,
+    "extracted": true,
+    "model_used": "Gemini:gemini-flash-lite-latest"
+  }
+]

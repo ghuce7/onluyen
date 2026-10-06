@@ -1,0 +1,112 @@
+[
+  {
+    "type": "concept",
+    "title": "Ngôn ngữ lập trình Python trong tài chính",
+    "plain": "Python là một ngôn ngữ máy tính giúp con người ra lệnh cho máy tính làm việc. Nó được dùng rất nhiều trong tài chính vì viết ngắn gọn, dễ đọc, dễ hiểu như tiếng Anh và có sẵn nhiều công cụ tính toán.",
+    "analogy": "Giống như việc bạn dùng máy tính bỏ túi nhưng thông minh hơn, có thể tự động hóa hàng triệu phép tính tiền bạc chỉ trong chớp mắt.",
+    "prereq": [],
+    "formula_latex": "",
+    "formula_words": "",
+    "symbols": [],
+    "steps": [
+      "Cài đặt Python trên máy tính",
+      "Viết câu lệnh bằng tiếng Anh đơn giản",
+      "Chạy chương trình để máy tính tính toán"
+    ],
+    "example": "Tính tỷ suất lợi nhuận khi biết giá vốn 100 triệu và lợi nhuận 8.5 triệu: Lấy 8.500.000 chia cho 100.000.000 ra kết quả là 0.085 hay 8.5%.",
+    "pitfall": "Nghĩ rằng lập trình là phải siêu toán học hay viết những ký hiệu khô khan khó hiểu.",
+    "exam_tip": "Nhớ rõ lý do vì sao Python được chọn trong tài chính: miễn phí, dễ đọc, nhiều thư viện và được các ngân hàng lớn dùng.",
+    "keywords": [
+      "Python",
+      "FinTech",
+      "tài chính"
+    ]
+  },
+  {
+    "type": "concept",
+    "title": "Môi trường Jupyter Notebook",
+    "plain": "Jupyter Notebook là một cuốn sổ tay điện tử trên máy tính, nơi bạn vừa viết được dòng lệnh (code), vừa viết được chữ giải thích, lại vừa xem được biểu đồ hiện ra ngay lập tức bên dưới.",
+    "analogy": "Giống như một cuốn vở học sinh, dòng nào làm bài tập (code) thì viết vào ô riêng, dòng nào ghi chú lý thuyết thì viết vào ô văn bản bên cạnh.",
+    "prereq": [
+      "Ngôn ngữ lập trình Python trong tài chính"
+    ],
+    "formula_latex": "",
+    "formula_words": "",
+    "symbols": [],
+    "steps": [
+      "Mở Jupyter Notebook",
+      "Tạo ô lệnh (Code cell) để viết code",
+      "Nhấn Shift cộng Enter để chạy và xem kết quả"
+    ],
+    "example": "Tạo một ô code gõ dòng lệnh in ra màn hình câu 'Xin chào FinTech!' và nhấn Shift cộng Enter để hiện kết quả ngay bên dưới.",
+    "pitfall": "Chạy các ô lệnh lộn xộn không theo thứ tự từ trên xuống dưới khiến máy tính báo lỗi vì chưa nhớ biến.",
+    "exam_tip": "Phân biệt rõ hai loại ô: Code cell (chạy code) và Markdown cell (viết chữ/công thức).",
+    "keywords": [
+      "Jupyter Notebook",
+      "Code cell",
+      "Markdown cell"
+    ]
+  },
+  {
+    "type": "formula",
+    "title": "Tính tỷ suất lợi nhuận cơ bản bằng Python",
+    "plain": "Công thức tính xem số tiền lãi chiếm bao nhiêu phần trăm so với số tiền vốn bỏ ra ban đầu.",
+    "analogy": "Bỏ ra 10 đồng vốn, thu về thêm 1 đồng lời thì lãi được 10 phần trăm số tiền bỏ ra.",
+    "prereq": [],
+    "formula_latex": "ty\\_suat\\_loi\\_nhuan = \\frac{loi\\_nhuan}{gia\\_von}",
+    "formula_words": "Tỷ suất lợi nhuận bằng lợi nhuận chia cho giá vốn",
+    "symbols": [
+      {
+        "symbol": "ty\\_suat\\_loi\\_nhuan",
+        "meaning": "Tỷ suất lợi nhuận tính ra dạng số thập phân hoặc phần trăm"
+      },
+      {
+        "symbol": "loi\\_nhuan",
+        "meaning": "Số tiền lời thu về"
+      },
+      {
+        "symbol": "gia\\_von",
+        "meaning": "Số tiền vốn ban đầu bỏ ra"
+      }
+    ],
+    "steps": [
+      "Gán giá trị vào biến gia_von",
+      "Gán giá trị vào biến loi_nhuan",
+      "Lấy loi_nhuan chia cho gia_von"
+    ],
+    "example": "Gia_von bằng 100_000_000, loi_nhuan bằng 8_500_000. Tính: 8.500.000 chia 100.000.000 bằng 0.085, đổi ra phần trăm là 8.5%.",
+    "pitfall": "Quên mất dấu gạch dưới trong số lớn (như 100_000_000) chỉ để dễ nhìn, Python hoàn toàn bỏ qua nó.",
+    "exam_tip": "Dạng bài tập tính toán cơ bản bằng Python luôn yêu cầu xác định đúng tên biến đầu vào và phép tính chia.",
+    "keywords": [
+      "tỷ suất lợi nhuận",
+      "giá vốn",
+      "lợi nhuận"
+    ]
+  },
+  {
+    "type": "fact",
+    "title": "Ứng dụng của Python trong Công nghệ Tài chính (FinTech)",
+    "plain": "Python được ứng dụng vào mọi ngóc ngách của ngành tài chính hiện đại để làm thay con người các việc nặng nhọc như tự động mua bán chứng khoán, tính toán rủi ro hay chống lừa đảo.",
+    "analogy": "Giống như việc thuê một trợ lý rô-bốt siêu thông minh làm việc không bao giờ mệt mỏi cho ngân hàng.",
+    "prereq": [
+      "Ngôn ngữ lập trình Python trong tài chính"
+    ],
+    "formula_latex": "",
+    "formula_words": "",
+    "symbols": [],
+    "steps": [
+      "Xác định bài toán tài chính cần giải quyết",
+      "Dùng Python viết thuật toán xử lý",
+      "Chạy tự động để đưa ra quyết định"
+    ],
+    "example": "Dùng Python để tự động phát hiện các giao dịch chuyển tiền bất thường nhằm ngăn chặn gian lận thẻ tín dụng ngay lập tức.",
+    "pitfall": "Nghỉ rằng Python chỉ dùng để vẽ biểu đồ đơn giản mà không biết nó cực mạnh trong giao dịch tự động.",
+    "exam_tip": "Nhớ tên các lĩnh vực ứng dụng chính: Giao dịch thuật toán, Phân tích rủi ro, Phát hiện gian lận, Chatbot, Blockchain, Robo-advisor.",
+    "keywords": [
+      "FinTech",
+      "Algorithmic Trading",
+      "Risk Analysis",
+      "Fraud Detection"
+    ]
+  }
+]
